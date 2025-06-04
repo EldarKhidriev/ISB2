@@ -14,96 +14,84 @@
 
 </head>
 <body>
-  <header class="header">
-    <div class="header__wrapper">
-      <div class="header-top">
-        <a href="#" class="header-top__link desk">Открыть школу <img src="assets/img/icon-add.svg" alt="добавить"></a>
-        
-        <a href="#" class="header-top__logo"><img src="assets/img/icon-logo.svg" alt="Логотип школы"></a>
-        <a href="#" class="header-top__link"><img src="assets/img/icon-lang.svg" alt="язык">Русский<img src="assets/img/icon-arrow.svg" alt="стрелка вниз"></a>
-      </div>
+<header class="header">
+  <div class="header__wrapper">
+    <div class="header-top">
+      <a href="#" class="header-top__link desk">Открыть школу <img src="assets/img/icon-add.svg" alt="добавить"></a>
+      <a href="index.html" class="header-top__logo"><img src="assets/img/icon-logo.svg" alt="Логотип школы"></a>
+      <a href="#" class="header-top__link"><img src="assets/img/icon-lang.svg" alt="язык">Русский<img src="assets/img/icon-arrow.svg" alt="стрелка вниз"></a>
     </div>
-    <div class="header-bottom">
-      <nav class="header-bottom__nav">
-        <ul class="header-bottom__list">
-          <li class="header-bottom__item"><a href="#" class="header-bottom__link">О проекте</a></li>
-          <li class="header-bottom__item"><a href="about.html" class="header-bottom__link">Контакты</a></li>
-          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Кубок школ исб</a></li>
-          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Каталог</a></li>
-          <!-- <li class="header-bottom__item"><a href="#" class="header-bottom__link">Тренерский совет<img src="assets/img/icon-arrow_back.svg" alt="развернуть вкладку"></a></li>
-          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Документы<img src="assets/img/icon-arrow_back.svg" alt="развернуть вкладку"></a></li> -->
-          <!-- С выпадающим подменю -->
-    <li class="header-bottom__item has-submenu">
-      <button class="header-bottom__link" aria-expanded="false">
-        Тренерский совет
-        <img src="assets/img/icon-arrow_back.svg" alt="">
-      </button>
-      <ul class="dropdown-list" hidden>
-        <li><a href="#">Совет 1</a></li>
-        <li><a href="#">Совет 2</a></li>
+  </div>
+
+  <div class="header-bottom">
+    <nav class="header-bottom__nav">
+      <ul class="header-bottom__list">
+        <li class="header-bottom__item"><a href="about.html" class="header-bottom__link">О проекте</a></li>
+        <li class="header-bottom__item"><a href="contacts.html" class="header-bottom__link">Контакты</a></li>
+        <li class="header-bottom__item"><a href="cup.html" class="header-bottom__link">Кубок школ исб</a></li>
+        <li class="header-bottom__item"><a href="#" class="header-bottom__link">Каталог</a></li>
+        <li class="header-bottom__item has-submenu">
+          <button class="header-bottom__link" aria-expanded="false">
+            Тренерский совет
+            <img src="assets/img/icon-arrow_back.svg" alt="">
+          </button>
+          <ul class="dropdown-list" hidden>
+            <li><a href="#">Совет 1</a></li>
+            <li><a href="#">Совет 2</a></li>
+          </ul>
+        </li>
+        <li class="header-bottom__item has-submenu">
+          <button class="header-bottom__link" aria-expanded="false">
+            Документы
+            <img src="assets/img/icon-arrow_back.svg" alt="">
+          </button>
+          <ul class="dropdown-list" hidden>
+            <li><a href="#">Положение</a></li>
+            <li><a href="#">Регламент</a></li>
+          </ul>
+        </li>
       </ul>
-    </li>
+    </nav>
+  </div>
 
-    <!-- Еще одно подменю -->
-    <li class="header-bottom__item has-submenu">
-      <button class="header-bottom__link" aria-expanded="false">
-        Документы
-        <img src="assets/img/icon-arrow_back.svg" alt="">
-      </button>
-      <ul class="dropdown-list" hidden>
-        <li><a href="#">Положение</a></li>
-        <li><a href="#">Регламент</a></li>
-      </ul>
-    </li>
-        </ul>
-      </nav>
-    </div>
+  <div class="header-mob">
+    <a href="#" class="header-mob__add"><img src="assets/img/mob/plus.svg" alt="добавить"></a>
+    <a href="index.html" class="header-mob__logo"><img src="assets/img/mob/logo.svg" alt="Логотип школы"></a>
+    <a href="#" class="header-mob__burger" id="burger-btn"><img src="assets/img/mob/burger.svg" alt="меню"></a>
+  </div>
+</header>
 
-    
-    <div class="header-mob">
-      <a href="#" class="header-mob__add"><img src="assets/img/mob/plus.svg" alt="добавить"></a>
-      <a href="#" class="header-mob__logo"><img src="assets/img/mob/logo.svg" alt="Логотип школы"></a>
-      <a href="#" class="header-mob__burger"><img src="assets/img/mob/burger.svg" alt="Логотип школы"></a>
-      <nav class="header-bottom__nav">
-        <ul class="header-bottom__list">
-          <li class="header-bottom__item"><a href="about.html" class="header-bottom__link">О проекте</a></li>
-          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Контакты</a></li>
-          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Кубок школ исб</a></li>
-          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Каталог</a></li>
-          <!-- <li class="header-bottom__item"><a href="#" class="header-bottom__link">Тренерский совет<img src="assets/img/icon-arrow_back.svg" alt="развернуть вкладку"></a></li>
-          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Документы<img src="assets/img/icon-arrow_back.svg" alt="развернуть вкладку"></a></li> -->
-          <!-- С выпадающим подменю -->
-    <li class="header-bottom__item has-submenu">
-      <button class="header-bottom__link" aria-expanded="false">
-        Тренерский совет
-        <img src="assets/img/icon-arrow_back.svg" alt="">
-      </button>
-      <ul class="dropdown-list" hidden>
-        <li><a href="#">Совет 1</a></li>
-        <li><a href="#">Совет 2</a></li>
-      </ul>
-    </li>
+<!-- 👉 Выезжающее мобильное меню (вставить сразу после </header>) -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu__close" id="menuClose">×</button>
+  <nav class="mobile-menu__nav">
+    <ul>
+      <li><a href="about.html">О проекте</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="cup.html">Кубок школ исб</a></li>
+      <li><a href="#">Каталог</a></li>
+      <li>
+        <details>
+          <summary>Тренерский совет</summary>
+          <ul>
+            <li><a href="#">Совет 1</a></li>
+            <li><a href="#">Совет 2</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>Документы</summary>
+          <ul>
+            <li><a href="#">Положение</a></li>
+            <li><a href="#">Регламент</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </nav>
+</div>
 
-    <!-- Еще одно подменю -->
-    <li class="header-bottom__item has-submenu">
-      <button class="header-bottom__link" aria-expanded="false">
-        Документы
-        <img src="assets/img/icon-arrow_back.svg" alt="">
-      </button>
-      <ul class="dropdown-list" hidden>
-        <li><a href="#">Положение</a></li>
-        <li><a href="#">Регламент</a></li>
-      </ul>
-    </li>
-        </ul>
-      </nav>
-    </div>
-
-
-
-
-
-  </header>
   <main>
     <section class="begin">
       <div class="begin__logo-conteiner">
@@ -330,6 +318,7 @@
 
   </footer>
 
+  <script src="js/header.js"></script>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/slider.js"></script>
@@ -349,6 +338,7 @@
   updateTime();
   setInterval(updateTime, 1000);
 </script>
+
 
 
 
