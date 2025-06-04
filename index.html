@@ -6,13 +6,20 @@
   <title>ШКОЛЫ ИСБ</title>
   <link rel="stylesheet" href="css/globals.css">
   <link rel="stylesheet" href="fonts/font.css">
+  <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/style.css">
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+
 </head>
 <body>
   <header class="header">
     <div class="header__wrapper">
       <div class="header-top">
-        <a href="#" class="header-top__link">Открыть школу <img src="assets/img/icon-add.svg" alt="добавить"></a>
+        <a href="#" class="header-top__link desk">Открыть школу <img src="assets/img/icon-add.svg" alt="добавить"></a>
+        
         <a href="#" class="header-top__logo"><img src="assets/img/icon-logo.svg" alt="Логотип школы"></a>
         <a href="#" class="header-top__link"><img src="assets/img/icon-lang.svg" alt="язык">Русский<img src="assets/img/icon-arrow.svg" alt="стрелка вниз"></a>
       </div>
@@ -21,14 +28,82 @@
       <nav class="header-bottom__nav">
         <ul class="header-bottom__list">
           <li class="header-bottom__item"><a href="#" class="header-bottom__link">О проекте</a></li>
-          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Контакты</a></li>
+          <li class="header-bottom__item"><a href="about.html" class="header-bottom__link">Контакты</a></li>
           <li class="header-bottom__item"><a href="#" class="header-bottom__link">Кубок школ исб</a></li>
           <li class="header-bottom__item"><a href="#" class="header-bottom__link">Каталог</a></li>
-          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Тренерский совет<img src="assets/img/icon-arrow_back.svg" alt="развернуть вкладку"></a></li>
-          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Документы<img src="assets/img/icon-arrow_back.svg" alt="развернуть вкладку"></a></li>
+          <!-- <li class="header-bottom__item"><a href="#" class="header-bottom__link">Тренерский совет<img src="assets/img/icon-arrow_back.svg" alt="развернуть вкладку"></a></li>
+          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Документы<img src="assets/img/icon-arrow_back.svg" alt="развернуть вкладку"></a></li> -->
+          <!-- С выпадающим подменю -->
+    <li class="header-bottom__item has-submenu">
+      <button class="header-bottom__link" aria-expanded="false">
+        Тренерский совет
+        <img src="assets/img/icon-arrow_back.svg" alt="">
+      </button>
+      <ul class="dropdown-list" hidden>
+        <li><a href="#">Совет 1</a></li>
+        <li><a href="#">Совет 2</a></li>
+      </ul>
+    </li>
+
+    <!-- Еще одно подменю -->
+    <li class="header-bottom__item has-submenu">
+      <button class="header-bottom__link" aria-expanded="false">
+        Документы
+        <img src="assets/img/icon-arrow_back.svg" alt="">
+      </button>
+      <ul class="dropdown-list" hidden>
+        <li><a href="#">Положение</a></li>
+        <li><a href="#">Регламент</a></li>
+      </ul>
+    </li>
         </ul>
       </nav>
     </div>
+
+    
+    <div class="header-mob">
+      <a href="#" class="header-mob__add"><img src="assets/img/mob/plus.svg" alt="добавить"></a>
+      <a href="#" class="header-mob__logo"><img src="assets/img/mob/logo.svg" alt="Логотип школы"></a>
+      <a href="#" class="header-mob__burger"><img src="assets/img/mob/burger.svg" alt="Логотип школы"></a>
+      <nav class="header-bottom__nav">
+        <ul class="header-bottom__list">
+          <li class="header-bottom__item"><a href="about.html" class="header-bottom__link">О проекте</a></li>
+          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Контакты</a></li>
+          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Кубок школ исб</a></li>
+          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Каталог</a></li>
+          <!-- <li class="header-bottom__item"><a href="#" class="header-bottom__link">Тренерский совет<img src="assets/img/icon-arrow_back.svg" alt="развернуть вкладку"></a></li>
+          <li class="header-bottom__item"><a href="#" class="header-bottom__link">Документы<img src="assets/img/icon-arrow_back.svg" alt="развернуть вкладку"></a></li> -->
+          <!-- С выпадающим подменю -->
+    <li class="header-bottom__item has-submenu">
+      <button class="header-bottom__link" aria-expanded="false">
+        Тренерский совет
+        <img src="assets/img/icon-arrow_back.svg" alt="">
+      </button>
+      <ul class="dropdown-list" hidden>
+        <li><a href="#">Совет 1</a></li>
+        <li><a href="#">Совет 2</a></li>
+      </ul>
+    </li>
+
+    <!-- Еще одно подменю -->
+    <li class="header-bottom__item has-submenu">
+      <button class="header-bottom__link" aria-expanded="false">
+        Документы
+        <img src="assets/img/icon-arrow_back.svg" alt="">
+      </button>
+      <ul class="dropdown-list" hidden>
+        <li><a href="#">Положение</a></li>
+        <li><a href="#">Регламент</a></li>
+      </ul>
+    </li>
+        </ul>
+      </nav>
+    </div>
+
+
+
+
+
   </header>
   <main>
     <section class="begin">
@@ -41,14 +116,16 @@
       <div class="begin__bg-r"></div>
     </section>
 
-    <section class="system-section">
+    <section class="system-section desk">
       <div class="system-section__bg-img"></div>
       <div class="system-section__wrapper">
         <div class="system-section__card">
           <div class="system-card system-card--left">
             <div class="system-card__icon-conteiner">
               <div>
-                <img src="assets/img/system-icon-isb.png" alt="иконка школы">
+                <img src="assets/img/system-icon-isb.png" alt="иконка школы" class="desk">
+                <img src="assets/img/mob/ШКОЛЫ СБ РОССИИ ЛОГО 2.svg" alt="иконка школы" class="mob">
+
               </div>
               <h3 class="system-card__title">
                 <span class="system-card__title--medium">Презентация</span><br>
@@ -71,11 +148,211 @@
       </div>
 
     </section>
+    <section class="system-mob mob">
+      <div class="system-mob__card">
+        <div class="system-card__icon-conteiner">
+              <div>
+                <img src="assets/img/system-icon-isb.png" alt="иконка школы" class="desk">
+                <img src="assets/img/mob/ШКОЛЫ СБ РОССИИ ЛОГО 2.svg" alt="иконка школы" class="mob">
 
-    <section class="events">
-      
+              </div>
+              <h3 class="system-card__title">
+                <span class="system-card__title--medium">Презентация</span><br>
+                <span class="system-card__title--bold">Система</span><br>
+                <span class="system-card__title--bold">поясов</span><br>
+              </h3>
+              <span class="system-card__title--regular">Принципы ранжирования поясов<br>в МФСОО "Школы ИСБ"</span>
+              <div class="system-card__btn-container">
+                <button class="system-card__btn system-card__btn--fill">Открыть</button>
+                <button class="system-card__btn system-card__btn--nofill">Скачать</button>
+              </div>
+            </div>
+      </div>
     </section>
 
+    <section class="events">
+      <h2 class="events__title section-title">События</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/img/events-slider/1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/events-slider/2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/events-slider/3.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/events-slider/1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/events-slider/2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/events-slider/3.jpg" alt=""></div>
+          
+          
+        </div>
+      
+        <!-- Если нужны кнопки -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      
+        <!-- Если нужна пагинация -->
+        <!-- <div class="swiper-pagination"></div> -->
+      </div>
+    </section>
+
+    <section class="news desk">
+      <h2 class="news__title section-title">Новости</h2>
+      <div class="news-card__wrapper">
+        <div class="news-card">
+          <div class="news-card__img-comteiner">
+            <img src="assets/img/news/1.jpg" alt="" class="news-card__img">
+            <div class="overlay"></div>
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__content-text-wrapper">
+              <h5 class="news-card__title">Семинар Владимира Ивлева</h5>
+              <p class="news-card__text">Следите за нашими новостями, учавствуйте в семинарах и становитесь сильнее вместе с лучшими бойцами ИСБ России!</p>
+            </div>
+            <p class="news-card__date">Событие: 22.03.25 школа ИСБ Ростов-на-Дону</p>
+          </div>
+          <div class="news-card__bottom">
+          </div>
+        </div>
+  
+        <div class="news-card">
+          <div class="news-card__img-comteiner">
+            <img src="assets/img/news/2.jpg" alt="" class="news-card__img">
+            <div class="overlay"></div>
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__content-text-wrapper">
+              <h5 class="news-card__title">РЕКОН 2025 | итоги</h5>
+              <p class="news-card__text">Уже второй год Школы ИСБ вывозят на фестиваль Рекон интерактивную выставку, рассказывающую о прекрасном мире Исторического Средневекового Боя.</p>
+            </div>
+          </div>
+          <div class="news-card__bottom">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news-mob mob">
+  <h2 class="news__title section-title">Новости</h2>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="news-card">
+          <div class="news-card__img-comteiner">
+            <img src="assets/img/news/1.jpg" alt="" class="news-card__img">
+            <div class="overlay"></div>
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__content-text-wrapper">
+              <h5 class="news-card__title">Семинар Владимира Ивлева</h5>
+              <p class="news-card__text">Следите за нашими новостями, участвуйте в семинарах и становитесь сильнее вместе с лучшими бойцами ИСБ России!</p>
+            </div>
+            <p class="news-card__date">Событие: 22.03.25 школа ИСБ Ростов-на-Дону</p>
+          </div>
+          <div class="news-card__bottom"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="news-card">
+          <div class="news-card__img-comteiner">
+            <img src="assets/img/news/2.jpg" alt="" class="news-card__img">
+            <div class="overlay"></div>
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__content-text-wrapper">
+              <h5 class="news-card__title">РЕКОН 2025 | итоги</h5>
+              <p class="news-card__text">Уже второй год Школы ИСБ вывозят на фестиваль Рекон интерактивную выставку, рассказывающую о прекрасном мире Исторического Средневекового Боя.</p>
+            </div>
+          </div>
+          <div class="news-card__bottom"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Если нужны кнопки -->
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+
+    <!-- Если нужна пагинация -->
+    <!-- <div class="swiper-pagination"></div> -->
+  </div>
+</section>
+
+
+    <section class="community">
+      <h2 class="community__title section-title">Сообщество</h2>
+
+      <div class="community__content">
+        <a class="community__card-wrapper" href="#">
+          <div class="overlay-orange"></div>
+          <img src="assets/img/community/1.jpg" alt="Сообщество в вк 'Школы ИСБ' России">
+        </a>
+
+        <a class="community__card-wrapper" href="#">
+          <div class="overlay-orange"></div>
+          <img src="assets/img/community/2.jpg" alt="Сообщество в вк 'Школы ИСБ' России">
+        </a>
+
+        <a class="community__card-wrapper" href="#">
+          <div class="overlay-orange"></div>
+          <img src="assets/img/community/3.jpg" alt="Сообщество в вк 'Школы ИСБ' России">
+        </a>
+      </div>
+
+
+    </section>
+    
+
   </main>
+
+  <footer class="footer">
+    <h4 class="footer__title">Ростов-на-Дону</h4>
+    <p class="footer__text">мфсоо школы исторического<br>средневекового боя</p>
+    <div class="footer__icon-conteiner">
+      <a href="#" class="footer__icon-img-conteiner"><img src="assets/img/footer/Rutube_icon.svg 1.png" alt="Рутуб"></a>
+      <a href="#" class="footer__icon-img-conteiner"><img src="assets/img/footer/VK_Compact_Logo_(2021-present).svg 1.png" alt="ВКонтакте"></a>
+      <a href="#" class="footer__icon-img-conteiner"><img src="assets/img/footer/telegram7584-Photoroom 1.png" alt="Телеграм"></a>
+    </div>
+    
+    <div class="time-container">
+  <div class="time-block">
+    <span class="label">UTC</span>
+    <span id="utc-time" class="time"></span>
+  </div>
+  <div class="time-block">
+    <img src="assets/img/footer/pace.svg" alt="Clock" class="clock-icon">
+    <span class="label">MSK</span>
+    <span id="msk-time" class="time"></span>
+  </div>
+</div>
+
+  <div class="footer__old">16+</div>
+  <div class="footer__bg"></div>
+
+  </footer>
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/slider.js"></script>
+  <script>
+  function updateTime() {
+    const nowUTC = new Date();
+
+    const utcString = nowUTC.toISOString().slice(0, 19).replace("T", " ");
+    document.getElementById("utc-time").textContent = utcString.replace(/-/g, ".");
+
+    // МСК = UTC + 3 часа
+    const nowMSK = new Date(nowUTC.getTime() + 3 * 60 * 60 * 1000);
+    const mskString = nowMSK.toISOString().slice(0, 19).replace("T", " ");
+    document.getElementById("msk-time").textContent = mskString.replace(/-/g, ".");
+  }
+
+  updateTime();
+  setInterval(updateTime, 1000);
+</script>
+
+
+
+  
 </body>
 </html>

@@ -53,9 +53,7 @@ section {
   display: flex;
   gap: 28px;
 }
-.header-bottom__item {
-  
-}
+
 .header-bottom__link {
   text-transform: uppercase;
   text-decoration: none;
@@ -64,6 +62,10 @@ section {
   display: flex;
   align-items: center;
   gap: 4px;
+  transition: color 0.3s ease;
+}
+.header-bottom__link:hover {
+  color: #FDA215;
 }
 
 .begin {
@@ -172,12 +174,19 @@ section {
 }
 
 .system-section__card {
+  position: relative;
   display: flex;
   /* align-items: center; */
   max-width: 1336px;
   margin: 0 auto;
   /* justify-content: center; */
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  transition: bottom 0.4s ease; /* <== ПЛАВНОСТЬ */
+  
+}
+.system-section__card:hover {
+  bottom: 1rem;
 }
 
 .system-card--left {
@@ -258,4 +267,828 @@ section {
 .system-card__btn-container {
   display: flex;
   gap: 58px;
+}
+
+.events {
+  width: 100%;
+  height: 821px;
+  background-image: url("../assets/img/events-bg.png");
+}
+
+
+
+.section-title {
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.events__title {
+  padding-top: 66px;
+
+}
+
+.news__title {
+  padding-top: 66px;
+  padding-bottom: 35px;
+}
+
+
+.news-card__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+.news-card {
+  position: relative;
+  max-width: 599px;
+  
+  background-image: url("../assets/img/system-card-left.png");
+  transition: bottom 0.3s ease; /* Плавность при изменении bottom */
+  bottom: 0; /* нужно задать начальное значение */
+}
+.news-card:hover {
+  bottom: 1.5rem;
+}
+.news-card:hover .news-card__content {
+  top: calc(335px + 1.5rem);
+}
+
+/* НАДО ДОДЕЛАТЬ АНИМАЦИЮ!!!!!!!!!!!!! */
+
+.news-card__img-comteiner {
+  position: relative;
+  width: 100%;
+  height: 295px;
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
+
+.news-card__img {
+  width: 595px;
+  height: 100%;
+  object-fit: cover; /* обрезает изображение по контейнеру, не искажая его */
+  display: block;
+  transition: transform 0.4s ease;
+}
+.news-card:hover .news-card__img-comteiner {
+  /* height: calc(295px - 30px); уменьшение высоты */
+}
+
+.news-card:hover .news-card__img {
+  transform: scale(1.1); 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* степень затемнения */
+  pointer-events: none; /* чтобы не мешал кликам */
+  transition: background-color 0.4s ease; /* <== ПЛАВНОСТЬ */
+}
+.news-card:hover .overlay {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.news-card__bottom {
+  min-height: 309px;
+}
+
+.news-card__content {
+  width: 90%;
+  height: 220px;
+  position: absolute;
+  left: 50%;
+  top: 335px;
+  transform: translate( -50%, 0%);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: top 0.3s ease; /* плавность смещения вверх */
+  
+}
+
+.news-card__title {
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  padding-bottom: 1.5rem;
+}
+
+.news-card__text, .news-card__date {
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+  font-weight: 500;
+
+}
+
+.news-card__date {
+  color: #FDA215;
+}
+
+.news {
+  
+}
+
+.community {
+  min-height: 900px;
+  /* width: 100%; */
+}
+
+.community__title {
+  margin: 75px 0 55px 0;
+}
+
+.community__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.community__card-wrapper {
+  position: relative;
+  width: 362px;
+  height: 569px;
+  overflow: hidden;
+  bottom: 0;
+  transition: bottom 0.4s ease;
+}
+
+.community__card-wrapper > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* обрезает изображение по контейнеру, не искажая его */
+  /* transform: scale(1.01);  */
+}
+
+.community__card-wrapper:hover {
+  bottom: 1rem;
+}
+.overlay-orange {
+  position: absolute;
+  inset: 0; /* top: 0; right: 0; bottom: 0; left: 0 */
+  background: linear-gradient(to top, rgba(255, 166, 0, 0.384), transparent); /* градиент от оранжевого вверх */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none; /* чтобы не мешал клику по ссылке */
+}
+
+.community__card-wrapper:hover .overlay-orange {
+  opacity: 1;
+}
+
+
+
+.footer {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+
+.swiper {
+  width: 100%; /* или фиксированная ширина, если нужно */
+  height: 420px; /* например, фиксированная высота */
+}
+
+.swiper-slide {
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+  transform: scale(0.9);
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* или contain / fill, смотри ниже */
+  display: block;
+}
+
+
+.footer__icon-img-conteiner {
+  display: inline-block;
+  width: 90px;   /* Задай нужный размер */
+  height: 90px;
+  margin-right: 10px; /* отступ между иконками */
+}
+
+.footer__icon-img-conteiner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* или cover, если хочешь, чтобы иконка полностью заполняла контейнер */
+  display: block;
+}
+
+.footer__title {
+  padding-top: 235px;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.footer__text {
+  font-size: 1.2rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+
+.time-container {
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 59px;
+  margin-bottom: 59px;
+}
+
+.time-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.time {
+  font-size: 16px;
+}
+
+.clock-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.footer__old {
+  background-color: #FDA215;
+  border-radius: 3px;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  margin: 0 auto;
+}
+
+
+.footer__bg {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  background-image: url("../assets/img/footer/bg.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 1; /* степень прозрачности */
+}
+
+
+
+
+
+
+
+/* Основное меню */
+
+
+
+
+.header-bottom__item {
+  position: relative;
+}
+
+
+
+/* Стрелка (по умолчанию) */
+.header-bottom__link img {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+/* Поворот стрелки при открытии */
+.header-bottom__link[aria-expanded="true"] img {
+  transform: rotate(0deg);
+}
+
+/* Подменю */
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 160px;
+  z-index: 100;
+}
+
+/* Элементы подменю */
+.dropdown-list li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.dropdown-list li a:hover {
+  background: #f0f0f0;
+}
+
+.has-submenu > button {
+  background-color: transparent;
+  border: none;
+}
+
+.header-mob {
+  display: none;
+}
+
+.mob {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .mob {
+  display: block;
+}
+  .header-mob {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+  }
+  .desk {
+    display: none;
+  }
+  .header-bottom, .header__wrapper {
+    display: none;
+  }
+  .header {
+    height: 150px;
+    padding-top: 58px;
+  }
+  .header-mob > a{
+    display: block;
+  }
+  .header-bottom__nav {
+    display: none;
+    position: absolute;
+  }
+  
+  .begin-btn {
+    display: none;
+    display: none;
+  }
+  .begin, .begin__bg-left {
+    max-width: 100%;
+    max-height: 455px;
+    min-height: 455px;
+  }
+  .begin__bg-r {
+    display: none;
+  }
+
+  .begin {
+    padding-top: 23px;
+  }
+
+  .begin__logo-conteiner  img{
+     width: 181px;
+  height: 99px;
+  object-fit: contain;
+  right: 0;
+  left: auto;
+  }
+
+  
+  .system-mob {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 412px;
+    min-width: 100%;
+    background-color: #797979;
+    background-image: url("../assets/img/mob/7410bbc3-66ac-4702-b373-6c290771223a\ \(1\)\ 1.png");
+  
+  }
+  
+}
+
+
+.system-mob__card {
+  background-color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  
+
+}
+
+@media (max-width: 768px) {
+  .system-card__title--medium {
+    color: #000;
+    font-size: 0.7rem;
+  }
+  .system-card__title--bold {
+    color: #000;
+    font-size: 1.5rem;
+
+  }
+  .system-card__title--regular {
+    color: #000;
+    font-size: 0.7rem;
+    letter-spacing: .01rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    
+  }
+
+  .system-card__btn-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .system-card__icon-conteiner {
+    padding: 23px;
+  }
+
+  .system-card__btn {
+    font-size: 1.2rem;
+    width: 161px;
+    height: 37px;
+  }
+  .system-card__btn--nofill {
+    background-image: url("../assets/img/mob/btn.svg");
+  }
+  .system-mob__card {
+    width: 80%;
+    
+  }
+
+
+  .events {
+    height: auto;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  
+  
+  .news-card__img-comteiner {
+    height: 167px;
+  }
+  .news-card__img-comteiner  img{
+    transform: scale(1.2);
+    transition: transform 0.4s ease;
+    
+  }
+  .news-card__content {
+    top: 187px;
+  }
+
+  .news-card__title {
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
+  }
+  .news-card__content {
+    height: 190px;
+  }
+  .news-card__text, .news-card__date {
+    font-size: 0.8rem;
+    letter-spacing: 0.01rem;
+  }
+  .news-card:hover .news-card__content {
+  top: calc(187px + 1.5rem);
+  }
+  .news-card__bottom {
+    min-height: 250px;
+  }
+  .news-card__bottom:hover {
+    height: 50px;
+
+  }
+
+  .community__card-wrapper {
+    height: auto;
+    width: auto;
+  }
+
+
+  .community {
+    min-height: auto;
+    padding-bottom: 55px;
+  }
+
+  
+  .footer__title {
+    padding-top: 31px;
+    font-size: 1.5rem;
+
+  }
+  .footer__text {
+    font-size: 1rem;
+    padding-top: 10px;
+    padding-bottom: 14px;
+  }
+  .footer__icon-img-conteiner {
+    width: 60px;   /* Задай нужный размер */
+    height: 60px;
+    margin-right: 5px; /* отступ между иконками */
+  }
+
+  
+  .time {
+    font-size: 0.7rem;
+    
+  }
+  
+  .label {
+    font-size: 0.8rem;
+  }
+  
+  .time-container {
+    padding: 5px 10px;
+    gap: 20px;
+    margin-top: 28px; 
+    margin-bottom: 28px; 
+  }
+
+
+}
+
+
+
+.blade {
+        width: 100%;
+        height: 100%; /* или задать конкретную высоту, например: height: 400px; */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .blade__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* сохраняет пропорции, обрезая изображение при необходимости */
+        display: block;
+    }
+
+.video {
+    width: 100%;
+    min-height: 1024px; /* или задать конкретную высоту, например: height: 400px; */
+    background-color: #000; /* черный фон */
+}
+
+
+
+.about-description {
+    padding: 20px;
+    background-color: #f9f9f9; /* светлый фон для контента */
+    color: #000; /* черный текст */
+    
+    background-image: url('../assets/img/about/description-bg.png'); /* фоновое изображение */
+
+}
+
+.about-description__wrapper {
+    margin: 0 auto; /* центрирование */
+    padding: 3% 0; /* отступы внутри контейнера */
+    max-width: 1275px; /* максимальная ширина для больших экранов */
+    display: flex;
+    flex-direction: column; /* вертикальное расположение элементов */
+    gap: 20px; /* отступы между элементами */
+}
+
+.about-description__text {
+    font-size: 1.5rem; /* размер шрифта */
+    line-height: 1.6; /* межстрочный интервал */
+    
+}
+
+
+.about-presentation {
+    min-height: 889px;
+    display: flex;
+    flex-direction: column; /* вертикальное расположение элементов */
+    justify-content: center; /* выравнивание по центру */
+    align-items: center; /* выравнивание по центру */
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+
+.big-card {
+    width: 1335px; /* максимальная ширина для больших экранов */
+    color: #000;
+    height: 613px; /* высота карточки */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    
+}
+
+
+.big-card__img {
+    width: 43%;
+    height: 100%;
+    background-image: url('../assets/img/about/bigcardimg.jpg'); /* фоновое изображение */
+    background-size: 110% 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.big-card__content {
+    width: 57%;
+    display: flex;
+    flex-direction: column; /* вертикальное расположение элементов */
+    justify-content: space-around; /* выравнивание по центру */
+    align-items: center; /* выравнивание по центру */
+    background-image: url("../assets/img/about/big-card-white-bg.jpg");
+    height: 100%;
+    padding: 2rem 0;
+
+}
+
+.big-card__btn-conteiner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* отступы между кнопками */
+    /* width: 100%; */
+    justify-content: center; /* выравнивание по центру */
+}
+
+.big-card__btn {
+  width: 301px;
+  height: 70px;
+  border: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+}
+
+.big-card__title {
+  font-size: 5.5rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+
+.big-card__text {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.section-one {
+  color : #000;
+  /* background-color: #fff; */
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../assets/img/cup/section-one-bg.jpg');
+  overflow: hidden;
+}
+
+.section-one__l {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+}
+.section-one__text {
+
+  display: flex;
+  flex-direction: column; /* вертикальное расположение элементов */
+  gap: 20px; /* отступы между элементами */
+  font-size: 1.5rem;
+}
+
+
+
+
+.section-one__r {
+  
+    height: 100%; /* высота секции */
+    width: 500px;
+
+}
+
+
+.section-one__r > img {
+    /* width: 500px; */
+    height: 100%;
+    object-fit: cover; /* сохраняет пропорции, обрезая изображение при необходимости */
+    display: block;
+}
+
+.big-card__text--small {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #000;
+}
+
+.big-card__content--no-img {
+    width: 57%;
+    display: flex;
+    flex-direction: column; /* вертикальное расположение элементов */
+    justify-content: space-around; /* выравнивание по центру */
+    align-items: center; /* выравнивание по центру */
+    background-color: #fff;
+    height: 100%;
+    padding: 2rem 0;
+
+}
+
+.big-card__img-cup {
+    width: 43%;
+    height: 100%;
+    background-image: url('../assets/img/cup/card-r.jpg'); /* фоновое изображение */
+    background-size: 110% 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.scheme-card-bg {
+  background-image: url('../assets/img/cup/bg-card.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-color: #1b1b1b;
+}
+
+
+.section-one__l--comtacts {
+  max-width: 80%;
+  padding-right: 20%;
+  padding-left: 15%;
+}
+.section-one {
+  position: relative;
+  overflow: hidden;
+}
+
+.contacts-description__text {
+  position: relative;
+  z-index: 10;
+}
+
+.section-one__r--contacts {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url('../assets/img/contacts/one-r.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
 }

@@ -4,3 +4,10 @@
   font-weight: 400;
   font-style: normal;
 }
+
+body {
+  font-family: 'Book Antiqua';
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.1rem;
+}

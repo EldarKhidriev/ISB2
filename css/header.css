@@ -1,0 +1,163 @@
+.header {
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.03em;
+  /* line-height: 1.5; */
+  background-color: #161717;
+  height: 195px;
+}
+.header__wrapper {
+  padding: 0 28px;
+  /* min-width: 1500px; */
+  margin: 0 auto;
+}
+
+section {
+  color: #fff;
+}
+
+.header-top {
+  position: relative;
+  min-height: 128px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+}
+
+.header-top__link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+}
+
+.header-top__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 77px; /* Задайте нужную высоту */
+}
+
+.header-bottom {
+  background-color: #3c3c3c;
+  min-height: 67px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 28px;
+  
+}
+.header-bottom__list {
+  display: flex;
+  gap: 28px;
+}
+
+.header-bottom__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.3s ease;
+}
+.header-bottom__link:hover {
+  color: #FDA215;
+}
+
+
+/* Основное меню */
+
+
+
+
+.header-bottom__item {
+  position: relative;
+}
+
+
+
+/* Стрелка (по умолчанию) */
+.header-bottom__link img {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+/* Поворот стрелки при открытии */
+.header-bottom__link[aria-expanded="true"] img {
+  transform: rotate(0deg);
+}
+
+.mob {
+  display: none;
+}
+
+/* Подменю */
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 160px;
+  z-index: 100;
+}
+
+/* Элементы подменю */
+.dropdown-list li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.dropdown-list li a:hover {
+  background: #f0f0f0;
+}
+
+.has-submenu > button {
+  background-color: transparent;
+  border: none;
+}
+
+.header-mob {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .mob {
+  display: block;
+}
+  .header-mob {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+  }
+  .desk {
+    display: none;
+  }
+  .header-bottom, .header__wrapper {
+    display: none;
+  }
+  .header {
+    height: 150px;
+    padding-top: 58px;
+  }
+  .header-mob > a{
+    display: block;
+  }
+  .header-bottom__nav {
+    display: none;
+    position: absolute;
+  }
+}
