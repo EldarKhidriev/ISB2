@@ -103,14 +103,43 @@
 
 
 <section class="location">
-    <div class="location__left">
-        <h2 class="location__title">Карта школ<br>ИСБ</h2>
-        <p class="location__text">Интерактивная карта школ по всей России</p>
+  <div class="location__l">
+    <div class="big-card__logo-conteiner">
+      <img src="assets/img/about/ШКОЛЫ СБ РОССИИ ЛОГО 2 (1).svg" alt="Логотип школы ИСБ">
     </div>
-    <div class="location__left">
+    <h2 class="location__title">Карта<br>школ ИСБ</h2>
+    <p class="location__text">Интерактивная карта школ по всей России</p>
+  </div>
 
-    </div>
+  <div class="location__r">
+    <img class="location__r-img" src="assets/img/contacts/location.jpg" alt="">
+
+    <!-- Кнопки с координатами -->
+    <button class="location__r-point" style="top: 52%; left: 9%;" data-text="Школа в Калининграде"></button>
+    <button class="location__r-point" style="top: 61%; left: 4%;" data-text="Школа в Санкт-Петербурге"></button>
+    <button class="location__r-point" style="top: 89.5%; left: 9%;" data-text="Школа в Москве"></button>
+    <button class="location__r-point" style="top: 73%; left: 7%;" data-text="Школа в Нижнем Новгороде"></button>
+    <button class="location__r-point" style="top: 85.5%; left: 8.5%;" data-text="Школа в Казани"></button>
+    <button class="location__r-point" style="top: 83%; left: 7.3%;" data-text="Школа в Екатеринбурге"></button>
+    <button class="location__r-point" style="top: 80%; left: 5%;" data-text="Школа в Тюмени"></button>
+    <button class="location__r-point" style="top: 87%; left: 11%;" data-text="Школа в Омске"></button>
+    <button class="location__r-point" style="top: 83%; left: 11.1%;" data-text="Школа в Омске"></button>
+    <button class="location__r-point" style="top: 82%; left: 9.3%;" data-text="Школа в Омске"></button>
+    <button class="location__r-point" style="top: 80%; left: 7%;" data-text="Школа в Омске"></button>
+    <button class="location__r-point" style="top: 68%; left: 7%;" data-text="Школа в Омске"></button>
+    <button class="location__r-point" style="top: 64%; left: 75%;" data-text="Школа в Новосибирске"></button>
+    <button class="location__r-point" style="top: 67%; left: 85%;" data-text="Школа в Красноярске"></button>
+    <button class="location__r-point" style="top: 72%; left: 91%;" data-text="Школа во Владивостоке"></button>
+  </div>
 </section>
+
+<!-- Модалка -->
+<div class="modal" id="modal">
+  <div class="modal__content">
+    <span class="modal__close" id="modal-close">&times;</span>
+    <p id="modal-text">Тут будет текст по кнопке</p>
+  </div>
+</div>
 
 
   </main>
@@ -136,11 +165,45 @@
   </div>
 </div>
 
+
+
   <div class="footer__old">16+</div>
   <div class="footer__bg"></div>
 
   </footer>
    <script src="js/header.js"></script>
+
+   <script>
+  // 1. Установим задержку анимации по left
+  document.querySelectorAll('.location__r-point').forEach((btn) => {
+    const leftPercent = parseFloat(btn.style.left);
+    const delay = (leftPercent / 100) * 2; // или умножай на 1.5, если медленнее нужно
+    btn.style.animationDelay = `${delay}s`;
+  });
+
+  // 2. Модалка: открытие и текст по кнопке
+  const modal = document.getElementById('modal');
+  const modalText = document.getElementById('modal-text');
+  const modalClose = document.getElementById('modal-close');
+
+  document.querySelectorAll('.location__r-point').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      modalText.textContent = btn.dataset.text;
+      modal.style.display = 'flex';
+    });
+  });
+
+  modalClose.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Закрытие по фону
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.style.display = 'none';
+  });
+</script>
+
+
   <script>
   function updateTime() {
     const nowUTC = new Date();
@@ -157,5 +220,7 @@
   updateTime();
   setInterval(updateTime, 1000);
 </script>
+
+
 </body>
 </html>

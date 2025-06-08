@@ -19,7 +19,18 @@
     <div class="header-top">
       <a href="#" class="header-top__link desk">Открыть школу <img src="assets/img/icon-add.svg" alt="добавить"></a>
       <a href="index.html" class="header-top__logo"><img src="assets/img/icon-logo.svg" alt="Логотип школы"></a>
-      <a href="#" class="header-top__link"><img src="assets/img/icon-lang.svg" alt="язык">Русский<img src="assets/img/icon-arrow.svg" alt="стрелка вниз"></a>
+      <!-- <a href="#" class="header-top__link"><img src="assets/img/icon-lang.svg" alt="язык">Русский<img src="assets/img/icon-arrow.svg" alt="стрелка вниз"></a> -->
+       <div class="language-selector">
+  <button class="header-top__link" id="lang-button">
+    <img src="assets/img/icon-lang.svg" alt="язык">
+    <span id="current-lang">Русский</span>
+    <img src="assets/img/icon-arrow.svg" alt="стрелка вниз">
+  </button>
+  <ul class="lang-dropdown" id="lang-dropdown">
+    <li data-lang="ru">Русский</li>
+    <li data-lang="en">English</li>
+  </ul>
+</div>
     </div>
   </div>
 
@@ -36,8 +47,11 @@
             <img src="assets/img/icon-arrow_back.svg" alt="">
           </button>
           <ul class="dropdown-list" hidden>
-            <li><a href="#">Совет 1</a></li>
-            <li><a href="#">Совет 2</a></li>
+            <li><a href="coach-council.html">Положение о тренерском совете</a></li>
+            <li><a href="#">Распоряжение о формировании терерского совета</a></li>
+            <li><a href="#">Бланк ображения</a></li>
+            <li><a href="#">Регламент аттестации</a></li>
+            <li><a href="#">Стандарт спортивной подготовки</a></li>
           </ul>
         </li>
         <li class="header-bottom__item has-submenu">
@@ -46,8 +60,10 @@
             <img src="assets/img/icon-arrow_back.svg" alt="">
           </button>
           <ul class="dropdown-list" hidden>
-            <li><a href="#">Положение</a></li>
-            <li><a href="#">Регламент</a></li>
+            <li><a href="#">Правила</a></li>
+            <li><a href="#">Бланки</a></li>
+            <li><a href="#">Дизайн</a></li>
+            <li><a href="#">Общее</a></li>
           </ul>
         </li>
       </ul>
@@ -65,7 +81,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu__close" id="menuClose">×</button>
   <nav class="mobile-menu__nav">
-    <ul>
+    <ul class="mobile-menu__list">
       <li><a href="about.html">О проекте</a></li>
       <li><a href="contacts.html">Контакты</a></li>
       <li><a href="cup.html">Кубок школ исб</a></li>
@@ -74,14 +90,14 @@
         <details>
           <summary>Тренерский совет</summary>
           <ul>
-            <li><a href="#">Совет 1</a></li>
+            <li><a href="coach-council.html">Совет 1</a></li>
             <li><a href="#">Совет 2</a></li>
           </ul>
         </details>
       </li>
       <li>
         <details>
-          <summary>Документы</summary>
+          <summary class="mobile-menu__summary--active">Документы</summary>
           <ul>
             <li><a href="#">Положение</a></li>
             <li><a href="#">Регламент</a></li>
@@ -89,6 +105,18 @@
         </details>
       </li>
     </ul>
+    <div class="language-selector--mobile">
+  <button class="header-top__link--mobile" id="lang-button-mobile">
+    <img src="assets/img/icon-lang.svg" alt="язык">
+    <span id="current-lang-mobile">Русский</span>
+    <img src="assets/img/icon-arrow.svg" alt="стрелка вниз">
+  </button>
+  <ul class="lang-dropdown--mobile" id="lang-dropdown-mobile">
+    <li data-lang="ru">Русский</li>
+    <li data-lang="en">English</li>
+  </ul>
+</div>
+
   </nav>
 </div>
 
@@ -285,7 +313,7 @@
           <img src="assets/img/community/3.jpg" alt="Сообщество в вк 'Школы ИСБ' России">
         </a>
       </div>
-
+      <div class="community__bg"></div>
 
     </section>
     
@@ -338,6 +366,33 @@
   updateTime();
   setInterval(updateTime, 1000);
 </script>
+<script>
+  const langButton = document.getElementById('lang-button');
+  const dropdown = document.getElementById('lang-dropdown');
+  const currentLang = document.getElementById('current-lang');
+  const wrapper = document.querySelector('.language-selector');
+
+  langButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    wrapper.classList.toggle('open');
+  });
+
+  dropdown.addEventListener('click', (e) => {
+    if (e.target.tagName === 'LI') {
+      const selectedLang = e.target.dataset.lang;
+      currentLang.textContent = e.target.textContent;
+      wrapper.classList.remove('open');
+
+      // Здесь можно добавить переключение языка сайта, если нужно.
+      console.log('Выбран язык:', selectedLang);
+    }
+  });
+
+  document.addEventListener('click', () => {
+    wrapper.classList.remove('open');
+  });
+</script>
+
 
 
 

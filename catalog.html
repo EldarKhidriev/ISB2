@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ШКОЛЫ ИСБ</title>
+    <link rel="stylesheet" href="css/globals.css" />
+    <link rel="stylesheet" href="fonts/font.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header-top">
+          <a href="#" class="header-top__link desk"
+            >Открыть школу <img src="assets/img/icon-add.svg" alt="добавить"
+          /></a>
+          <a href="index.html" class="header-top__logo"
+            ><img src="assets/img/icon-logo.svg" alt="Логотип школы"
+          /></a>
+          <a href="#" class="header-top__link"
+            ><img src="assets/img/icon-lang.svg" alt="язык" />Русский<img
+              src="assets/img/icon-arrow.svg"
+              alt="стрелка вниз"
+          /></a>
+        </div>
+      </div>
+
+      <div class="header-bottom">
+        <nav class="header-bottom__nav">
+          <ul class="header-bottom__list">
+            <li class="header-bottom__item">
+              <a href="about.html" class="header-bottom__link">О проекте</a>
+            </li>
+            <li class="header-bottom__item">
+              <a href="contacts.html" class="header-bottom__link">Контакты</a>
+            </li>
+            <li class="header-bottom__item">
+              <a href="cup.html" class="header-bottom__link">Кубок школ исб</a>
+            </li>
+            <li class="header-bottom__item">
+              <a href="#" class="header-bottom__link">Каталог</a>
+            </li>
+            <li class="header-bottom__item has-submenu">
+              <button class="header-bottom__link" aria-expanded="false">
+                Тренерский совет
+                <img src="assets/img/icon-arrow_back.svg" alt="" />
+              </button>
+              <ul class="dropdown-list" hidden>
+                <li><a href="#">Совет 1</a></li>
+                <li><a href="#">Совет 2</a></li>
+              </ul>
+            </li>
+            <li class="header-bottom__item has-submenu">
+              <button class="header-bottom__link" aria-expanded="false">
+                Документы
+                <img src="assets/img/icon-arrow_back.svg" alt="" />
+              </button>
+              <ul class="dropdown-list" hidden>
+                <li><a href="#">Положение</a></li>
+                <li><a href="#">Регламент</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-mob">
+        <a href="#" class="header-mob__add"
+          ><img src="assets/img/mob/plus.svg" alt="добавить"
+        /></a>
+        <a href="index.html" class="header-mob__logo"
+          ><img src="assets/img/mob/logo.svg" alt="Логотип школы"
+        /></a>
+        <a href="#" class="header-mob__burger" id="burger-btn"
+          ><img src="assets/img/mob/burger.svg" alt="меню"
+        /></a>
+      </div>
+    </header>
+    <div id="gallery"></div>
+
+<script>
+  const gallery = document.getElementById('gallery');
+  for (let i = 1; i <= 34; i++) {
+    const div = document.createElement('div');
+    div.className = 'photo-row';
+
+    const img = document.createElement('img');
+    img.src = `assets/img/catalog/${i}.jpg`;
+    img.alt = `Photo ${i}`;
+
+    div.appendChild(img);
+    gallery.appendChild(div);
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
