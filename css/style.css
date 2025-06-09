@@ -169,7 +169,7 @@ section {
   display: flex;
   height: 100%;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   align-items: end;
 }
 
@@ -517,6 +517,7 @@ section {
   width: 100%;
   height: 100%; /* или можно 150% */
   background-image: url('../assets/img/gif.jpg');
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -563,6 +564,7 @@ section {
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none; /* чтобы не мешал клику по ссылке */
+  z-index: 11;
 }
 
 .community__card-wrapper:hover .overlay-orange {
@@ -776,7 +778,7 @@ section {
 } */
 
 
-@keyframes moveBackground {
+/* @keyframes moveBackground {
   0% {
     background-position: 0 0;
   }
@@ -807,21 +809,22 @@ section {
   animation: moveBackground 1s ease-in-out infinite;
   opacity: 1;
   z-index: 0;
-}
+} */
 
-/* .footer__bg {
+.footer__bg {
   position: absolute;
   top: -50%;
   left: 0;
   width: 100%;
   height: 150%;
   overflow: hidden;
-  background-image: url("../assets/img/footer/bg.png");
+  background-image: url("../assets/img/gif3.gif");
   background-size: cover;
   background-position: center;
-  opacity: 1; 
-  z-index: 0;
-} */
+  opacity: .02; 
+  z-index: -1000;
+  pointer-events: none;
+}
 
 .footer {
   position: relative;
@@ -1173,6 +1176,16 @@ section {
     
 }
 
+@media (max-width: 768px) {
+    .about-description__text {
+        font-size: .8rem; /* уменьшение размера шрифта на мобильных устройствах */
+    }
+    .about-description {
+      background-size: contain;
+    }
+  
+}
+
 
 .about-presentation {
     min-height: 889px;
@@ -1251,6 +1264,8 @@ section {
   font-weight: 700;
 }
 
+
+
 .section-one {
   color : #000;
   /* background-color: #fff; */
@@ -1285,6 +1300,32 @@ section {
     height: 100%; /* высота секции */
     width: 500px;
 
+}
+@media (max-width: 768px) {
+  .section-one {
+  width: 100%;
+  height: auto;
+  background-image: url('../assets/img/cup/section-one-bg.jpg');
+  overflow: hidden;
+  padding: 15% 5%; /* отступы сверху и снизу */
+}
+  .section-one__text {
+    font-size: .9rem;
+    text-transform: none;
+  }
+  .section-one__r--mob {
+    position: absolute;
+    z-index: 15;
+    bottom: 0;
+    right: 0;
+    background-image: url('../assets/img/mob/cup-one-bg-r.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:  right;
+    width: 100%;
+    height: 100%;
+  }
+  
 }
 
 
@@ -1386,6 +1427,16 @@ section {
   right: 0;
 }
 
+.mobile-menu__summary-text-bottom a {
+  font-size: 1rem !important;
+  border-bottom:2px solid #FDA215;
+  line-height: 1.5 !important;
+}
+
+.border-bottom {
+  
+}
+
 .lang-dropdown--mobile {
   display: none;
   list-style: none;
@@ -1396,7 +1447,8 @@ section {
 }
 
 .lang-dropdown--mobile.open {
-  display: block;
+  display: inline-block;
+  text-align: center;
 }
 
 .header-top__link--mobile {
@@ -1434,7 +1486,7 @@ section {
 }
 
 .mobile-menu nav ul li {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .mobile-menu nav a {
@@ -1476,6 +1528,8 @@ details ul {
   justify-content: space-between;
   gap: 5px;
   padding: 3%;
+  position: relative;
+  z-index: 10; /* чтобы текст был поверх фонового изображения */
 }
 
 .location__r {
@@ -1494,6 +1548,8 @@ details ul {
   max-width: 100%; /* Максимальная ширина 100% */
   height: auto; /* Высота автоматически подстраивается под пропорции */
   display: block; /* Убираем обтекание текстом */
+  position: relative;
+  z-index: 10; /* Устанавливаем z-index, чтобы изображение было поверх фона */
 }
 
 /* Опционально: если нужно центровать изображение по вертикали */
@@ -1820,3 +1876,160 @@ background: linear-gradient(180deg, #ffa200,#ff9500);/* W3C, IE 10+/ Edge, Firef
   width: calc(100% + 1px);
   margin-left: -1px;
 }
+
+
+
+
+
+
+
+
+.modal__content .btn {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 20px;
+  background-color: #0077ff;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+  .about-presentation {
+    min-height: 330px;
+    
+}
+
+.big-card {
+    width: 95%; /* максимальная ширина для больших экранов */
+    color: #000;
+    height: 264px; /* высота карточки */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    position: relative;
+    z-index: 15;
+    
+}
+
+
+.big-card__img {
+    width: 43%;
+    height: 100%;
+}
+
+.big-card__content {
+    width: 57%;
+
+    padding: 1rem 0;
+
+}
+
+.big-card__btn-conteiner {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* отступы между кнопками */
+    /* width: 100%; */
+    justify-content: center; /* выравнивание по центру */
+    margin: 10px;
+}
+
+.big-card__btn {
+      font-size: 1.2rem;
+    width: 161px;
+    height: 38px;
+}
+
+.big-card__title {
+  font-size: 2rem;
+}
+
+
+.big-card__text {
+  font-size: .8rem;
+}
+
+.big-card__img-cup {
+  display: none;
+}
+
+.big-card-no-img {
+  height: auto;
+  margin: 10%;
+  border-radius: 10px;
+  background-color: #5D5B5B;
+}
+
+.big-card-no-img > .big-card__content--no-img {
+  background-color: #5D5B5B;
+  color: #fff;
+}
+
+.big-card__text-cup {
+  color: #fff;
+  font-weight: normal;
+}
+
+
+}
+
+
+.modal-school {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-school__content {
+  background: rgb(43, 43, 43);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 320px;
+  min-width: 550px;
+  position: relative;
+  background-image: url('../assets/img/mob/bg-mob-menu.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.modal-school__content input,
+.modal-school__content button {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 36.5px;
+  text-transform: uppercase;
+}
+
+.modal-school__radio-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.modal-school__radio-group label {
+  display: flex;
+}
+
+.modal-school__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+
+

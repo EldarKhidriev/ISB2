@@ -40,18 +40,18 @@
         <li class="header-bottom__item"><a href="about.html" class="header-bottom__link">О проекте</a></li>
         <li class="header-bottom__item"><a href="contacts.html" class="header-bottom__link">Контакты</a></li>
         <li class="header-bottom__item"><a href="cup.html" class="header-bottom__link">Кубок школ исб</a></li>
-        <li class="header-bottom__item"><a href="#" class="header-bottom__link">Каталог</a></li>
+        <li class="header-bottom__item"><a href="catalog.html" class="header-bottom__link">Каталог</a></li>
         <li class="header-bottom__item has-submenu">
           <button class="header-bottom__link" aria-expanded="false">
             Тренерский совет
             <img src="assets/img/icon-arrow_back.svg" alt="">
           </button>
           <ul class="dropdown-list" hidden>
-            <li><a href="coach-council.html">Положение о тренерском совете</a></li>
-            <li><a href="#">Распоряжение о формировании терерского совета</a></li>
-            <li><a href="#">Бланк ображения</a></li>
-            <li><a href="#">Регламент аттестации</a></li>
-            <li><a href="#">Стандарт спортивной подготовки</a></li>
+            <li><a href="coach-council.html#small-card-1">Положение о тренерском совете</a></li>
+            <li><a href="coach-council.html#small-card-3">Распоряжение о формировании терерского совета</a></li>
+            <li><a href="coach-council.html">Бланк ображения</a></li>
+            <li><a href="coach-council.html#small-card-4">Регламент аттестации</a></li>
+            <li><a href="coach-council.html#small-card-2">Стандарт спортивной подготовки</a></li>
           </ul>
         </li>
         <li class="header-bottom__item has-submenu">
@@ -60,10 +60,10 @@
             <img src="assets/img/icon-arrow_back.svg" alt="">
           </button>
           <ul class="dropdown-list" hidden>
-            <li><a href="#">Правила</a></li>
-            <li><a href="#">Бланки</a></li>
-            <li><a href="#">Дизайн</a></li>
-            <li><a href="#">Общее</a></li>
+            <li><a href="document-rules.html">Правила</a></li>
+            <li><a href="document-forms.html">Бланки</a></li>
+            <li><a href="document-design.html">Дизайн</a></li>
+            <li><a href="document-general.html">Общее</a></li>
           </ul>
         </li>
       </ul>
@@ -85,13 +85,16 @@
       <li><a href="about.html">О проекте</a></li>
       <li><a href="contacts.html">Контакты</a></li>
       <li><a href="cup.html">Кубок школ исб</a></li>
-      <li><a href="#">Каталог</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
       <li>
         <details>
           <summary>Тренерский совет</summary>
           <ul>
-            <li><a href="coach-council.html">Совет 1</a></li>
-            <li><a href="#">Совет 2</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html#small-card-1">Положение о тренерском совете</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html#small-card-3">Распоряжение о формировании терерского совета</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html">Бланк ображения</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html#small-card-4">Регламент аттестации</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html#small-card-2">Стандарт спортивной подготовки</a></li>
           </ul>
         </details>
       </li>
@@ -99,8 +102,10 @@
         <details>
           <summary class="mobile-menu__summary--active">Документы</summary>
           <ul>
-            <li><a href="#">Положение</a></li>
-            <li><a href="#">Регламент</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-rules.html">Правила</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-forms.html">Бланки</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-design.html">Дизайн</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-general.html">Общее</a></li>
           </ul>
         </details>
       </li>
@@ -112,8 +117,8 @@
     <img src="assets/img/icon-arrow.svg" alt="стрелка вниз">
   </button>
   <ul class="lang-dropdown--mobile" id="lang-dropdown-mobile">
-    <li data-lang="ru">Русский</li>
-    <li data-lang="en">English</li>
+    <li data-lang="ru" class="mobile-menu__summary-text-bottom" style="border-bottom:2px solid #FDA215;">Русский</li>
+    <li data-lang="en" class="mobile-menu__summary-text-bottom"><a href="#">English</a></li>
   </ul>
 </div>
 
@@ -344,7 +349,9 @@
   <div class="footer__old">16+</div>
   <div class="footer__bg"></div>
 
-  </footer>
+  
+</footer>
+<!-- <img src="assets/img/mob/photo_2025-06-08_21-14-22.jpg" alt="" style="width: 100%;"> -->
 
   <script src="js/header.js"></script>
 
