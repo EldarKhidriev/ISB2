@@ -1,85 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ШКОЛЫ ИСБ</title>
-    <link rel="stylesheet" href="css/globals.css" />
-    <link rel="stylesheet" href="fonts/font.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/buttons.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__wrapper">
-        <div class="header-top">
-          <a href="#" class="header-top__link desk"
-            >Открыть школу <img src="assets/img/icon-add.svg" alt="добавить"
-          /></a>
-          <a href="index.html" class="header-top__logo"
-            ><img src="assets/img/icon-logo.svg" alt="Логотип школы"
-          /></a>
-          <a href="#" class="header-top__link"
-            ><img src="assets/img/icon-lang.svg" alt="язык" />Русский<img
-              src="assets/img/icon-arrow.svg"
-              alt="стрелка вниз"
-          /></a>
-        </div>
-      </div>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ШКОЛЫ ИСБ</title>
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="fonts/font.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/style.css">
 
-      <div class="header-bottom">
-        <nav class="header-bottom__nav">
-          <ul class="header-bottom__list">
-            <li class="header-bottom__item">
-              <a href="about.html" class="header-bottom__link">О проекте</a>
-            </li>
-            <li class="header-bottom__item">
-              <a href="contacts.html" class="header-bottom__link">Контакты</a>
-            </li>
-            <li class="header-bottom__item">
-              <a href="cup.html" class="header-bottom__link">Кубок школ исб</a>
-            </li>
-            <li class="header-bottom__item">
-              <a href="#" class="header-bottom__link">Каталог</a>
-            </li>
-            <li class="header-bottom__item has-submenu">
-              <button class="header-bottom__link" aria-expanded="false">
-                Тренерский совет
-                <img src="assets/img/icon-arrow_back.svg" alt="" />
-              </button>
-              <ul class="dropdown-list" hidden>
-                <li><a href="#">Совет 1</a></li>
-                <li><a href="#">Совет 2</a></li>
-              </ul>
-            </li>
-            <li class="header-bottom__item has-submenu">
-              <button class="header-bottom__link" aria-expanded="false">
-                Документы
-                <img src="assets/img/icon-arrow_back.svg" alt="" />
-              </button>
-              <ul class="dropdown-list" hidden>
-                <li><a href="#">Положение</a></li>
-                <li><a href="#">Регламент</a></li>
-              </ul>
-            </li>
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+</head>
+<body>
+<header class="header">
+  <div class="header__wrapper">
+    <div class="header-top">
+      <a href="#" class="header-top__link desk openSchoolModalBtn">Открыть школу <img src="assets/img/icon-add.svg" alt="добавить"></a>
+      <a href="index.html" class="header-top__logo"><img src="assets/img/icon-logo.svg" alt="Логотип школы"></a>
+      <!-- <a href="#" class="header-top__link"><img src="assets/img/icon-lang.svg" alt="язык">Русский<img src="assets/img/icon-arrow.svg" alt="стрелка вниз"></a> -->
+       <div class="language-selector">
+  <button class="header-top__link" id="lang-button">
+    <img src="assets/img/icon-lang.svg" alt="язык">
+    <span id="current-lang">Русский</span>
+    <img src="assets/img/icon-arrow.svg" alt="стрелка вниз">
+  </button>
+  <ul class="lang-dropdown" id="lang-dropdown">
+    <li data-lang="ru">Русский</li>
+    <li data-lang="en">English</li>
+  </ul>
+</div>
+    </div>
+  </div>
+
+  <div class="header-bottom">
+    <nav class="header-bottom__nav">
+      <ul class="header-bottom__list">
+        <li class="header-bottom__item"><a href="about.html" class="header-bottom__link">О проекте</a></li>
+        <li class="header-bottom__item"><a href="contacts.html" class="header-bottom__link">Контакты</a></li>
+        <li class="header-bottom__item"><a href="cup.html" class="header-bottom__link">Кубок школ исб</a></li>
+        <li class="header-bottom__item"><a href="catalog.html" class="header-bottom__link">Каталог</a></li>
+        <li class="header-bottom__item has-submenu">
+          <button class="header-bottom__link" aria-expanded="false">
+            Тренерский совет
+            <img src="assets/img/icon-arrow_back.svg" alt="">
+          </button>
+          <ul class="dropdown-list" hidden>
+            <li><a href="coach-council.html#small-card-1">Положение о тренерском совете</a></li>
+            <li><a href="coach-council.html#small-card-3">Распоряжение о формировании терерского совета</a></li>
+            <li><a href="coach-council.html">Бланк ображения</a></li>
+            <li><a href="coach-council.html#small-card-4">Регламент аттестации</a></li>
+            <li><a href="coach-council.html#small-card-2">Стандарт спортивной подготовки</a></li>
           </ul>
-        </nav>
-      </div>
+        </li>
+        <li class="header-bottom__item has-submenu">
+          <button class="header-bottom__link" aria-expanded="false">
+            Документы
+            <img src="assets/img/icon-arrow_back.svg" alt="">
+          </button>
+          <ul class="dropdown-list" hidden>
+            <li><a href="document-rules.html">Правила</a></li>
+            <li><a href="document-forms.html">Бланки</a></li>
+            <li><a href="document-design.html">Дизайн</a></li>
+            <li><a href="document-general.html">Общее</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
-      <div class="header-mob">
-        <a href="#" class="header-mob__add"
-          ><img src="assets/img/mob/plus.svg" alt="добавить"
-        /></a>
-        <a href="index.html" class="header-mob__logo"
-          ><img src="assets/img/mob/logo.svg" alt="Логотип школы"
-        /></a>
-        <a href="#" class="header-mob__burger" id="burger-btn"
-          ><img src="assets/img/mob/burger.svg" alt="меню"
-        /></a>
-      </div>
-
-
-      <nav class="doc-nav">
+  <div class="header-mob">
+    <a href="#" class="header-mob__add openSchoolModalBtn"><img src="assets/img/mob/plus.svg" alt="добавить"></a>
+    <a href="index.html" class="header-mob__logo"><img src="assets/img/mob/logo.svg" alt="Логотип школы"></a>
+    <button class="header-mob__burger" id="burger-btn"><img src="assets/img/mob/burger.svg" alt="меню"></button>
+  </div>
+  <nav class="doc-nav">
         <ul class="doc-nav__list">
           <li class="doc-nav__item">
             <a href="document-rules.html" class="doc-nav__link">Правила</a>
@@ -91,11 +88,87 @@
             <a href="document-design.html" class="doc-nav__link">Дизайн</a>
           </li>
           <li class="doc-nav__item">
-            <a href="document-general.html" class="doc-nav__link doc-nav__link--active">Общее</a>
+            <a href="document-general.html" class="doc-nav__link  doc-nav__link--active">Общее</a>
           </li>
         </ul>
       </nav>
-    </header>
+</header>
+
+<!-- 👉 Выезжающее мобильное меню (вставить сразу после </header>) -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu__close" id="menuClose">×</button>
+  <nav class="mobile-menu__nav">
+    <ul class="mobile-menu__list">
+      <li><a href="about.html">О проекте</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="cup.html">Кубок школ исб</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
+      <li>
+        <details>
+          <summary>Тренерский совет</summary>
+          <ul>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html#small-card-1">Положение о тренерском совете</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html#small-card-3">Распоряжение о формировании терерского совета</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html">Бланк ображения</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html#small-card-4">Регламент аттестации</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html#small-card-2">Стандарт спортивной подготовки</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary class="mobile-menu__summary--active">Документы</summary>
+          <ul>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-rules.html">Правила</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-forms.html">Бланки</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-design.html">Дизайн</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-general.html">Общее</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+    <div class="language-selector--mobile">
+  <button class="header-top__link--mobile" id="lang-button-mobile">
+    <img src="assets/img/icon-lang.svg" alt="язык">
+    <span id="current-lang-mobile">Русский</span>
+    <img src="assets/img/icon-arrow.svg" alt="стрелка вниз">
+  </button>
+  <ul class="lang-dropdown--mobile" id="lang-dropdown-mobile">
+    <li data-lang="ru" class="mobile-menu__summary-text-bottom" style="border-bottom:2px solid #FDA215;">Русский</li>
+    <li data-lang="en" class="mobile-menu__summary-text-bottom"><a href="#">English</a></li>
+  </ul>
+</div>
+
+  </nav>
+</div>
+
+<div class="modal-school" id="modalSchool">
+  <div class="modal-school__content">
+    <span class="modal-school__close" id="closeSchoolModalBtn">&times;</span>
+    <h2>Заполните форму</h2>
+    <form id="schoolForm">
+      <input type="text" name="fio" placeholder="Ф.И.О." required>
+      <input type="tel" name="phone" id="phoneInput" placeholder="+7-XXX-XXX-XX-XX" required>
+      <input type="text" name="location" placeholder="Населённый пункт" required>
+
+      <div class="modal-school__radio-group">
+  <label>
+    <input type="radio" name="action" value="learn" required>
+    <span class="custom-radio"></span>
+    Начать обучение
+  </label>
+  <label>
+    <input type="radio" name="action" value="open" required>
+    <span class="custom-radio modal-school-btn"></span>
+    Открыть школу
+  </label>
+</div>
+
+
+      <button class="big-card__btn big-card__btn--fill system-card__btn" type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
 
     <main class="doc-rul">
       <section class="doc-rul__cards-wrapper">
@@ -182,22 +255,9 @@
   <div class="footer__bg"></div>
 
   </footer>
-   <script src="js/header.js"></script>
-  <script>
-  function updateTime() {
-    const nowUTC = new Date();
-
-    const utcString = nowUTC.toISOString().slice(0, 19).replace("T", " ");
-    document.getElementById("utc-time").textContent = utcString.replace(/-/g, ".");
-
-    // МСК = UTC + 3 часа
-    const nowMSK = new Date(nowUTC.getTime() + 3 * 60 * 60 * 1000);
-    const mskString = nowMSK.toISOString().slice(0, 19).replace("T", " ");
-    document.getElementById("msk-time").textContent = mskString.replace(/-/g, ".");
-  }
-
-  updateTime();
-  setInterval(updateTime, 1000);
-</script>
+ <script src="js/header.js"></script>
+<script src="js/time.js"></script>
+<script src="js/mob-burger.js"></script>
+<script src="js/form.js"></script>
 </body>
 </html>
