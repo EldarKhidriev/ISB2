@@ -206,8 +206,15 @@
                 <p class="big-card__text">Презентация</p>
                 <h2 class="big-card__title">О нашем<br>проекте</h2>
                 <div class="big-card__btn-conteiner">
-                    <button class="big-card__btn big-card__btn--fill system-card__btn">Открыть</button>
-                    <button class="big-card__btn big-card__btn--nofill system-card__btn--nofill">Скачать</button>
+                    <button class="big-card__btn big-card__btn--fill system-card__btn" 
+        onclick="window.open('https://hmbschools.ru/static/pdf/preza.pdf', '_blank')">
+  Открыть
+</button>
+
+<button class="big-card__btn big-card__btn--nofill system-card__btn--nofill" 
+        onclick="downloadFile('assets/files/preza.pdf')">
+  Скачать
+</button>
                 </div>
             </div>
 
@@ -257,11 +264,23 @@
   <div class="footer__bg"></div>
 
   </footer>
+  <script>
+  function downloadFile(url) {
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = ''; // имя файла можно указать, если нужно
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+</script>
    <script src="js/header.js"></script>
 
 <script src="js/time.js"></script>
 
 <script src="js/mob-burger.js"></script>
 <script src="js/form.js"></script>
+
+
 </body>
 </html>
