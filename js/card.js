@@ -23,38 +23,38 @@
     "Москва": [
       {
         title: "Школа в Москве 1",
-        address: "Омск, улица 1",
-        leader: "Руководитель 1",
+        address: "г. Москва, Автозаводская, Ул. Ленинская Слобода д.26",
+        leader: "Мещерякова Анастасия",
         logo: "../assets/img/contacts/adress/moscov.png",
-        groupUrl: "https://vk.com/group_omsk1",
-        openUrl: "https://vk.com/open_omsk1"
+        groupUrl: "https://vk.com/hmbschoolmoscow",
+        openUrl: "https://vk.com/id180668770"
       },
       {
         title: "Школа в Москве 2",
-        address: "Омск, улица 2",
-        leader: "Руководитель 2",
+        address: "г. Москва, ул. Электрозаводская, дом 21, проходная 3 (Мраморная)",
+        leader: "Уколов Сергей",
         logo: "../assets/img/contacts/adress/moscov.png",
-        groupUrl: "https://vk.com/group_omsk2",
-        openUrl: "https://vk.com/open_omsk2"
+        groupUrl: "https://vk.com/bayard_fencing_hall",
+        openUrl: "https://vk.com/ukolovsv"
       }
     ],
     "Архангельск": [
       {
         title: "Школа в Архангельске 1",
-        address: "Зеленогорск, улица А",
-        leader: "Руководитель А",
+        address: "г. Архангельск, пр. Троицкий, 94",
+        leader: "Рыкалов Роман",
         logo:"../assets/img/contacts/adress/moscov.png",
 
-        groupUrl: "https://vk.com/group_z1",
-        openUrl: "https://vk.com/open_z1"
+        groupUrl: "https://vk.com/hmbarh",
+        openUrl: "https://vk.com/rykalovroman"
       },
       {
         title: "Школа в Архангельске 2",
-        address: "Зеленогорск, улица Б",
-        leader: "Руководитель Б",
+        address: "г. Архангельск, Гайдара, д.55, 3 этаж (ТЦ &quot;Мебельная империя&quot;",
+        leader: "Яргина Оксана",
         logo: "../assets/img/contacts/adress/moscov.png",
-        groupUrl: "https://vk.com/group_z2",
-        openUrl: "https://vk.com/open_z2"
+        groupUrl: "https://vk.com/hmbschoolnorthenwolf",
+        openUrl: "https://vk.com/barsyaksyu"
       }
     ]
   };

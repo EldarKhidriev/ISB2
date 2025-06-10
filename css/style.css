@@ -1908,6 +1908,16 @@ details ul {
 #small-card-2 {background-image: url('../assets/img/coach-council/cards/2.jpg');}
 #small-card-3 {background-image: url('../assets/img/coach-council/cards/3.jpg');}
 #small-card-4 {background-image: url('../assets/img/coach-council/cards/4.jpg');}
+
+#small-card-rules-1 {background-image: url('../assets/img/doc-rules/1.png');}
+#small-card-rules-2 {background-image: url('../assets/img/doc-rules/2.png');}
+#small-card-rules-3 {background-image: url('../assets/img/doc-rules/3.png');}
+#small-card-rules-4 {background-image: url('../assets/img/doc-rules/4.png');}
+#small-card-rules-5 {background-image: url('../assets/img/doc-rules/5.png');}
+#small-card-rules-6 {background-image: url('../assets/img/doc-rules/6.png');}
+#small-card-rules-7 {background-image: url('../assets/img/doc-rules/7.png');}
+
+
 .small-card__wrapper {
   background-repeat: no-repeat;
   overflow: hidden;
