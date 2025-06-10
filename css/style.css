@@ -989,6 +989,35 @@ section {
     background-image: url("../assets/img/mob/7410bbc3-66ac-4702-b373-6c290771223a\ \(1\)\ 1.png");
     background-size: cover;
   }
+
+  .header-mob {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  height: 60px;
+  position: relative;
+}
+
+/* Центрируем логотип */
+.header-mob > img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 40px; /* настрой по нужному размеру */
+  z-index: 1;
+}
+
+/* Левая кнопка */
+.header-mob .burger {
+  z-index: 2; /* чтобы не перекрывалась логотипом */
+}
+
+/* Правая кнопка */
+.header-mob a:last-of-type {
+  z-index: 2;
+}
+
   
 }
 
