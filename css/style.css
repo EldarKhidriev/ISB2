@@ -1399,6 +1399,20 @@ section {
 
 }
 
+@media (max-width: 900px) {
+  .big-card__content--no-img {
+    width: 80%;
+    padding: 1rem;
+    
+  }
+
+  .big-card__content--no-img {
+    height: 320px;
+  }
+  
+}
+
+
 .big-card__img-cup {
     width: 43%;
     height: 100%;
