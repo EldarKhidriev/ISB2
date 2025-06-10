@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ШКОЛЫ ИСБ</title>
-    <link rel="stylesheet" href="css/globals.css">
-    <link rel="stylesheet" href="fonts/font.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/buttons.css">
-    <link rel="stylesheet" href="css/card.css">
-    <link
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ШКОЛЫ ИСБ</title>
+  <link rel="stylesheet" href="css/css2.css">
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="fonts/font.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link
   rel="stylesheet"
   href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
 </head>
 <body>
-   <header class="header">
+<header class="header">
   <div class="header__wrapper">
     <div class="header-top">
-      <a href="#" class="header-top__link desk" id="openSchoolModalBtn">Открыть школу <img src="assets/img/icon-add.svg" alt="добавить"></a>
+      <a href="#" class="header-top__link desk openSchoolModalBtn">Открыть школу <img src="assets/img/icon-add.svg" alt="добавить"></a>
       <a href="index.html" class="header-top__logo"><img src="assets/img/icon-logo.svg" alt="Логотип школы"></a>
-      <a href="#" class="header-top__link"><img src="assets/img/icon-lang.svg" alt="язык">Русский<img src="assets/img/icon-arrow.svg" alt="стрелка вниз"></a>
+      <!-- <a href="#" class="header-top__link"><img src="assets/img/icon-lang.svg" alt="язык">Русский<img src="assets/img/icon-arrow.svg" alt="стрелка вниз"></a> -->
+       <div class="language-selector">
+  <button class="header-top__link" id="lang-button">
+    <img src="assets/img/icon-lang.svg" alt="язык">
+    <span id="current-lang">Русский</span>
+    <img src="assets/img/icon-arrow.svg" alt="стрелка вниз">
+  </button>
+  <ul class="lang-dropdown" id="lang-dropdown">
+    <li data-lang="ru">Русский</li>
+    <li data-lang="en">English</li>
+  </ul>
+</div>
     </div>
   </div>
 
@@ -36,8 +49,11 @@
             <img src="assets/img/icon-arrow_back.svg" alt="">
           </button>
           <ul class="dropdown-list" hidden>
-            <li><a href="#">Совет 1</a></li>
-            <li><a href="#">Совет 2</a></li>
+            <li><a href="coach-council.html#small-card-1">Положение о тренерском совете</a></li>
+            <li><a href="coach-council.html#small-card-3">Распоряжение о формировании терерского совета</a></li>
+            <li><a href="coach-council.html">Бланк ображения</a></li>
+            <li><a href="coach-council.html#small-card-4">Регламент аттестации</a></li>
+            <li><a href="coach-council.html#small-card-2">Стандарт спортивной подготовки</a></li>
           </ul>
         </li>
         <li class="header-bottom__item has-submenu">
@@ -46,8 +62,10 @@
             <img src="assets/img/icon-arrow_back.svg" alt="">
           </button>
           <ul class="dropdown-list" hidden>
-            <li><a href="#">Положение</a></li>
-            <li><a href="#">Регламент</a></li>
+            <li><a href="document-rules.html">Правила</a></li>
+            <li><a href="document-forms.html">Бланки</a></li>
+            <li><a href="document-design.html">Дизайн</a></li>
+            <li><a href="document-general.html">Общее</a></li>
           </ul>
         </li>
       </ul>
@@ -55,40 +73,86 @@
   </div>
 
   <div class="header-mob">
-    <a href="#" class="header-mob__add"><img src="assets/img/mob/plus.svg" alt="добавить"></a>
+    <a href="#" class="header-mob__add openSchoolModalBtn"><img src="assets/img/mob/plus.svg" alt="добавить"></a>
     <a href="index.html" class="header-mob__logo"><img src="assets/img/mob/logo.svg" alt="Логотип школы"></a>
-    <a href="#" class="header-mob__burger" id="burger-btn"><img src="assets/img/mob/burger.svg" alt="меню"></a>
+    <button class="header-mob__burger" id="burger-btn"><img src="assets/img/mob/burger.svg" alt="меню"></button>
   </div>
 </header>
 
+<!-- 👉 Выезжающее мобильное меню (вставить сразу после </header>) -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu__close" id="menuClose">×</button>
   <nav class="mobile-menu__nav">
-    <ul>
+    <ul class="mobile-menu__list">
       <li><a href="about.html">О проекте</a></li>
       <li><a href="contacts.html">Контакты</a></li>
       <li><a href="cup.html">Кубок школ исб</a></li>
-      <li><a href="#">Каталог</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
       <li>
         <details>
           <summary>Тренерский совет</summary>
           <ul>
-            <li><a href="#">Совет 1</a></li>
-            <li><a href="#">Совет 2</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html#small-card-1">Положение о тренерском совете</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html#small-card-3">Распоряжение о формировании терерского совета</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html">Бланк ображения</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html#small-card-4">Регламент аттестации</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="coach-council.html#small-card-2">Стандарт спортивной подготовки</a></li>
           </ul>
         </details>
       </li>
       <li>
         <details>
-          <summary>Документы</summary>
+          <summary class="mobile-menu__summary--active">Документы</summary>
           <ul>
-            <li><a href="#">Положение</a></li>
-            <li><a href="#">Регламент</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-rules.html">Правила</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-forms.html">Бланки</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-design.html">Дизайн</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-general.html">Общее</a></li>
           </ul>
         </details>
       </li>
     </ul>
+    <div class="language-selector--mobile">
+  <button class="header-top__link--mobile" id="lang-button-mobile">
+    <img src="assets/img/icon-lang.svg" alt="язык">
+    <span id="current-lang-mobile">Русский</span>
+    <img src="assets/img/icon-arrow.svg" alt="стрелка вниз">
+  </button>
+  <ul class="lang-dropdown--mobile" id="lang-dropdown-mobile">
+    <li data-lang="ru" class="mobile-menu__summary-text-bottom" style="border-bottom:2px solid #FDA215;">Русский</li>
+    <li data-lang="en" class="mobile-menu__summary-text-bottom"><a href="#">English</a></li>
+  </ul>
+</div>
+
   </nav>
+</div>
+
+<div class="modal-school" id="modalSchool">
+  <div class="modal-school__content">
+    <span class="modal-school__close" id="closeSchoolModalBtn">&times;</span>
+    <h2>Заполните форму</h2>
+    <form id="schoolForm">
+      <input type="text" name="fio" placeholder="Ф.И.О." required>
+      <input type="tel" name="phone" id="phoneInput" placeholder="+7-XXX-XXX-XX-XX" required>
+      <input type="text" name="location" placeholder="Населённый пункт" required>
+
+      <div class="modal-school__radio-group">
+  <label>
+    <input type="radio" name="action" value="learn" required>
+    <span class="custom-radio"></span>
+    Начать обучение
+  </label>
+  <label>
+    <input type="radio" name="action" value="open" required>
+    <span class="custom-radio modal-school-btn"></span>
+    Открыть школу
+  </label>
+</div>
+
+
+      <button class="big-card__btn big-card__btn--fill system-card__btn" type="submit">Отправить</button>
+    </form>
+  </div>
 </div>
 
   <main>
@@ -106,8 +170,8 @@
 
 
 
-<section class="location">
-  <div class="location__l">
+<section class="location desk">
+  <div class="location__l" >
     <div class="big-card__logo-conteiner">
       <img src="assets/img/about/ШКОЛЫ СБ РОССИИ ЛОГО 2 (1).svg" alt="Логотип школы ИСБ">
     </div>
@@ -125,7 +189,8 @@
     data-title="Архангельск"
     data-address="Адрес школы в Калининграде"
     data-leader="Имя руководителя"
-    data-logo="assets/img/logos/kaliningrad.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
     data-group-url="https://vk.com/group_kaliningrad"
     data-open-url="https://vk.com/open_kaliningrad"
     ></button>
@@ -133,10 +198,10 @@
     <button
     class="location__r-point"
     style="top: 61%; left: 4%;"
-    data-title="Санкт-Петербурге"
+    data-title="Санкт-Петербург"
     data-address="Кадетская лин. ВО, 5 корпус. 2Д, Вавилов лофт"
     data-leader="Самойлов Юрий"
-    data-logo="assets/img/logos/spb.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
     data-group-url="https://vk.com/group_spb"
     data-open-url="https://vk.com/open_spb"
     ></button>
@@ -148,7 +213,8 @@
     data-title="Москва"
     data-address="Адрес в Нижнем Новгороде"
     data-leader="Имя руководителя"
-    data-logo="assets/img/logos/nizhny.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
     data-group-url="https://vk.com/group_nizhny"
     data-open-url="https://vk.com/open_nizhny"
     ></button>
@@ -160,7 +226,8 @@
       data-address="Адрес школы в Москве"
       data-leader="Имя руководителя"
       data-logo="assets/img/logos/moscow.png"
-      data-group-url="https://vk.com/group_moscow"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
       data-open-url="https://vk.com/open_moscow"
     ></button>
 
@@ -170,7 +237,8 @@
   data-title="Ростов-на-Дону"
   data-address="Адрес в Казани"
   data-leader="Имя руководителя"
-  data-logo="assets/img/logos/kazan.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
   data-group-url="https://vk.com/group_kazan"
   data-open-url="https://vk.com/open_kazan"
 ></button>
@@ -181,7 +249,8 @@
   data-title="Луганск"
   data-address="Адрес в Екатеринбурге"
   data-leader="Имя руководителя"
-  data-logo="assets/img/logos/ekb.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
   data-group-url="https://vk.com/group_ekb"
   data-open-url="https://vk.com/open_ekb"
 ></button>
@@ -192,7 +261,8 @@
   data-title="Орел"
   data-address="Адрес в Тюмени"
   data-leader="Имя руководителя"
-  data-logo="assets/img/logos/tyumen.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
   data-group-url="https://vk.com/group_tyumen"
   data-open-url="https://vk.com/open_tyumen"
 ></button>
@@ -205,7 +275,8 @@ class="location__r-point"
   data-title="Ставрополь"
    data-address="Адрес в Омске"
     data-leader="Имя руководителя"
-     data-logo="assets/img/logos/omsk.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
       data-group-url="https://vk.com/group_omsk"
        data-open-url="https://vk.com/open_omsk"
        ></button>
@@ -215,7 +286,8 @@ class="location__r-point"
   data-title="Волгоград"
    data-address="Адрес в Омске"
     data-leader="Имя руководителя"
-     data-logo="assets/img/logos/omsk.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
       data-group-url="https://vk.com/group_omsk"
        data-open-url="https://vk.com/open_omsk"
        ></button>
@@ -225,7 +297,8 @@ class="location__r-point"
   data-title="Воронеж"
    data-address="Адрес в Омске"
     data-leader="Имя руководителя"
-     data-logo="assets/img/logos/omsk.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
       data-group-url="https://vk.com/group_omsk"
        data-open-url="https://vk.com/open_omsk"
        ></button>
@@ -235,7 +308,8 @@ class="location__r-point"
  data-title="Старый Оскол" 
  data-address="Адрес в Омске"
   data-leader="Имя руководителя" 
-  data-logo="assets/img/logos/omsk.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
    data-group-url="https://vk.com/group_omsk"
     data-open-url="https://vk.com/open_omsk"
     ></button>
@@ -245,7 +319,8 @@ class="location__r-point"
   data-title="Рязань"
    data-address="Адрес в Омске"
     data-leader="Имя руководителя"
-     data-logo="assets/img/logos/omsk.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
       data-group-url="https://vk.com/group_omsk"
        data-open-url="https://vk.com/open_omsk"
        ></button>
@@ -255,7 +330,8 @@ class="location__r-point"
   data-title="Нижний Новгород" 
   data-address="Адрес в Омске"
    data-leader="Имя руководителя"
-    data-logo="assets/img/logos/omsk.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
      data-group-url="https://vk.com/group_omsk"
       data-open-url="https://vk.com/open_omsk"
       ></button>
@@ -265,7 +341,8 @@ class="location__r-point"
   data-title="Казань" 
   data-address="Адрес в Омске"
    data-leader="Имя руководителя"
-    data-logo="assets/img/logos/omsk.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
      data-group-url="https://vk.com/group_omsk"
       data-open-url="https://vk.com/open_omsk"
       ></button>
@@ -275,7 +352,8 @@ class="location__r-point"
   data-title="Самара"
    data-address="Адрес в Омске"
     data-leader="Имя руководителя"
-     data-logo="assets/img/logos/omsk.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
       data-group-url="https://vk.com/group_omsk"
        data-open-url="https://vk.com/open_omsk"
        ></button>
@@ -285,7 +363,8 @@ class="location__r-point"
   data-title="Киров"
    data-address="Адрес в Омске"
     data-leader="Имя руководителя"
-     data-logo="assets/img/logos/omsk.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
       data-group-url="https://vk.com/group_omsk"
        data-open-url="https://vk.com/open_omsk"
        ></button>
@@ -295,7 +374,8 @@ class="location__r-point"
   data-title="Пермь"
    data-address="Адрес в Омске"
     data-leader="Имя руководителя"
-     data-logo="assets/img/logos/omsk.png"
+    data-logo="assets/img/contacts/adress/moscov.png"
+
       data-group-url="https://vk.com/group_omsk"
        data-open-url="https://vk.com/open_omsk"
        ></button>
@@ -305,7 +385,8 @@ class="location__r-point"
   data-title="Глазов"
    data-address="Адрес в Омске"
     data-leader="Имя руководителя" 
-    data-logo="assets/img/logos/omsk.png" 
+    data-logo="assets/img/contacts/adress/moscov.png"
+
     data-group-url="https://vk.com/group_omsk" 
     data-open-url="https://vk.com/open_omsk"
     ></button>
@@ -315,7 +396,8 @@ class="location__r-point"
  data-title="Челябинск" 
  data-address="Адрес в Омске" 
  data-leader="Имя руководителя" 
- data-logo="assets/img/logos/omsk.png" 
+    data-logo="assets/img/contacts/adress/moscov.png"
+
  data-group-url="https://vk.com/group_omsk" 
  data-open-url="https://vk.com/open_omsk"
  ></button>
@@ -325,7 +407,8 @@ class="location__r-point"
  data-title="Новосибирс" 
  data-address="Адрес в Омске" 
  data-leader="Имя руководителя"
-  data-logo="assets/img/logos/omsk.png" 
+    data-logo="assets/img/contacts/adress/moscov.png"
+
   data-group-url="https://vk.com/group_omsk" 
   data-open-url="https://vk.com/open_omsk"
   ></button>
@@ -335,7 +418,8 @@ class="location__r-point"
  data-title="Красноярск" 
  data-address="Адрес в Омске" 
  data-leader="Имя руководителя" 
- data-logo="assets/img/logos/omsk.png" 
+    data-logo="assets/img/contacts/adress/moscov.png"
+
  data-group-url="https://vk.com/group_omsk" 
  data-open-url="https://vk.com/open_omsk"
  ></button>
@@ -345,7 +429,8 @@ class="location__r-point"
  data-title="Зеленогорск" 
  data-address="Адрес в Омске" 
  data-leader="Имя руководителя" 
- data-logo="assets/img/logos/omsk.png" 
+    data-logo="assets/img/contacts/adress/moscov.png"
+
  data-group-url="https://vk.com/group_omsk" 
  data-open-url="https://vk.com/open_omsk"
  ></button>
@@ -355,7 +440,8 @@ class="location__r-point"
  data-title="Магадан" 
  data-address="Адрес в Омске" 
  data-leader="Имя руководителя" 
- data-logo="assets/img/logos/omsk.png" 
+    data-logo="assets/img/contacts/adress/moscov.png"
+
  data-group-url="https://vk.com/group_omsk" 
  data-open-url="https://vk.com/open_omsk"
  ></button>
@@ -368,6 +454,8 @@ class="location__r-point"
     <button class="location__r-point" style="top: 72%; left: 91%;" data-text="Школа во Владивостоке"></button> -->
   </div>
 </section>
+
+
 
 <!-- Модалка -->
 <!-- <div class="modal" id="modal">
@@ -384,9 +472,9 @@ class="location__r-point"
   <div id="modal-single">
     <img id="modal-logo" />
     <h2 id="modal-title"></h2>
-    <p><strong>Адрес:</strong> <span id="modal-address"></span></p>
-    <p><strong>Руководитель:</strong> <span id="modal-leader"></span></p>
+    <p><strong>Адрес:</strong><br><span id="modal-address"></span></p>
     <a id="modal-group" href="#" target="_blank">Сообщество</a>
+    <p><strong>Руководитель:</strong><br><span id="modal-leader"></span></p>
     <a id="modal-open" href="#" target="_blank">Открыть</a>
   </div>
 
@@ -402,6 +490,762 @@ class="location__r-point"
 </div>
 
 
+
+<div class="card-mob-old mob">
+ <div class="block_contacts_main mob" id="block_contacts">
+  <div class="item_school">
+    <h1 class="count_school">1</h1>
+    <div class="info_item_school">
+      <div class="logo_item_school">
+        <img class="logo_shevron" src="/static/img_face/shevron.jpg">
+        <div class="logo_info">
+          <img class="logo_city" src="/static/img_logo/moskva.png">
+          <a href="https://vk.com/hmbschoolmoscow" class="vk_community_school">
+            Сообщество 
+            <img class="vk_icon" src="/static/img/vk.svg" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="info_data_school">
+        <div class="map_school">
+          <a href="https://yandex.ru/maps/?um=constructor%3Abbdf23d1ec7a6aa3fa17459c957762a7f7473a5554efb211fad69751b1338c42&amp;source=constructorStatic" target="_blank">
+            <img class="map_img" src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Abbdf23d1ec7a6aa3fa17459c957762a7f7473a5554efb211fad69751b1338c42&amp;width=100&amp;height=100&amp;lang=ru_RU" alt="">
+          </a>
+          <p class="address">г. Москва, Автозаводская, Ул. Ленинская Слобода д.26</p>
+        </div>
+        <div class="about_master">
+          <h1 class="about_title">Руководитель школы</h1>
+          <img class="master_photo" src="/static/img_face/moskow.jpg" alt="">
+          <h1 class="h1_bottom_about_master">Сергей <br>Уколов</h1>
+        </div>
+        <div class="write_bottom_vk">
+          <div class="div_write_vk hidden">
+            Написать в 
+            <img class="vk_icon" src="/static/img/vk.svg" alt="">
+          </div>
+          <a class="div_write_vk" href="https://vk.com/id180668770">
+            Написать в 
+            <img class="vk_icon" src="/static/img/vk.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item_school">
+    <h1 class="count_school">2</h1>
+    <div class="info_item_school">
+      <div class="logo_item_school">
+        <img class="logo_shevron" src="/static/img_face/shevron.jpg">
+        <div class="logo_info">
+          <img class="logo_city" src="/static/img_logo/moskva.png">
+          <a href="https://vk.com/bayard_fencing_hall" class="vk_community_school">
+            Сообщество 
+          </a>
+        </div>
+      </div>
+      <div class="info_data_school">
+        <div class="map_school">
+
+          </a>
+          <p class="address">г. Москва, ул. Электрозаводская, дом 21, проходная 3 (Мраморная)</p>
+        </div>
+        <div class="about_master">
+          <h1 class="about_title">Руководитель школы</h1>
+          <img class="master_photo" src="/static/img_face/moskow.jpg" alt="">
+          <h1 class="h1_bottom_about_master">Сергей <br>Уколов</h1>
+        </div>
+        <div class="write_bottom_vk">
+          <div class="div_write_vk hidden">
+            Написать в 
+          </div>
+          <a class="div_write_vk" href="https://vk.com/ukolovsv">
+            Написать в 
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="block_wrap_map_and_regions">
+    
+          <div class="light_filter"><div class="bar_region" style="opacity: 0;">Москва</div></div>
+          <div class="light_filter_left"><div class="bar_region" style="opacity: 0;">Москва</div></div>
+            <div class="toolbar_region" id="toolbar_region"><div class="bar_region" onclick="findSchool(this)">Белгородская область</div><div class="bar_region" onclick="findSchool(this)">Воронежская область</div><div class="bar_region" onclick="findSchool(this)">Челябинская область</div><div class="bar_region" onclick="findSchool(this)">Новосибирская область</div><div class="bar_region" onclick="findSchool(this)">Магаданская область</div><div class="bar_region" onclick="findSchool(this)">Архангельская область</div><div class="bar_region" onclick="findSchool(this)">Москва</div><div class="bar_region" onclick="findSchool(this)">Краснодарский край</div><div class="bar_region" onclick="findSchool(this)">Ставропольский край</div><div class="bar_region" onclick="findSchool(this)">Волгоградская область</div><div class="bar_region" onclick="findSchool(this)">Ростовская область</div><div class="bar_region" onclick="findSchool(this)">Орловская область</div><div class="bar_region" onclick="findSchool(this)">Рязанская область</div><div class="bar_region" onclick="findSchool(this)">Самарская область</div><div class="bar_region" onclick="findSchool(this)">Нижегородская область</div><div class="bar_region" onclick="findSchool(this)">Кировская область</div><div class="bar_region" onclick="findSchool(this)">Республика Татарстан</div><div class="bar_region" onclick="findSchool(this)">Удмуртская Республика</div><div class="bar_region" onclick="findSchool(this)">Пермский край</div><div class="bar_region" onclick="findSchool(this)">Красноярский край</div><div class="bar_region" onclick="findSchool(this)">Санкт-Петербург</div><div class="bar_region" onclick="findSchool(this)">Луганская Народная Республика</div></div>
+    
+    
+    
+          <svg class="map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 808.9 458.9" enable-background="new 0 0 808.9 458.9" xml:space="preserve" style="fill: white;">
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Крым" data-code="RU-CR" d="M1.6,328.6H4l1.2,0.8l1.5,0.2v-0.9l1.3-0.2l0.8,1.3h3.3l0.1-1.1
+            l1.2,0.3v2.1l1.4,1.3l-0.8,2l1.6,1.6v2.9l0.4,1.1l-0.5,1.3l-0.8,1.1l1.2,1.2l0.5,1.2l2,0.6l2.1,0.3l2.5,4.2l-1.5,0.2l-1.3,1.3
+            l-2.6-0.9l-2-1.8l-0.4-1.1l-0.2-1l-1.3-0.9l-2.6,0.6l-1.7-0.9l-2.1-1.2l-3,0.5l-2.2-0.4l-1-1.7l-0.7-2.6l1.6-0.1l1.9-2.3l0.5-2.4
+            L4.2,334v-1.7l-1-1.6l-1.6-1.2L1.6,328.6z" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Мурманская область" data-code="RU-MUR" d="M160,158.1l6.1,5.5l-0.3,2.3l-0.7,1.9l1.4,1.4l2.1-0.5l1.3,0.8
+            l1.6-0.1l0,0l-0.5-2.8l1.2-1.2l0.8-2.2l1.8,1.8l-1.5,1.5l-0.6,2.9l1.8,0.8l0.9,4.7l1.6,2.8l0.9,2.5l1.1,2.7l2.4,2.4v3.4l2.3,2.3
+            l3.7,2.1l3.4,1.3l3.9-0.8h3.5l3.4-3.4l2.2-3.9l0.5-4.6l0.1-2.8l-2.2-2.2l-0.1-3.9l-0.8-1.8l0.6-3.2v-3.7l-1-3.6l-2.1-2.1v-2.9
+            l-1.8-0.9v-2.7l-1.6-1.6l-2.2-1.1v-2.4l-0.6-2.4l1.3-1.3l1.5,1.5l1.4,0.9l-0.6-2.3v-2l-3-0.1l-2.2,0.3l0.5-2.7l-2.2,1.5l-1.8-1.8
+            h-2.2l-3.7-1.4l-5.3,2.7l-4.1,2v6.8l-2,3.5h-6.5l-3.9,3.9L160,158.1L160,158.1" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Псковская область" data-code="RU-PSK" d="M75.6,243l1.7,2.1l0.8-2.2h1.8l0.8-1.3l0.7-1.5l0.3-2.7l1.1-1.1
+            l0.2-1.6l2-1.6l-1.1-1.1l1-1l1.1-0.6v-1.8l1.1-0.6l1.3-1.3l1.7-0.8l0.6-1.8l-1.3-1l-0.4-1l0.9-0.9v-1.6l1-1l2.1-0.2l-0.5-2.5
+            l0.7-2.3l-0.8-1.8l-0.1-1.8l-1.6-1.6l0.8-1.7l-1.5-1.8l-2.9-0.1l-2.2,2.9l-2.7,1l-0.1,1.9l-1.4,1.6l-3.2,0.1L76,214v2.7l-3,1.9
+            l-2,0.5l0.6,2.3l-1.4,2.5l-2.4,2.4l-0.4,1.8l1.1,2.5l1.8,1.8l-0.6,2l-0.8,1.9l2.4,0.6l2.2,2v4.3L75.6,243" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Смоленская область" data-code="RU-SMO" d="M71.1,245.3l-0.9,1.9l-2.5,0.8l-1,2.8l-1.4,3.3l-0.8,3l0.1,2.2
+            l-1.3,0.9l1.9,1.9l-0.8,2.8l-0.6,2.5l1.9,1v2.2l1.2-1.2l1.3-2.1l1.6,0.1l1.9-1l1.7-0.4l1.8-1.8H77l1.3,1.3l0.4,1.5l1.8,0.2l0.6-0.6
+            l1,0.3l1.8,1.4l1.4-1.1h1.8l2.3-0.5l0.9-1.4l1.7-1.7l2.3-0.9l0.6-2.1l-0.6-1.3l-1.5-1.2l-1-1.9l-1-1v-1.3l-2.2-0.6l-2,0.6l-2.5-0.6
+            l-1.2-1.2l-1.9-1.1l-1.4-1.4l-0.5-2.6l-1.7-1l-0.2-0.8l-1.7-2.1l-2.2,0.2L71.1,245.3" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Брянская область" data-code="RU-BRY" d="M61.4,268.1l-2.5-0.9l-0.8-1.9l-1.4-1.5l-1.9,0.1l-0.6,2.3
+            l-1.6,1.9l-2.4,2.4l-1.1,2l1.1,1.9l1.3,1.3l1.7-1.5l1.1,1.6l1.4,1.5l1.9,0.3l1.4,1.4l1,2.5l-0.3,2l-0.9,3.4l1.4,0.1l0.9-1.3l1.8-0.6
+            l1.1,0.8h1.6l1.4-1.4l1.3,0l0.3-1.1l-0.4-1.1l1.2-0.4h1.4l1,1l0.7-0.7l0.4-1.6l0.8-0.8l-0.3-1.8l-1.2-1.2v-1.5l1-1v-1.9l0.5-1.9
+            l-1-1l0.1-1.2l-1.2-1.9l-1.9,1l-1.6-0.1l-1.3,2.1l-1.2,1.2v-2.2l-1.9-1L61.4,268.1" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Курская область" data-code="RU-KRS" d="M57,298.3v-2.7l-1.4-2.5l-1.4-2.2l1.3-1l0.8-1.9h1.5l1.1-1
+            l1.4,0.1l0.9-1.3l1.8-0.6l1.1,0.8h1.6l0.7,1.1l1.3,0.5l1,0.8v2.1l1.5,0.4l0.4,1.2l1.3,0.6l0.4,2.8l1.4,2.3l0.4,2.9l1.4,0.3l1,1v2.2
+            l1.6,0.3l1.8,1.1l-1.5,1.5l-1.9-0.7l-1.2,1.2v1.9l-1.3,0.6l-0.6-1.9l-1.9-1.9l-2.9-1.8l-1.8,0.4l-3.5-0.7v-1.4l-1.8-1.9l-0.9,0.9
+            h-2.2l-2.6-0.6L57,298.3" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Белгородская область" data-code="RU-BEL" data-logo="static/img_logo/oskol.png" data-face="static/img_face/oskol.png" data-name="Беседин Антон" data-link-glav="https://vk.com/torloff88" data-adress="г. Старый Оскол, улица Ленина 17" data-link-school="https://vk.com/stalnoioskal" d="M67.4,326.1l-0.8-2.9l-1.9-1.1l-2-2.3l0.8-2.7l-0.8-3.9l-2.4-1.8
+            l-2.8-2.2l-0.9-2.9l-1.9-1.5l-0.6-1.8l1.6-1.9l2.6,0.6h2.2l0.9-0.9l1.8,1.9v1.4l3.5,0.7l1.8-0.4l2.9,1.8l1.9,1.9l0.6,1.9l0.5,1.7
+            l-1.1,0.9l1.6,1.6l-1,1.9h-1.3v2.5l0.4,1.9l-1.9,1v2.2l-1.5,0.1l0.4,1.6l-2.2,1.2L67.4,326.1" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Воронежская область" data-code="RU-VOR" data-logo="static/img_logo/voronej.png" data-face="static/img_face/shevron.jpg" data-name="Гольтянин Владимир" data-link-glav="https://vk.com/id27346014" data-adress="г. Воронеж, Путиловская, 22а" data-link-school="https://vk.com/hmbschoolvrnzh" d="M67.8,326.5l2.2-1.2l-0.4-1.6l1.5-0.1v-2.2l1.9-1l-0.4-1.9v-2.5
+            h1.3l1-1.9l-0.9-0.9l-0.7-0.7l1.1-0.9l-0.5-1.7l1.3-0.6v-1.9l1.2-1.2l1.9,0.7l1.5-1.5l2.2,0.4l1,1.9l2.3,0.8l-0.5,2.3l1.5,1.5
+            l1.9,0.2l1.8,2.5l1.3,1.3l-0.6,1.9l1.5,1.5l2.4,1l0.8,1.6l1.5,1.5l0.8,2.5l1,2.6l-0.9,0.9h-2.6l-1.9-1.1l-0.4-1.4l-1.9-0.4l-1.8,1.6
+            h-3.6l-0.9,3l-3,3h-3.3l-1.1,1.1h-1.8l-0.9-1.2h-2.2V333l-1-1l-2.2-1v-2.7L67.8,326.5" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Карачаево-Черкесская Республика" data-code="RU-KC" d="M39.7,397.4l-1.9-0.9l-2.8-1.9l-0.9-3l-1.9-2.9l-0.6-2.5l1.5-1.5
+            l1.8-0.3l1.3-1.3h1.3l0.7,1.5l1.1,1.6h2.5l1.9-2.4l1.5,0.5v2l1.4,1l0.3,1.6l0.7,1h-2.2l-0.6,1.1l1,1l0.7,1.1l-0.7,1.6l-1.8,0.7
+            l-1.2-0.1l-1.5,1.5L39.7,397.4" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Северная Осетия" data-code="RU-SE" d="M44.2,406.3l0.5,4.1l1.8,1.8l2.8,0.4l1.6,1.6l0.4,1.3l1.2-2h1.9
+            l0.2-1.3l-0.6-2l0.6-3l1.7-0.7l2.6,0.1l-0.5-2.2l-2.4-2.2l-1,0.8v1.5l-0.9,0.9l-2.3,0.1l-0.8,0.8l-1.3-1h-1.6L47,406l-1.1-0.2
+            L44.2,406.3" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Ингушетия" data-code="RU-IN" d="M58.7,411.5l-1.2,2.6l-1.5,2.4l-1.9,1.4l-0.6-2.3l-2.2-0.3l1.2-2
+            h1.9l0.2-1.3l-0.6-2l0.6-3l1.7-0.7l0.9,1.7l2,1.6L58.7,411.5" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Дагестан" data-code="RU-DA" d="M77.1,405.7l-1.3,1.3v2.1l1.3,1.3l0.8,2.4l-0.6,2.4l-0.6,2.2
+            l-1.5,1.5v0.9L74,421l-2.8,4.6v3.5l0.8,4.3l-0.5,3.3l0.3,4.1l-3,1.4l-2-0.9l-2.9,1l-2.8-0.6l-0.4-2.4l-1.4-4.2l-0.3-3l-2-1.4V429
+            l-1-2.7l-1.8-2.3l1.1-1.9l2.2-0.3l1.4-1.1l2.1,0.2l1.3-1l2.1,1.2l0.8-3l2.2-2.7l2.3-1.3l1.3-0.4l-0.2-2.9l-2.6-0.2l-1.4-1.9l-1.8-2
+            l0.8-2l-1.3-0.6v-1.1h1.6l0.9-0.8l-0.6-1l1-1l1.6,0.6l1.9-0.6l2-1.3l1.7,1.2l0.9,1.3l1.4,0.5l0.6,1.6L77.1,405.7" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Калмыкия" data-code="RU-KL" d="M78.7,406.2l2.7-0.8h2.4l2.2-2.5l1.8-0.8v-1.8l-1.4-1l-1.7,0
+            l-0.4-1l4.1-2.9v-1.2l-0.8-0.8v-1.5l-0.9-1.2l1-1l1.4,0.6l0.2,1h0.9l0.2-1.6l2.7,0.2l0.8-2l-1.3-1.3l0.9-3.2l1.5-0.8l0.3-1.5
+            l0.3-1.6l-2.8-0.1l-1.2-1.6l-0.2-2.4l0.4-1.9l0.3-2.1l-1.5-1l-0.7-2.5l-2.3-0.5l-1.3-1.3v-1.6l-1.2-0.4l-0.9,2.5l-1.3,0.5l-1.3-1.3
+            l-1.5,0.6l-1.4-1.4l-2.3,2.1v2.7l1.6,0.1l1.9-1v1.9l-1.2,2.6l-2.6,1.9h-2.9l-2.7,2.8l-1.5-0.4l-0.6,0.6l-1.4-0.5l-1-1l-0.9-3.8
+            l-1.6-0.4l-1.2-1.2v-1.7l-0.7-1.8h-1.5v1.2l-0.9,0.9H57l-1.2-0.9l-1.6,1.3l1.4,0.7l0.6,1.7h1.3l1-0.4L59,374l1,1l2.3-0.4l1.4,0.6
+            L64,377l1.2,1.4l0.4,1.6l1.2,1.2l0.8,2.3l-0.9,1.7l1,1.8l1.3,1.3l1,1.3v1.5l1.4,1.4l0.3,1.9l1.1,1.6v2.9l1.7,1.2l0.9,1.3l1.4,0.5
+            l0.6,1.6l-0.2,2.2L78.7,406.2" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Оренбургская область" data-code="RU-ORE" d="M202.8,387.3l0.8,1.8l1.8,1.8l1.2,1.2l0.5,2.2l1.8,1.8l-1.8,2.4
+            l-1.6,1.6h-2.8l-2.9,0.2l-1.5-1.5l-1-2.1h-1.3l-1.4,1.4h-2.2l-2.5-2.5l-0.5-1.4l-1.9-1.9v-3.2l-1.6-1.6h-2.9l-2.4,0.9l-0.9-1.9
+            l-2.4-1.9l-2.2-1.1l-2.9,1.4l-2.7,0.4l-2.2-0.6l-1.5-2.9l-2.2-1.9l-1.5,2.5h-1.6v-2l1.5-1.5l-1-2.2l-1.3-3.3l-0.5-3.4l-1.9-2.3
+            l-3-1.1l-0.9-2.2l-1.6-1.6l-3,0.5h-1.8v-2.4l-0.9-2.5l0.1-1.4h4.5l1.3-2.6l2.4-1.7l1.4,0.4l0.8-1.7l3.5-0.6l1.7-4l2.9-1.6l2.2-2.2
+            l0.8-3.5h2.1l2.1,2.1l-1.5,1.5l1.3,1.2l0.8,1.4l-0.1,3.3l1,1l-0.7,3.5l1.4,0.9l1.7,1.7l1.1,2.8v2.8l0.8,1.7l-0.7,1.7v2.4l-0.5,1.2
+            l1.5,0.8l1.3-1.3h2.2l0.8,1.4l-0.8,1.9l-2.1,0.8l0.5,1l1.3,0.3l-0.4,2.5l-0.8,0.8l0.4,2h1.2l0.3,1.1l1.5,1.5l1.5-0.7l1.1-1.1
+            l1.3,0.7l0.5,1.3l1.4,1l1.6,0.4l1.6-1.2l1.1-2.5h2.1h2.4l1.5-0.6l2.1,0.9h1.3l0.9,1.6l-0.6,1.6l-2.4,1.2l0.2,1.6h1.3L202.8,387.3" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Челябинская область" data-code="RU-CHE" data-logo="static/img_logo/chelyabinsk.png" data-face="static/img_face/shevron.jpg" data-name="Габидулин Дмитрий" data-link-glav="https://vk.com/fakob" data-adress="г. Челябинск, ул. Первого Спутника, 2" data-link-school="https://vk.com/hmbshoolchel" d="M229.8,371.6l-3.2-0.6l-2.3,0.6l-2-1.8l-2.9-1.5h-2.7l-0.9,2.8
+            l0.9,1.9l-1.8,1.8l1.4,0.9l1.4,1.4l1.7,1.7l-1.6,1.6h-1.8l-2.2-2.2l-3.3,0.1l-2.2,0.9l0.9,3.2l-0.9,2.3l-2.2,0.6l-2.5-0.6l-1,2.7
+            l-0.4-2h-1.3l-0.2-1.6l2.4-1.2l0.6-1.6l-0.9-1.6h-1.3l-2.1-0.9l-1.5,0.6h-4.5l0.8-1.3l2-0.9l0.3-1.9l1.7-3.1h1.3v-2.2l1.7-2.2v-1.4
+            l2.6-2.6l2-0.7v-0.9l2.1-0.2l0.9,1.2h1.5v-2.4l-0.9-2.8l-3.1-1l-1.3,0.9l-3.1-0.3l-1.6-2.6l-0.4-3.4l-1.2-1.2l-0.5-2.4l2.8-2.1
+            l1.9,0.6l2.1,1l1.4,1.4v1.7l2.6,1l1.7-1.7l2.9-0.7v-1.5l1.5-2.8l0.6-1.9l-0.5-2.1l1.7-0.7l2.1,1.4l0.7,1.3l2.3,0.8l0.4,1l1.7,0.2
+            l1.7,1.7l1.6-1.6l1.8,1l1.4,1.4l1.3,1.3l0.1,2.8l0.4,3.2l-1.2,1.9h-2.2l-1.3,1.3l0.7,2.4l-1.2,1.2h-1.7l-0.5,1.7l1.5,1.5l1.6,0.1
+            l0.3,1.2h2.5l1,2.5l-1.9,1.9L229.8,371.6" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Омская область" data-code="RU-OMS" d="M305.6,394.7l-2.1,2.1l-3.5,1l-3,1.6l-1.4-2l-2.7,1.3h-2.2
+            l0.8-3.4l3-1.4v-1.8H292l-2.3-1.4l-1.4,1.4l-2.5-0.8l0.8-3l-1.8-1.8l-2.5,1.5l-2.8-0.8l-0.7-2.2l1.6-1.6v-2.4l0.6-1.8l-1-3.2
+            l-1.9-0.9v-1.5l0.7-1.5l1.3-1.3v-1.7l1-0.2l1.3-1.3l0.5-1.3v-2.2l3.2-3.2l2.4-0.4l0.9-0.9V358l-1.9-1l-0.6-1.5l-1.2-1.2l-1.7-0.9
+            V352l2-1l-0.9-2.6l0.2-2l1.8-2l0.9-1.5l1.9-1.3l2,2l-1.2,1.2v1.5l1.7,0.6l2.2,0.7l1.4,0.7l1.6,1h2.6l0.9-1.2l2.2,1.1l1.9,0.6h3
+            l2.5-1.2l2-2l1.1-1.6l0.4,1.2l-0.7,1.6l-0.8,1.7v2.6l1.5,1.5l-0.4,3.2l1.4,2.9l0.8,2.2v3.2v2.9l-2,2l0.4,1.4v1.9l-1,1l-1.8-0.7
+            l-1.6,0.7l-2.4,2.8l-1.4,3.5l0.6,4.5v2.6l1.3,1.3v1.5l-1.4,1.4L305.6,394.7" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Новосибирская область" data-code="RU-NVS" data-logo="static/img_logo/novosibirsk.png" data-face="static/img_face/shevron.jpg" data-name="Бернгардт Константин" data-link-glav="https://vk.com/elennor1984" data-adress="г. Новосибирск, Некрасова, 82, историко-культурный центр ГГПЦ 'Твоя история'" data-link-school="https://vk.com/hmbschoolnsknovosibirsk" d="M318.4,405.7l-1.4-1.4l-1.5-3.1l-1.6-1.6l-2.2-0.9v-2.3h1.8l1.5-2
+            l-0.6-1.8h-2.3l-1.9,1.9l-2.7,0.1l-2,0.1l1.1-3l1.4-1.4v-1.5l-1.3-1.3v-2.6l-0.6-4.5l1.4-3.5l2.4-2.8l1.6-0.7l1.8,0.7l1-1v-1.9
+            l-0.4-1.4l2-2v-6.1l2.8,0.7l1.5,1.5h3.1l3.4,0.5l2.9,1.5l3.4,1.4l2.1,2.1l1.7,1.7l2.5,3.5h5.5l2.2,3h2.6l3-0.8l1.8-1.8l1.6,0.8
+            l0.5,3.2v2.4l1,1l-1.2,1.2l1.4,1.4l1.6-1.6l1.7-1.9l3.2,0.2l0.4,4.2l0.9,1.8l0.7,3.8l-0.5,5.4l1.6,2.4l-4.2,2.4h-2.5l-1.7,1.3
+            l-1.7-1l-1.7,1.7l-1.5-1.5l-2.4,2.4l-1.1,2.9l-1.7,0.8l-1.7-2.5h-1.4l-1.1-1.7v-1.8l-2.3-2.3l-1.2-1.2l-2.6,0.1l-3.7,1.2l-3.7,2.8
+            H327l-2.5,1l-1.9,0.7l-1.4-1.4l-0.9,1.2L318.4,405.7" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Алтай" data-code="RU-AL" d="M396.3,452.3l-3,0.7l-2.1,2.1l-3.8-0.1l-3.2,1.8l-1.6,1.6
+            l-3.7-0.6l-1.1-1.9l-1.4-2.5l-0.7-2.6l-2,2l-3.3,1.3l-3-1L364,452v-3l-2.7-1.6l-1-2.3l-2.2-1.4l-0.5-3l2.5-0.2v-2.2l-1.1-1.1
+            l-1.7-1.7l1.2-1.2l2.7-0.9l3.3-1.2h2.2l3-3.1V427l1.5-1.5l2.4,1.5l1.2-1.6h1.3l1-1.5l-1.4-1.4l1.1-2l2-1l2.5,2.2h2.5l2.2,1.1h1.2
+            l0.1,2.3l-1.6,1.6l-1.9,1.9l0.6,2.5l-1.2,1.2l2.6,2.6h2l1.2-2.5h1.3l0.4,2.9l0.9,2.8l2.9,2.9l2.3,2.2l-0.6,1.8l-2.1,0.5l-1,1
+            l1.9,1.9v2.1L396.3,452.3" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Алтайский край" data-code="RU-ALT" d="M357.6,440.6l-1.8-1.6l-2.4-1l-1.6-1.6h-3.2l-1.6,1.6l-3.2,0.5
+            l-1.3-1.3l-2.8,0.5l-1.5-1.5l-1.4-1.4v-1.9l-1.4-1.6l-2,0.6l-1.4,2.9l-2.8,0.5l-1.6-3.3l-0.9-2.9l-0.6-3.3l-2.2-3.8v-3l-2-1.9v-4.2
+            l-1.5-5.1l-2.2-2.2l1.5-0.7l1.3-1.5l1.4,1.4l4.4-1.7h4.2l3.7-2.8l3.7-1.2l2.6-0.1l3.5,3.5v1.8l1.1,1.7h1.4l1.7,2.5l1.7-0.8l1.1-2.9
+            l2.4-2.4l1.5,1.5l1.7-1.7l1.7,1l1.7-1.3h2.5l4.2-2.4l1.5,2.9h2.3l1.6,3.1l1.4,1.4l0.5,2.4l2,1.2h1.9l0.1,1.7l-1.9,0.9l1.3,2.4v2
+            l0.8,2.1l-2,1l-1.1,2l1.4,1.4l-1,1.5h-1.3l-1.2,1.6l-2.4-1.5l-1.5,1.5v1.9l-1.4,1.4l-1.6,1.7h-2.2l-3.3,1.2l-2.7,0.9l-1.2,1.2
+            l1.7,1.7l1.1,1.1v2.2L357.6,440.6" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Тыва" data-code="RU-TY" d="M457.9,424.1l-2,2l-1.6,3.2l-1.7,1.7l-0.5,3.3l1.6,1.9v2.8
+            l2.2,2.2v3l-3,2l-2.9,2.9h-2.4h-3.7l-3.4-0.9l-3.5,0.6l-2.5-0.8l-3.7-1.3l-2-2l-2.4-2.4l-2.9-0.9l-3.4,1.4l-2.2-2.2l-2.7-1.2
+            l-2.2,2.2h-2.8l-0.9,2.7H406l-4.2,2.7l-2.5,2.5h-2.5l-0.5,2.7l-1-1.8v-2.1l-1.9-1.9l1-1l2.1-0.5l0.6-1.8l-2.3-2.2l-2.9-2.9l-0.9-2.8
+            l-0.4-2.9l1.1-1.1l2.2,0.6l2.5,0.2l2.4-2.4v-2.8l2.7-1.4l2.2,2.2l2.9,1h2.9l2.6,1.3h2l2.7-1.1l3.7-3.2l2.7-0.8v-3.2l1.9-1.9v-2.1
+            l2.9-0.8l0.8-4.6l1.2-1.2l3.3,0.6l2.4-2.4l2.8,0.1l1.1-1.1l1.4,0.5l0.7-1.6h2.3l1.9,1.4l2.9,0.4l2.4,2.3l1.6,0.8h2.8l1.1-1.1
+            l1.3,1.3l1,1l-1.5,1.5v2.2l-1.4,1.4l0.5,2.2l1.2,1.2L457.9,424.1" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Амурская область" data-code="RU-AMU" d="M675.1,379.6l-1.5,1.5l-2.9-0.8l-2.4-0.6l-3.7,0.5h-3.4l-1.4,1.4
+            L656,383l-3.8-0.8l-1.6-3.1l-1.8-1.8c0,0-2.2-1.3-2.2-1.8c0-0.5-2.4-2.4-2.4-2.4l-3-0.5l-1.3-3l-2.9-2.3l-2-2l-2.8-0.8l-1-2.7
+            l-2.5-1.1l-1.5-1.5l-5.1-0.5h-2.7l-3,1.6l-3.8-0.6l-2.9,1h-3.2l-4.3,3.2l-2,2l-1.8-3.2l-0.8-1.6h-2.2l-0.6-2.7l-1.1-1.6l1.9-1.1
+            v-0.9h-1l-1.7-1.8l-1.4-0.2l0.3-3.2l-0.8-1.5l-0.9-2.5l-2-1l-1.5,2l-1.5-0.6l-0.1-2.2l-1-1l-1.5-0.4l-1.6,1.6l-0.8,1.9l-2.6-0.7
+            l-0.8-1.6l1.5-1.9l-0.9-1.5l-1.7,0.6l-2.2-0.6l-1.5-1.5l0-1.5l2.2-2.2l2.5-2.1h2.5l1.1-1.1l1.4,1.4l1.9,0.4l0.9-0.9h2.5l1,1.3
+            c0,0,1.6,0.2,1.6,0s0.5-1.9,0.5-1.9l3.2,0.6l1.1-1.1l2.3-0.5l2.1,1l2.7,2.7l2.1-0.9l2.3-0.6l1-1.4l1.7,0.8l1.3-1.3h1.4l1.3,1.3l5-5
+            l2.7,0.4v-1.7l3.4-1.3l2.5,0.5c0,0,2.4-1.5,2.5-1.6c0.1-0.1-0.2-2.6-0.2-2.6l4.1-2.5l3.9-3.2l1,0.6l1.6-0.8l1.4-1.8l2-0.3l1.8-1.8
+            l2.3-0.4l2.3,1.3l-0.9,2.2c0,0,0.2,1.7,0.1,1.7s-1.6,2.2-1.6,2.2v3.9l-0.9-0.1l-0.7,1.7l1.4,2.3v1.7l-1.5,0.9l-0.9,2.1l1.6,1.9
+            l3.1,0.4l1.1-1l2-0.6l3.5,4.8l1.5-1.4l1.6,0.1l2.3-3.4l2.4-0.9l0.8-0.8l-0.5-2.4l0.6-2l2.5-0.5l1.3-1.3l1.4-2.4l2.4-0.2l2.2,2.2
+            l0.6,3.8l2.3,1.6l-0.9,3.1l-4.1,1.5l-2.2-0.1l-1,1.4l2.6,2.6l0.1,1.7l-2.3,2.5l-0.3,3.7l-2.2,2l-0.1,1.7l-1.7,2.1l1.5,2.3l-1.2,2.2
+            l0.5,5.1l1.4,1.4h1.3l1.4,2.2l1.1-1.1l2.8,0.3l0.5,2l2.4,1.7l0.2,1.8l1.1,0.3l1.4,1.1l0.1,3l-1.2,0.5l0.6,2l-0.6,1.5l0.3,2.8
+            L675.1,379.6z" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Еврейская автономная область" data-code="RU-YEV" d="M703.4,368.4l-3,1.6l-0.8,2.5l-2,3.3l-2.3,2.9l1,3.2l-2.7,2.2
+            l-2.7,1.5l-2.3,0.8l-0.6,2.3h-2.4l-2.4-1.4l-1.8-0.6v-2.9l-2-1.8l-1.6-1.6l-0.3-2.8l0.6-1.5l-0.6-2l1.2-0.5l1.3,0.3l1.3-2.1l1.2-1.2
+            l-0.2-2.7l2.1-0.3l2.2,0.4l2.9-1.4l2.1,1l2.5,3l1.6-2.2c0,0,3.3-0.6,3.5-0.8c0.2-0.2,1.3-2.4,1.3-2.4l2.6-0.3l2.2-0.9l-0.2,2.1
+            l0.8,0.8l-0.3,1.5H703.4L703.4,368.4z" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Приморский край" data-code="RU-PRI" d="M735.3,360.2l1.4,3.7l1,4.1l0.8,3.7l0.8,4.9v4.8l-0.8,2.5v4.9v6.1
+            l-0.8,4.6l0.8,4.7l-0.3,6.1v2.9l-2.5,4.2l-1.6,3.5l-1.9,3.5h-1.6l-3.2,1.3l-2.7,1.5l-1.8-0.8v-1.7l-1-1l-1,2.2v2.3l-1.1-1.1
+            l-1.6-1.6v1.3l-0.5,3.2l0.5,2.2l-0.7,2.5l-1.1,1.1v1.3v2l-2.4-0.1l-1-1l0.9-2.9l1.5-3v-2.5l-1.3-3l-2.7-2.7l-1.4-1.4l-1.1-2.9
+            l-2.4-2.4l-2.3-0.8l-0.1-2.5l1.6-1.6l1.4-1.4v-2.5l1.8-1.8l2-1l2.1,0.7l1.8-1.8l1.1-2.3l-2-3.2l1-2.7l-1.3-2.8l-0.3-2.9l-1.8-2.4
+            l0.5-2l-1.4-2.4l2.5-0.3v-1.1l-1.4-1.4l0.3-2.4l2.2-3l1.8,0.5l0.5,0.5l1.7-0.1l0.6-0.9l2.6,0.4l0.2-0.8l2.6-0.4l2-2.5v-3.6l-1.5-0.4
+            l0.4-2.1l3-1.1l0.8-1.8l0.3-2.5l-1-2.4l-1-0.3l-0.8,1.6l-2.1,0.2l-0.6-1.8l-2.3-0.3l-0.4-1.7l2.5-2.1l0.9-3.5l1.5-0.2l1.8,1.4
+            l1.4,1.4l1.8-0.1l0.8,1.6l-0.6,1.3l2.2,1.6l2.1-1.8L735.3,360.2" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Магаданская область" data-code="RU-MAG" data-logo="static/img_logo/magadan.png" data-face="static/img_face/shevron.jpg" data-name="Кияненко Алексей " data-link-glav="https://vk.com/a.kianenko" data-adress="г. Магадан, ул. Набережная реки Магаданки, 71	" data-link-school="https://vk.com/hmbschoolmagadan" d="M713.7,143l1.6,1.6v4.1l1.3,3l0.3,4.8l-0.9,2.9l-1-2.5l-2.3-1.1
+            l0,3.2l-1.9-1.9l-1.3-1.3l-1-2.2l-3.5-3.3l1,2.8l-1,3h-3.4v2l-1.1,4.2l-1.4,1.6l0.1,5.6l2.3,1.5l-0.4,3.5l2.3,3.5v3.8l0.7,5l2.1,2.1
+            v2.3l1.8,1.8l1.6-0.3l1.5-1.3l1.1-1.1h1.9l-0.1,2.4l-2,0.6v3.4l-3.8,0.6l0.9,4.4l-0.4,1.9l-2.4,1v2.7l-0.9,2.4c0,0-3,0.7-2.4,0.1
+            c0.6-0.6-1.1-1.1-1.1-1.1v-1.6l0.5-1.6l2.1-0.7l-1-1l-2.3,0.9l-2.4,0.4v1.1L695,208l-1.8,2.2l-2,0.5l-1.6,1.6l-0.6,1.9l0.6,2.4
+            l1.4,1.4l-1.6,1.8l-2.7-1l0.8,2.7l-2,2l-1.8,1.6l-0.6-2l-2.8-2.8h-1.5l-1.1,1l-1.5-0.8l-2.2-0.1l-1.9,2.3l-1.7,0.1l-1.4-2.1V218
+            l2.4-1.3l-1.9-2.6v-1.9l-1.7-0.6l-2.9-1.8l-1.7-0.9l-4.8-0.3l-2.6,3l-2-0.1l0.4-2.4l-1.9-1.9l-0.5-1.5l-1.7-1.7l-3-1.5l-0.8-1.8
+            l-2.1-2.8v-1.5l-1-0.5l0.5-2.5l1.2-1.2l-1.8-1.1l0.4-2.2l3.3-1.3v-1.2l2.5,0.1l-0.2-2.8l-1.9-0.6l-1.3-1.7l1.6-1.5h1.6v-2l1.6-1.1
+            v-1.4l2-0.5l1.2,1.4l1.7-0.2l0.9-1.8l-0.6-1.6l1.7-2.8l0.6-1.8l1.7-0.3v-1.6l-0.9-2.3l-2.1-1.2l-2-2l-0.2-4.8l-1.9-1l-1.3-1.8v-2.1
+            l1.5-0.3l-0.7-2.1l-2.1-0.6l0.4-1.9l2.2-0.9v-2.2l1-1h2.5l0.2-2.6h3.2l1.3-1.3l-0.8-2.6l1.1-2.1l-1.5-2.5l2.8-1.2l1.3,1.3l1.5,2.2
+            h2.1l2.5-1l0.8-1.6l2.6,0.6l3-0.3l2.7-3.7l4,0.6l4.2-4.9l3.2,0.3l0.1,1.3l0.8,0.8l-0.6,1.8l3,1.3l0.4,1.9l3-0.6l1,2.3l2.1,0.9
+            l0.1,1.7l1.6,1.6l1.9-0.5h2.2l0.4,1.5h1.4l1,1.2l-0.8,2.8h1.1l0.9-1.3l0.9,0.9v1.7L713.7,143z" style="fill: rgb(255, 183, 65);"></path>
+          
+                <path class="map" onmousedown="Check_region(this)" data-title="Архангельская область" data-code="RU-ARK" data-number="2" data-logo="static/img_logo/arhangelsk.jpg" data-face="static/img_face/shevron.jpg" data-name="Рыкалов Роман" data-link-glav="https://vk.com/rykalovroman" data-adress="г. Архангельск, пр. Троицкий, 94" data-link-school="https://vk.com/hmbarh" data-face-2="static/img_face/shevron.jpg" data-name-2="Яргина Оксана" data-link-glav-2="https://vk.com/barsyaksyu" data-adress-2="г. Архангельск, Гайдара, д.55, 3 этаж (ТЦ &quot;Мебельная империя&quot;)" data-link-school-2="https://vk.com/hmbschoolnorthenwolf" d="M167.7,189.4l-0.5,0.7l0.8,1l1-1L167.7,189.4 M348.1,78l-1,0.3l0.8,1v1h1.3v-1.8L348.1,78M274.9,191h-1.3l-1.4-2.1l-0.8,0.5l-2.4-2.3l-1.8-2l0.7-2.1
+                l1.8-0.6l0.7-1.1l-1.3-1l0.1-2.8l-0.8-0.2l-0.8-2.1l-1.7-0.1l-1.4-2l0.5-2.5l1.8-2.5l2.2,0.2l0.7,0.8l0.8,0.3l0.3-1.5l2.6-0.8
+                l2.1-2.2l-1.4-1.5l1.8-1.2l2.1,0.8l0.6-1.7v-1.7h2.6l1.3,1.3l1.3-1.3l0.3-1.2l2.9-0.6l-1-1l-2.5-0.9v-0.9l2.9-0.8l3-0.8l1.5-1.5h2
+                v-1.4l2.8-0.1l-1.5-1.5l2.4-0.1l0.9,0.9l-0.1-2.3l1.2-1.2l-1.3-1.5l0.8-1.3l1.4,1.4h1.7v-1.7l2.5,0.9l1.3-1.4l1.3-1.5h1.6l2.8-1.3
+                l2,0.7h2.9l1.9-1.9l2.2,0.2l1,1.5h2.4l1.2,1.1l2.1-0.6h2.9l1.9-1.9l2.2-1.2l3-1.2h2.8l1.6,2.5v2.8l-2.4,2.2l-2.2,2.1l-2.9,0.2
+                l-3.4,1.6l-3.1-1.1l-1.5,1.5l-3.6-0.1H317l-1.7,1.8h-3.6l-2.6,1.5l0.8,1.8l-1.8,0.7l-2.2-0.2h-2l-0.2,1.3l-2.1-0.6v2.1l-2.1,1.5
+                l-1.7,1.3v-2l-1.4,1.3l0.3,2.3h-1.4l-1-1v1.1v1.7l-1-1l-1.3,1.3l-1.1,1.1h-1.5l-1.1,1.5l-1.5,2.5h-2.4l-2,1.6v2.2l-2,0.8l-0.7,2.3
+                l-1.6,1.6v2.9l-0.8,2.1l1,3l-0.9,3l1.3,2l0.6,2.1l-0.7,0.7l-2,0.9v-1.5L274.9,191 M347.8,86.1l-0.7,1l-2.5,0.5l-1.6,0.9l1.2,0.6l-0.6,1.3l1,0.3h2.1
+                l1.7-1.7l1.2-1.2l-0.4-1.9L347.8,86.1 M339.9,84.4l-0.5,0.5l1,1l1.8-0.7v-1.5h-1L339.9,84.4 M338.6,87.4l-1.4-1.6l-1,1l-0.8,1.5v1.9l1.6,0.3l0.4,1.1l2-0.5
+                l1.3-1.3l1-1l0.5-1.6h-1.4L338.6,87.4 M332.9,94l-0.6,0.6v1.2h1.3l0.5-1.5L332.9,94 M330.3,89.2l-0.7-0.7h-2.1v1.4l-1.1,1.1l0.7,0.7l2.3-0.5l0.9,0.9
+                l2-0.5l0.6-1.3l1.4,0.5l-0.8-1.7l-1.3-1.3L330.3,89.2 M340.8,73.3l-0.6,1.1l1,1l1-1L340.8,73.3 M338.7,75.9h-1.5v1.7l1.6,1.6v1.3l1.4-0.7l-0.9-1.8L338.7,75.9 M329.2,80.9h-1.3l-0.3,0.3l1.1,1.1L329.2,80.9 M330.3,83.1l-0.9,0.9l0.9,1l1-0.1L330.3,83.1 M331.2,78.9v1.2h1.3l-0.3-1.4L331.2,78.9 M333.1,82v1.1h1.1l-0.9-0.9L333.1,82 M334.1,84.5l0.5,0.5l0.9-0.9L334.1,84.5 M335.5,79.5v1.3l1.1,0.1v-1.4H335.5 M333.8,76.8l0.7,1.2l0.6-0.6l-0.6-0.6H333.8 M321.5,84.8l-0.7,0.7l1.2,1.2l1.4,0v-2.3l-1-1.2L321.5,84.8 M324.6,83.3l0.5,1.3h1v-1.1L324.6,83.3 M319.3,75.7l-1,1v1l-1.1,1.1l-1.9-1.4l-1.6,0.9v1.1l-2-1.4
+                l-1.5,0.6l0.5,2.3l1.4-0.5v1.5l1.5,0.4l1.4-1.4l1.9-0.8l1.6,0.5h2.4l1.7-1.7l-1.6-1.6l1.1-1.1l-1.9-1.1L319.3,75.7 M313.9,73.3h-2.1l-1.2-1.2l-0.9,1.7l1.1,1.1l0.4,1.3l2.5-0.9
+                l0.9,0.9l1.6-0.7l0.7,0.7v-1.4l-1.1-1.1h-1L313.9,73.3 M315.8,83.3H315l0.3,1.2l1.7,0.1L315.8,83.3 M316.1,85.8l-0.9,0.9l0.7,0.7l1.6,0.4l-1-1L316.1,85.8 M323,73.6v1.2h1l1-1L323,73.6 M206.3,204.1l-2.2,2.2l-1.6,2v-2.8l1.8-1.8l-2.2-3.3l-1.5-1.5
+                h-2.3l-3.4,1.1l-3-1.6l-3.7,1.4l-3.9-0.6l-0.1,4.4l-2.2,1.8l0.9,2.2l-1.1,1.1l-3.6-1.1l-1.4-2.9l-2.2-2.2l-0.7-3.7l-0.8-5.7h-2.2
+                l-2.2,2.3v2.2l-0.3,2.8l1.6,1.6l-0.6,3.2l-3.2,2.3l-2.8-2.8l-2.6-2.6l-0.7,0.8l-1,1.5l-1.3-0.9l-0.6,0.6l-1-1.3l-0.8,0.9l0.1,2
+                l-0.8,1.8l-1.6,0.8l-0.6,1.4l-0.3,3.2l2.4,2.4l-1,2.6l-2.1,0.6l0.3,1.7l-0.4,2l-2.5,2.5l-0.9,0.2l-1,1.1l-1.9,3.9l0.3,1.2l-1,1
+                l0.7,3.5l1.5,0.9v1.6l2,1l0.5,1.3l0.8,0.5l1.2,1.2h1.3l1.1,1.1l0.5,1.4l2.5,0.1l1.9,0.5l0.9,0.9l1.6,0.4l0.6,1.6l1.5,1.5l1,0.7v1.3
+                l1.1,0.4h2.2v-0.8l1,0.3h1.4v1.6l0.8,0.9h0.8v1l1.5,0.8l1,1l1.3-1.3l0.4-1.1l1.4,0.6l1,1.6l-1.1,1.1l1.5,0.8v0.8h1.1l1.4,0.6
+                l-0.6,0.6l0.8,1.2l0.8,0.8l1.4-1.2l1,0.3l0.7,1.1l0.5,0.5l1.2,1.2l-0.4,1.4l1.1,0.6l1.6-0.4l-0.1-0.9l1.1,0.3h2l0.3,1l1.3,0.3
+                l1.1-1.3l1.3-1l1.1-1.8l-1.4-1.4l1-1l1.5-1l0.2-1.1l2-1.2l1.7-1.7l1.1-0.5l1.6-1.6l-1.1-1.1L203,250l-1.3,0.6l-0.8-0.8h-1.1
+                l-1.6,0.3l-0.7,1.6l-0.8-0.3l-1.1,1.6l-1.1-1.1l-1.2-0.4l-1.3-0.6l-0.2-2.2l1.5-0.8l-0.3-1.4l0.6-0.6l0.5-1.2l1.5-0.4l1.8,0.4
+                l0.3-1.2l-0.3-2l-0.9-0.9l0.5-1.9l1.7-1.1v-1.8l0.5-1.8l-1.3-1.3l-1.3-1.9v-1.5l-0.3-1.7h1.6l1.8,1.3l1.5,0.5l1.1,1.1l2.2,0.4
+                l1.8,1.1l2,2l0.4,2l1.5-0.8l1.7-0.6l1.3,0.8l1.6,0.4l1.6,1.3h1.1l0.8,0.8l1.1-1.1l1.1-2l-1-1l-0.4-1.7l0.8-1.7l-0.6-1.2l-1.4-1.4
+                l-0.5-1.1l1.1-1.1l0.9-0.9v-0.9l0.9-0.9l0.7-1.9l1.4-1.4l-1-1l-2.4-1.1l-0.3,0.8l-2.2,0.8l-1.2-0.4l-1.5-1.8l-1.1-1.1l-0.5-2.2l-2-2
+                l-1.1-1.5l-0.7-2.7l-1-2.1L206.3,204.1" style="fill: rgb(255, 183, 65);"></path>
+    
+            
+            
+                <path class="map" onmousedown="Check_region(this)" data-title="Сахалинская область" data-code="RU-SAK" d="M705.1,284.6l-0.9,0.2l-0.7-1.9v-1.6l2.8,0.8l1.4,0.7l0.8,1.8
+                l1.5,1.5l2.7,0.5l0.7,1.8l3.1,2h1.6l1.3,1.9l1.1,3l1.7,1.7l3.2,3.3l2.1,0.5l2.9,1.1l2.7,2.4l3.7,2.1l2.4,2.1l3.2,1.6l2.7,1.6
+                l1.8,1.4l3.1,1.2l-0.4,1.4l-1.1,1.1l-2.1,0.7h-1.6l0.4,2.3l-0.4,1.6v1.3l1.9,2.9c0,0,1.8,2,1.4,2.3c-0.3,0.3,0.1,3.4,0.1,3.4
+                l1.4,1.4l2.2,2.2l1.9,1.2h2.8l1.6,1.6h1.9l1,2.1l2.4,0.1l1.5-1.5l2.6,1.5l1.5,2c0,0,0.5,1.3,0,1.3s-3.5-1.4-3.5-1.4l-1.3,1.3h-2.8
+                l-0.9,2.2l0.5,2.2l1.8,1.8l1.3,2.9l-1.8,1.4l-1.4-1.8l-1.9-1.9l-3.3-3.1v-2.1l-2.2-2.2l-2.1-2.1l-1.4-1.9l-1.8-3.4l-2.2-2.1
+                l-2.3-1.3l-2.2-0.7l-1.9-3.9l-4.1-5.6l-3.3-3.3l-2.7-2.7l-2.4-3.3l-1.5-2.5l-4.2-1.9l-3.3-1.4l-2-0.2l-2.6-3.6v-1.6l-2.8-2.9
+                l-1.5-2.8l-3.1-1l0.8-2.2v-1.6l2.5,0.8l0.4-2.2l-1.5-1.5v-0.8l-1.5-1.5L705.1,284.6z M806.9,288.7v2.4v2h1.5l-0.4-1.9V290v-1.4L806.9,288.7 M797.8,341.9l0.4,2.3l0.2,2.2l0.9,0.3v-1.8l0.7-1.4v-2
+                L797.8,341.9 M805.3,343.2v1l1.4,0.8v-1.6L805.3,343.2 M800.8,334.3l1.3,0.5l0.4-1.8l-0.7-3.5l1.2-1.2l-0.2-2.5l-1.9-0.5
+                l-0.5,2.9l0.7,0.7l-0.6,2.1L800.8,334.3 M804.1,319.8l-0.5,0.5l0.4,1.9l0.9-1.3L804.1,319.8 M805.4,313.1l0.5-2.8l-0.8-1.8l0.4-1.9l1.5-1.5l0.4,2l-0.3,2.1
+                l0.4,2.4l-0.8,1.8L805.4,313.1" style="fill: white;"></path>
+    
+            
+            
+                <path class="map" onmousedown="Check_region(this)" data-title="Камчатский край" data-code="RU-KAM" d="M745.7,210.4c0,0,1.1,2.5,1.6,3l3.4,2.3l3.5,1.9l5.4,1.6l2.5,0.5
+                l2.3,1.5l1.4,1.9l4.8,2.5l4.2,1.8l4.4,2l2.3,2.3h2.5l1.8,1.8l2.3,1.2h3.7l1.4,1.9v-2.5l-0.6-3.4l-1.3-5.3l-0.5-4.1l-2.4-2.3
+                l-3.3-3.3l-2.2-0.9l-1.3-4.6l1-2.3v-2.3l2.8-0.4V204l-3.7-0.9L781,202l-2.2-0.8l-2.5-3.9l-0.9-5.1l1.3-2.8l2.2-1.4l1.5-1l-0.9-2.3
+                l-2.5-2l-4.3,0.5l-1.8-1.8l-2.3-0.6l-2.7-4.4l-0.8-3l2.5-0.8l1-2.4l-2.5-2.5h-2.1l-1.3,1.3l-3.3-0.7l-3.3-2.3l-0.6-2.9l-3.3-3.3
+                l-0.9,1.9l-1.2,1.2v1.1l1,2.2h-3.5l-2.1-2.1l-3.5-1.8l-0.4-2.8l-0.5-3.5l-2.4-2.4l-1.8-1.8l-1.5-1.5l-1.9-3.2l1.4-1.4v-3.3h1.5
+                l2.3-2.3l-2.3-1.1v-2.4l-1.4-3.7l1.5-0.1l1.8,1.8l2.4,1.1v-2l-2.2-3.3v-1.9l1-3.5l-1.4-1.4l2.7-3.8l1.6-3.8l3.2-1l2.3,1.1l2.2-1.9
+                l-1.4-1.4l-2.2-2.4l-1.3-5.1v-3.7l-2.4-2.2l-1.3-3.9l-0.6-4.1l-1.3-3l-0.8-3.5l-1.4,2l-2.2,0.2l-1.6-1.6l-1.9,0.6l-0.6,3.2l-0.9,3.2
+                l-1.9,2.9c0,0,1.1,1.1,1.1,1.7s-1.3,3.9-1.3,3.9l-1.3,2.8l-2.1,1.3l-1.4-1.4l-1.9,0.6l-1.7,1.7l-2.2,0.4l-1.9,2.6l-1.5-1.5l-0.8-2.1
+                l-1-2l-0.7-2.6l-1.6-0.5l-2.2,1.5l-1.3,1.3l-1.8-0.8l-3,0.5l0.6,1.9l-1,1.5l-1.3-0.4l-3,0.9v2.2l-1.4,1l-0.8,2.6l-2.1-0.2l-2.5,1.9
+                l0.9,0.9l-1.3,1.3l-2.1,1.1l-1.1,2.3v2.2l0.9,1l3.2,0.3l0.1,1.3l0.8,0.8l-0.6,1.8l3,1.3l0.4,1.9l3-0.6l1,2.3l2.1,0.9
+                c0,0,0.1,1.3,0.1,1.7c0,0.4,1.6,1.6,1.6,1.6l1.9-0.5h2.2l0.4,1.5h1.4l1,1.2l-0.8,2.8h1.1l0.9-1.3l0.9,0.9v1.7l2.6,0.3l1.2-1.7
+                l1.1,0.1l0.3-1.6h-2.5l-2.1-2.1l-2.2-2.2l-1.5-1.4l0.8-2v-2.7l2.8-1.5l2-2l0.8,0.8l-2.4,2.3v2.9l2.7,1.6l1.8,2.3l1.5,1.5l1.6,0.6
+                h1.6l1.6,3.2l1.5,1.5v2.2v1.8l-0.9,3l0.1,2.5l1.5,1.3l1.5,4.7l1.3,3.2l1.1,3.9l1,4.2l2.4,3.2l1.5,4.7l0.6,4.1l1.3,3.8l-1,1l-1.1,1.1
+                l1.2,2.1l-0.9,1.9l-1.1,1.1v1.1l2.3,0.5l2.2,3l0.4,2.9l1.8,1.8l0,2.7l2.5,2.7L745.7,210.4z M795,153l-1.4,1l0.8,0.8l1-1l1-1L795,153 M798,256.6v1.6l1.1,0.5l0.8-1L798,256.6 M793.3,239.5l-0.7,2l-1,1l1.2,1.2l0.7,1.5l-0.2,2l-0.1,2.5
+                l1.2,1.2l1.3-0.7v-2.6l1.2-1.2l-0.9-2.2l-1.5-1.5l0.1-2L793.3,239.5 M785.7,158.7l-1.5,0.5l0.8,1.6h2.6h2.6l1.6-1.6l-2.1-0.7l-2.1,0.9
+                L785.7,158.7 M743.1,147.2v2.4l-0.2,2.2l1.3,0.9l0.9,1.1l0.1,2l1.8,0.7l-0.4-2
+                l-0.8-1.5l0.8-2.5v-3.1l-2.1-0.9L743.1,147.2" style="fill: white;"></path>
+    
+            
+           
+                <path class="map" onmousedown="Check_region(this)" data-title="Чукотский автономный округ" data-code="RU-CHU" d="M738.9,84.7v-4.6l-0.9-4.1l-2.2-3.3l1-1l-3-2l0.8-1.1h2.7l1.6-3.5
+                l2.5-1v-2.7l-1.8-1.8l-1-2.2l-2,1.5l-1.4-1.1l-1.6,0.3l-1.3,1.3H730l-0.6,1.2h-2.3v-1.8l-2.8,0.1l-1.5,0.3l-1.9-0.1l-0.8,1.3
+                l-1.6,1.6l-2.7,0.1l-1.5,1.1v2.4l-1.6,0.6l-1.3-1.3l2-2.4H712l-2.2,0.9l0.9-2l2.7-1.1h1.9l2-3.3l-0.5-2.9l-1-3.7l-2.1-2.1l-2-2
+                l-1.1,1.1l-0.1-2.4h-1.9l-2.8,0.8l-1.7-1.7v-1.7l-2.2-0.4l0.8-0.8l1.1-0.5l-1-1l0.2-1.2l1.3,0.8l1.4,1.1h2.4l1.6-1.3l1.6,1.3
+                l2.1-2.1v-3.2l-1-1.9l2.2-3.2h2.4l1.9,0.8l2.7-0.9l1.4-3l2.7-2.9l2.9-0.3l1.1-3.3l-2.2-0.6v-1h2.7l-0.9-2v-1.6L728,17l-1.4,0.4
+                l-1.6-2.5l-2.3-2.3v1.3l-3-1.1l-1.4,1.4l-2.3-0.4l2.9-1.9V9.1c0,0,0.8-2.3,0-1.5c-0.8,0.8-2.7,0.8-2.7,0.8l1.4-2.9l-1.3-1.3
+                l-1.6-1.4c0,0,0.8-2.9,0-2.2S711.7,2,711.7,2l-2.3,3.2h-0.9l-3,1.1l-1.8,1.8l-1.3,1.8l-0.3,2.3l-1.4-0.1v1.1l2,0.5l-2.4,1.6
+                l-0.8,2.3l2.3,0.6l3.5,0.3l3-0.6v1.5l-3,1.6l-1.7,1.7l-2.6-2l-2.9,0.9l-2-2l-1.8,1l-2.8,1.3l-2.3,2.4l-4.3,1.3l-2.3,3.3l-3.2,1.3
+                l-2.6,2.6l-2.5,2.5l-2.7,1.6l-3.8,1.6l-2,2l-4.3,4.3l-3.9,3.7l-1,3.7l-2.2,3.2l-0.8,2.3l0.8,2.2H653l-2,1.1l-0.3,2.7l-2.3,1.1
+                l-0.6,2.4v1.4h2.5l0.8,1.8l3.2-0.5l4.3,1.9l1.4,0.3l0.8,2l-0.6,2l-2.5,0.6l-2.8,1.3l-2,0.8h-2.9l-1.9-1.9l1.8-1.8l-2.4-2.4l-1.3,1.3
+                l-1.4,2.5l1.8,2.5l-0.5,1.5l1.3,1.3l-0.8,3l-3.2,2.3v2.5l-1.6,1.6h-1.9l-1.1,2.2v4.2l1,1.4l3,1l2.5,0.3l0.6,1.6l2.3,0.9l2,3.3
+                l-2.6,2l-1.2,3v2.5l-1.7,1.2v2.6l-1.5,2.4l1,2.5l2,1.1v2.9l2.5,0.4l2.4,1l2.6-0.9h2.1l1.5,1.5l1.3,2.7h1.4l2.8-1.2l1.3,1.3l1.5,2.2
+                h2.1l2.5-1l0.8-1.6l2.6,0.6l3-0.3l2.7-3.7l4,0.6l1.8-1.8l2.4-3.1l-0.9-1v-2.2l1.1-2.3l2.1-1.1l1.3-1.3l-0.9-0.9l0.6-0.6l1.9-1.3
+                l2.1,0.2l0.6-2.4l1.7-1.3v-2.2l3-0.9l1.3,0.4l1-1.5l-0.6-1.9l3-0.5l1.8,0.8l1.3-1.3l2.2-1.5l1.6,0.5l0.7,2.6l1,2l0.8,2.1l1.5,1.5
+                l1.9-2.6l2.2-0.4l1.7-1.7l1.9-0.6l1.4,1.4l2.1-1.3l1.3-2.8l1.3-3.9l-1.1-1.7l1.9-2.9l0.9-3.2l0.6-3.2l1.9-0.6l1.6,1.6l2.2-0.2
+                L738.9,84.7z M650,21.1l-1-0.4l-0.9,0.9l-1.9,1l-1.6,1.6l0.1,2.7l-0.7,0.7
+                l0.3,2.2l1.3,1.8l1.3,3l2,0.4l1.4-1.4l1-1.9l-1.1-1.2l1.7-2.4l-0.3-2.6v-3.1L650,21.1" style="fill: white;"></path>
+                
+            
+            <path class="map" onmousedown="Check_region(this)" data-title="Калининградская область" data-code="RU-KGD" d="M21.6,195.1l2,0.4l1.7-0.5l0.6-1.2l1.5,0.2l1.4,1.4l0.1,2l1.2,0.4
+            l0.2,1.5l1.8,0.3l0.4-1.4l-1-1l0.8-0.8l0.5,0.5l1.7,1.4v2.2l-0.2,1.9l1,1.6l1,0.7l0.4,2.5l-0.9,1.9l-4.2,2.1l-6.4-7.6L21.6,195.1" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Калужская область" data-code="RU-KLU" d="M73,268.4l-1.2-1.9l1.7-0.4l1.8-1.8H77l1.3,1.3l0.4,1.5l1.8,0.2
+            l0.6-0.6l1,0.3l1.7,1.3l1.6-1h1.8l2.3-0.5l1.8,0.5l1,1.8l1.2,1.2h2.1l0.8,1.5l0.8,1.4l-0.9,1.3l-0.7,1.3v1.9l-1.9,1.3l-1.8-1.2
+            l-0.7,0.7v1.4l-1.7,0.3l-1.5-1.5l-1.3-0.7l-2.2,0.6l-1.1,1.1l-1.1-0.4l-1.8,2.4l-2.8-1.1h-2l-1.8-0.6l-0.3-1.8l-1.2-1.2v-1.5l1-1
+            v-1.9l0.5-1.9l-1-1L73,268.4" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Новгородская область" data-code="RU-NGR" d="M118.4,243.7l0.9-0.9l0.3-1.9l-1.6-2.6l-1.8-0.7l0.5-1.1l0.8-1.6
+            l-0.7-1.9l-0.3-1.9l-1-1l-1.5-0.5l0.8-1.6v-1.5l-1.6-0.7l-0.2-1.5l-1.8-0.1l-1.1,1.1l-1.4-1.7l0.4-3.3l-1.1-0.3l-1.3-1.3l-1.2,1
+            l-1.3,0.3l-2-0.8l-2-0.2h-2.9l-0.9-1.8l-1.1,0.5l-0.9,0.9l-1.7-0.2l-2.1,0.2l-1,1v1.6l-0.9,0.9l0.4,1l1.3,1l-0.6,1.8l-1.7,0.8
+            l-1.3,1.3l-1.1,0.6v1.8l-1.1,0.6l-1,1l1.1,1.1l0.8,1.6l1.1,1.1H89l1.1,1.1l1.9-0.1l1.5,0.9h2.7l1.4,1.4l1.8,0.2l1.1-1.1h2.1l1.4-1.4
+            h1.7l1.4,0.7l1,1l0.5,1.8h1.8l1.2,1.5h1.6l0.3-1.1l1.1,1.1l1.7,0.8L118.4,243.7" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Тверская область" data-code="RU-TVE" d="M100.3,257.4v1.6l0.7,0.1l0.2,1.4h1.9l1.1,0.7l1.6,0.9h2l1.3,1.3
+            h2.1l1.7,1l1.6,0.5l1.5-1.4l2.5-1.6l-0.9-2v-1.2l1.4-1.4l-0.6-2.2l0.7-1.6h1.8l0.8-2.6l2.5-1.1v-2.5l0.7-2.1l-1.8-0.6l-2,0.4
+            l-1.5-0.6l-1.1-0.7c0,0-1.5-0.8-1.8-0.8c-0.3,0-2-0.8-2-0.8l-1.1-1.1l-0.3,1.1h-1.6l-1.2-1.5h-1.8c0,0-0.1-1.8-0.5-1.8s-1-1-1-1
+            l-1.4-0.7H104l-1.4,1.4h-2.1l-1.1,1.1l-1.8-0.2l-1.4-1.4h-2.7l-1.5-0.9l-1.9,0.1l-1.1-1.1h-2.2l-1.1-1.1l-0.8-1.6l-2,1.6l-0.2,1.6
+            l-1.1,1.1l-0.3,2.7l-0.7,1.5l-0.8,1.3h-1.8l-0.8,2.2l0.2,0.8l1.7,1l0.5,2.6l1.6,1.6l1.7,1l1.2,1.2l2.5,0.6l2-0.6l2.2,0.6v1.3l1,1
+            l1,1.9l1.4,1.1l0.8,1.4l0.8-1h1.5l1-1.4L100.3,257.4z" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Московская область" data-code="RU-MOS"  d="M112.2,278.6l-0.6-1.2v-1.6l-1.2-0.5l-0.6-1.7l1.4-1.1l-0.1-1.7
+            l1-1l0.5-1.6l1.4-0.7c0,0-0.5-1.4-0.4-1.6s0.9-1.1,0.9-1.1l-1.6-0.5l-1.7-1h-2.1l-1.3-1.3h-2l-1.6-0.9l-1.1-0.7h-1.9l-0.2-1.4
+            l-0.7-0.1v-1.6l-2,0.8l-1,1.4h-1.5l-0.8,1l-0.6,2.1l-2.3,1l-1.7,1.7l-0.9,1.4l1.8,0.5l0.8,1.6l1.3,1.4h2.1l0.8,1.5l0.8,1.4l-1.6,2.7
+            v1.9l1.1,1.8l1.6,0.3v1.4l-0.5,1.6l0.5,1.6l-0.6,2.1l0.2,1.7l1.9-0.3l0.3-1.3l1.6-0.3l0.5,0.5l2.3-0.1l0.7-0.7l2,0.4l1.2,0.4
+            l1.3-0.3l0.6-0.6l1.5,0.1h1.5l0-1.8l0.8-0.4l0.4-1.3l0.2-2.4l-1-1L112.2,278.6z M105.9,272.2l-0.8,1.1l0.3,1.3h-1.7l-0.5-0.5
+            l-0.5-0.5l-0.9,0.9l-1.3,0.1l0.5-1.4v-1.1v-1.3l0.9,0.1l0.8-1.2l-0.3-0.7l0.8-0.7l1.1-0.3l0,0.8l0.4,0.8l0,0.2l1.2,0.5l0.9,0.9
+            L105.9,272.2z" style="fill: white;"></path>
+            <path class="map" style="fill: rgb(255, 183, 65);" onmousedown="Check_region(this)" data-title="Москва" data-code="RU-MOW" data-logo="static/img_logo/moskva.png" data-face="static/img_face/shevron.jpg" data-name="Мещерякова Анастасия" data-link-glav="https://vk.com/id180668770" data-adress="г. Москва, Автозаводская, Ул. Ленинская Слобода д.26" data-link-school="https://vk.com/hmbschoolmoscow" data-number="2" data-face-2="static/img_face/shevron.jpg" data-name-2="Уколов Сергей" data-link-glav-2="https://vk.com/ukolovsv" data-adress-2="г. Москва, ул. Электрозаводская, дом 21, проходная 3 (Мраморная)" data-link-school-2="https://vk.com/bayard_fencing_hall" d="M104.7,269.9l0-0.2l-0.4-0.8l0-0.8l-1.1,0.3l-0.8,0.7l0.3,0.7
+            l-0.8,1.2l-0.9-0.1v1.3v1.1l-0.5,1.4l1.3-0.1l0.9-0.9l0.5,0.5l0.5,0.5h1.7l-0.3-1.3l0.8-1.1l1-0.9l-0.9-0.9L104.7,269.9"></path>
+            
+            <path class="map" onmousedown="Check_region(this)" data-title="Ненецкий автономный округ" data-code="RU-NEN" d="M299.3,218.6l-1,1.5l-1.2,1.2l-0.8,0.8l1.2,1.2l0.3,1l1,0.3v2v2.3
+            h-1.2l-1.5-0.8h-1.5l-2.5,2.2l-2.2,0.1l-1,2.4l-3.4-0.6l-0.9,1.5l-1.5,1.5l-1.5,0.8l-2.8,1l-2.4,0.6l-2.9-1.5l-1.5,0.3l-1.7-1.5
+            l-3.4-1.3l-3.4-2.2l-2.5-1l-4.1-1.6l-2-2l-2.5-0.3l-4-2.6l-2-2l-3.1-1.4l-3-2.6l-2.8,0.3l-2.1,1.4l-13.2,0.1l-1-1l-2.4-1.1l-0.3,0.8
+            l-2.2,0.8l-1.2-0.4c0,0-1.3-1.5-1.5-1.8c-0.3-0.3-1.1-1.1-1.1-1.1l-0.5-2.2l-2-2l-1.1-1.5l-0.7-2.7l-1-2.1l-1-1.3l3-0.6l2.5-3.7
+            v-3.2l1-2.2l3.3-1.6v-2l3.2-1.9v-3.2l-0.5-3h2.2l0.7,1.6l2.9,2.9l2.2,3.3v4.4l-0.8,2.3l-1.1,1.1l-1.9-1.9l-2.7-0.6l-4.1,1.4v3.3l1,3
+            v2.5l2.9,0.8l2.8,1.3l3.2-1.5v-2.3l3.3-0.8l3.2,1.5l-0.5-2l4.9,0.9l2.7-0.5l4.8,0.6h2.8l1.4,2.5h1.3v-2.3l4.1-1.3h2.2l0.9,3.3h-2.4
+            l-0.8,2.3l-1.9,0.6l2.9,2.7h2l3.8-1.6l3.6,0.7l3.9,3.9l1.3-1.3h2.7l3.4-1.1l1.3,1.3l-0.4,1.8l-2,1.4v2.2l2.4,2l0.2-2.3l1.1-1.1
+            l2.5,0.6v-2l2.4-0.4l0.5-3l-0.4-3.7l2.3-1.1l2-0.6l2.3,2.3l1-1l2.6,3.2l3,3l2.4,2.4L299.3,218.6z M282.9,197.8l-1.8,0.9l-1.4,0.5l0.3,3l0.2,1.6l1.3,0.3l0.5,2.4
+            l2.4,0.2l0.8-2l-1.2-2l0.1-2.2L282.9,197.8 M242.2,187.8l-2.5,0.7l-1.5,2l-1.1,1.5l0.8,2.2l1.8,0.7l1.7,0.7
+            l1.6-1.1l2,0.3l1-2.4l-1.6-2.1l-0.1-1.7L242.2,187.8" style="fill: white;"></path>
+    
+           
+            
+                <path class="map" onmousedown="Check_region(this)" data-title="Ямало-Ненецкий автономный округ" data-code="RU-YAN" d="M295.8,232.2l0.2-1.4l1-0.5l0.6-1.4h1.2v-4.3l-1-0.3l-0.3-1
+                l-1.2-1.2l2-2l1-1.5l1,2l3,3l2,3.2l2.2,2.9v2.5l1.8,2.8l2.5-1.5v-2.7l2.9-2.7l-2-0.6l-1.4-3.3l0.5-3.5l-2.4-1.6l-1.3-2.7l1.2-1.2
+                l2.5-1.3v-2l0.6-3l1.1-1.5v-1.9l-1.6-0.5l0.9-2.5l1.4-1.8l2.5-0.9l2.7-1.3l1-1l2.2-2.2l1.6-3.7l1.3-3l1.4-3l2.4-1.3l1.5,2.2h3
+                l1.5,1.5h2.7l1.1,4.3l-1.3,1.3l-0.6,4.6l-3.6,3.6l-1,3.3l2.2,1.9l-0.8,4.3l-0.6,3.4l-2.5,3.8l-0.9,5.4l-1.4,4.8l-1,2.4l1,3.4
+                l2.2,2.2l-0.4,2l-2.8,2.2l-0.5,4.7l-2.8,0.8l-3.3,3.3l-1.9,2.8l-1.8,1l-3.2-0.6l-1.9,1.3l-2.1-1.3l-1.3-1.3l-1.9-0.6v2.4l1.9,2.9
+                l1.9,0.9l2.5,1.8l2.2-0.1l1.5,2.2h2.3c0,0,1-1.7,0.4-2.2c-0.5-0.5,1.3-1.3,1.3-1.3h1.6l0.8-0.8l3.2-0.9l2.5-1.4v-2.7l1.1-1.1l2-2
+                l1.6-1.6l0.8-3l-0.6-2.7l-0.3-2.4l1.7-1.7l1.7-1.7h2.7l2.9-0.4l0.8,2.5l1.2,1.2l1.5,3.9l-2,2l0.1,3v1.9l2.5,2.5l2.9,0.6v-1.8
+                L347,250l-1.1-1.1v-1.5l-0.3-2.3l2-0.6l0.8-1.6l-0.8-2.4l0.9-2l-1.3-2.5l-1.6-1.5l-1-1l-3.1-1.1l-1.8-1.8l-1.5,1.5l-1.9,0.9l-1-1.4
+                h-2.3l-0.4-2.4l1.5-1.5l-0.4-4.1l1.8-2.8l1.1-3.3l2.5-2.5l-0.9-2.8l-0.8-2.4l0.3-2.6l-1.8-1.8l2-2l3.2-3.2h2.7l1.5-2.4l1-2.7
+                l-0.9-2.2l0.9-1.9h2l-0.6,2.7v3.7l-0.5,3.3l-2.3,2.3v3.2v2.3l2.7,2l1.5,1.3l2-1.2l2,2l2.2,2v-1.5l-0.8-2l-1.5-1.5l-2.3-1.1v-1
+                l-1.9-1.9l-0.9-2.8l2.7-1.8l1.3,1.3l2,2l1.5-1.4L355,201l-0.2-1.5l1.5-1.5l0.1,1.5h1.2l0.5,1.4l1,1l1.7,0.4l1.8,1l0.4,1.6l-1.2,1.2
+                l0.3,1.3l-2.4,0.4l-1.1,1.1l-0.7,0.7l0.8,1.7l0.6-0.6l0.7,1.5l2.7,1.5l-0.3,3v4.4H360l-1,1.5l-1.9,1.9l-2.3,1.7l0.1,2.3l1.1,1.1
+                l0.3,1.4l1.6,1.6l2.4,0.4l0.3,1.6l0.8,0.8l1.5-1.3l0.8,0.8l1.5-1.5l-0.1,2.5l2,0.4v2l1.2,2.9l-0.7,1.8h-1l1,1.9l-0.8,2.4l-1.4,1.4
+                l-0.5,1.6l-1.8-0.4l-0.1,2l1.2,1.2l0.4,2.3l-1.1,1.9l1.1,1.1v1.8l2.8,1.6l1.1,2.2l-1.7,1.6v1.3l0.9,1.5v2.3l-1.1,0.9l1.4,2.5h1.5
+                l1.5,1.5l1.1,2.3l0.3,2.9l-1.3,1.3l0.6,2.7l2.9,0.6l1.5,1.5l1.5-1.5l0.5,3l-0.5,2.7l0.9,2l-1.7,1.7l-1.8,2.3l-1.3,2.4l1.9,2.7v3.2
+                l-1.8,1.8l-0.2,2.9l-1.1,1.1l-3,3l-2.7-3.3h-1.8l-1.9,0.6l-1.9-3.2l-3.7-1.1l-1.2,1.2l-2.6-3.4l-1-2.7l-2.7,1.8l-2.3,1.3l-1,1.8
+                h-4.4h-4.7l-2-2l-2.7-1.4l0.9-2.4l-3.4-1.4l-1.2,1.2l-2-2l-3.1-0.8l-2.2,0.5l-2.5-2.7h-2.2l-1.9-3h-2.2l-4.4,0.5l-0.9-2.5l0.6-2.5
+                l-2.9-2.9v-2.2l-0.7-3.4l-3-3h-3.4l-1.4,1.4l-1.9-1.9l-1.8,1.8l-3.4-0.6l-1.9-2.2l2.2-2.2l-2.9-2.5l-2.9-1.5l-2.7,1.1l-2.7-1.1
+                l-3.4,0.8l-2.5-2.5l-2.2-2.2l-1.2-1.2l2.3-2.3l1-3.1l-0.5-3.4l0.3-4.2l3.3,0.1v-2.8l4.1-2.3l4.1-0.9h4.3l0.9-2.8h2.4l2.3-2.3l3-1.5
+                l-2-2l2.3-1v-1.6l-2.5-1.3L295.8,232.2z M350.4,182.5l-1,0.9l0.7,1l1.4-0.9l1.7,0.5l-0.5-1L350.4,182.5 M345.1,187.1l-0.6,1.5l0.9,0.8l1-1.3L345.1,187.1 M332.8,179.7l-1.3,0.9l0.5,1l-0.9,1.3l0.2,0.8l2.1,0.6l2-0.9
+                l1.2,0.1v-1.2l-1.8-0.5l0.9-1l-1-1.5l-1.3,0.5L332.8,179.7" style="fill: white;"></path>
+    
+            
+    
+                <path class="map" onmousedown="Check_region(this)" data-title="Хабаровский край" data-code="RU-KHA" d="M636.4,315.7l-1.4-3.3v-2.5l-1.7-1.7l1.5-1.5l0.4-3.3l-3.5-1.5
+                h-2.8l-0.3-1.7l2-0.4l-1-2.1l0.6-3.9l-2.4-0.4l-2.4-2.5l2.1-0.5l0.2-3l-0.9-0.9l-0.6-1.6l0.8-2l-1.6-1.6l1.3-1.8l-1.1-1.1v-2.7
+                l2.6-1.3l1.7-1l2.1,0.2l1.7-1.7l2.3-0.9l0.3-2.2l-1.5-1.5l0.8-2.1l2.9-0.6l3.9-3.9l-0.2-4.4l2.8-0.9v-1.4l-2.7-2.7l-0.6-1.9l-3-3
+                l-1.9-0.4l-0.4-2.5l0.5-2.9l-1.5-1.5l2.3-3v-2.7l0.2-3.3l-1.2-1.2l-0.6-2.4l-1.1-1.1l-0.1-2.9l2.2-0.5l1.9,0.5l2.5,1.3l2.5-1.3
+                l2-0.6l2-2l1.4-2.5l1.9,0.1l1.1-0.7l0.8,0.8l1.1-0.4v-2.1l-0.2-3.5l2,0.1l2.6-3l4.8,0.3l4.6,2.7l1.7,0.6v1.9l1.9,2.6L669,218v2.9
+                l1.4,2.1l1.7-0.1l1.9-2.3l2.2,0.1l1.5,0.8l1.1-1h1.5l2.8,2.8l0.6,2h-1.5l-1.5,1.4l1,1.6l0.8,0.8l-2.2,1.4h-2.9l-2.9,2.8l-1.8,1.8
+                l-2,3.4l-2.2,2.2l-2.2,4.3l-0.4,4.2l2,4.1l-1.9,1.9l-0.6,4.1l1.1,2.9l1.8,1.8l-1.5,2.5v3.4v4.6l-0.8,3.2v4.3l1.3,1.4v3v3.4l-1.1,4.3
+                v3.5l-1.9,3.2v3.2l-1,2.8l1.1,2.6h1.9l1.5-1.5h2.1l1.6-1.6l1.8-1.8l1.3,1.3l1.5,0.8v1.6l1.2,2.2l1.5,1.5l1.3-1.3v-2l-1.8-0.8v-1.9
+                l1.4-1.5v1.3l1.5,1.1l0.8-0.3l0.8,0.8v2.3v1.6l2.5-1v-1.3l1.4-1.9l0.9-0.8l1.4,1l0.3-2.1l-1.2-1.2l-1.1-2.2l-1.4-2.5l2.3-1.3
+                l1.4-1.4l2.8-0.6h3.3l2.7,0.3l1.2,1.2c0,0,2.9-0.5,3.5-0.5c0.6,0,2.4-0.8,2.4-0.8l1.6,1.6l-1.2,1.2l-0.9,0.9l-0.8,1.4h2.2h2.3
+                l0.5,1.6l1.9,1.9l2.3-0.3l1.2,1.2l1.3,2.4l0.4,4.8l1.6,5.1l2.6,3.7l3.2,3.2l1.3,1.3l0.6,2.2l2.5,2.5l1.8,3l0.6,1.8l2.3,3.6l2,2v5.3
+                l-0.8,4.6l1.4,4.6l-2.1,1.8l-2.2-1.6l0.6-1.3l-0.8-1.6l-1.8,0.1l-1.4-1.4l-1.8-1.4l-1.5,0.2l-0.9,3.5l-2.5,2.1l0.4,1.7l2.3,0.3
+                l0.6,1.8l2.1-0.2l0.8-1.6l1,0.3l1,2.4l-0.3,2.5l-0.8,1.8l-3,1.1l-0.4,2.1l1.5,0.4v3.6l-2,2.5l-2.6,0.4l-0.2,0.8l-2.6-0.4l-0.6,0.9
+                l-1.7,0.1l-0.5-0.5l-1.8-0.5l-2.2,3l-0.3,2.4l1.4,1.4v1.1l-2.5,0.3l-0.6-2.8l-2.5-2.7l1.9-1.9v-2.8l-1.6-1.6l-1.8-1.8l-0.5-1.6
+                l0.3-1.5l-0.8-0.8l0.2-2.1l-2.2,0.9l-2.6,0.3l-1.3,2.4l-3.5,0.8l-1.6,2.2l-2.5-3l-2.1-1l-1.9,0.8l-1,0.5l-2.2-0.4l-2.1,0.3l0.2,2.7
+                c0,0-0.9,1.4-1.2,1.2c-0.3-0.3-1.2,2.2-1.2,2.2l-1.5-0.4l-0.1-3l-1.4-1.1l-1.1-0.3l-0.2-1.8l-2.4-1.7l-0.5-2l-2.8-0.3l-1.1,1.1
+                l-1.4-2.2h-1.3l-1.4-1.4l-0.5-5.1l1.2-2.2l-1.5-2.3l1.7-2.1l0.1-1.7l2.2-2l0.3-3.7c0,0,2.3-2.3,2.3-2.5c0-0.3-0.1-1.7-0.1-1.7
+                l-2.6-2.6l1-1.4l2.2,0.1l4.1-1.5l0.9-3.1l-2.3-1.6l-0.6-3.8l-2.2-2.2l-2.4,0.2l-1.4,2.4l-1.3,1.3l-2.5,0.5l-0.6,2l0.5,2.4l-0.8,0.8
+                l-2.4,0.9l-1.2,1.7l-1.1,1.7c0,0-1.4-0.2-1.6-0.1c-0.2,0.2-1.5,1.4-1.5,1.4l-3.5-4.8l-2,0.6l-1.1,1l-3.1-0.4l-1.6-1.9l0.9-2.1
+                l1.5-0.9v-1.7l-1.4-2.3l0.7-1.7l0.9,0.1v-3.9l1.6-2.2l-0.1-1.7l0.9-2.2l-2.3-1.3l-2.3,0.4l-1.8,1.8l-2,0.3l-1.4,1.8l-1.6,0.8
+                L636.4,315.7z M674.7,295.9l-1.1,1.2v1.5v1.6l1.9-0.8l1,1l1.1-1.1l0.4-2.2
+                l-1.2-1.8L674.7,295.9" style="fill: white;"></path>
+    
+            <path class="map" onmousedown="Check_region(this)" data-title="Краснодарский край" data-code="RU-KDA" data-logo="static/img_logo/krasnodar.png" data-face="static/img_face/krasnodar.jpg" data-name="Басов Захар" data-link-glav="https://vk.com/id209706471" data-adress="г. Краснодар, ул. Тюляева 4/1" data-link-school="https://vk.com/hmbschoolkrd" d="M52.8,365.6l-1-1.3l-1.4-0.6l-1.4-2.2l-1-1l1.7-1.4l-0.4-2
+            l1.4-0.4l-1-1l-3.4-3.6l-1.5,0.8l-1.3-1.3l0.1-1.3l0.4-1.6l-1.8-0.8l-1.1,1.1l-1.5-1.4l-1.4-1l-1.5-0.3l-0.5,1.6l1,1.9l-0.4,3.2
+            l-1.9-0.6h-1.5l-2.9,0.1l-2.2,0.9l-0.9,1.9l-1.9-0.6l-2-2.5l-1.5,0.3l-1.4,1.4l0.6,2.5l-0.8,2.3l1,2l1.5,1.4l-0.3,3.8l1.3,1.9l1,2.2
+            l0.5,4.3l-0.4,5.8l1,3l1.6-0.3l1.3,1.8l1,1.3l1.4,0.3l1.5-1.5l1.8-0.3l1.3-1.3h1.3l0.7,1.5l1.1,1.6h2.5l1.9-2.4l0.7-1.4l-0.5-1.8
+            l1.3-0.4l2.1-1.6l-1.2-1.2l1-1.7l-0.8-1.5l-1-0.8l1-1.5v-1.5l1-1.1l1,0.3l0.7,1l1.8-0.2l1.1-1.1l-0.2-2.6L52.8,365.6z M39.6,372.5
+            v2.8l-0.7,1.4l-0.5-1.7l-1.2,0.5l-1.1,1.1l-1.3,1.9l-1.4,1.4l-0.9,0.8v1l-1.3,0.2l-0.6,0.6l-0.7-1.3l-1.9-2.4l1.1-1.1l1,0.5h2.8
+            l0.3-1l-0.5-1.2v-2.1h1.2l0.8-1.5l1.4,0.1l0.8-0.8l-0.7-1.7l-1.4-0.9l-0.4,0.5H33l-0.9-1l-1-1l-0.7-0.7l-0.6-1.1v-1.2l0.7-0.3
+            l0.9,0.9l0.6,0.6l0.8,1.2l1.6,0.5l0.7-0.3l1.6,0.5l0.4,1.4l1.1,0.6l0.8,0.8l0.9,0.6L39.6,372.5L39.6,372.5z" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Ставропольский край" data-code="RU-STA" data-logo="static/img_logo/stavropol.png" data-face="static/img_face/shevron.jpg" data-name="Кравченко Игорь" data-link-glav="https://vk.com/id97068179	" data-adress="г. Ставрополь, ул. Рогожникова, д. 1" data-link-school="https://vk.com/hmbschoolstv	" d="M56,402.1l0.5-1l-1.4-1l-1-1l-1.8,0.4l-2.3-2.3l-0.5-1.5l-1.9-0.4
+            l-2-0.6l0.6-1.4l-0.6-1.3l-1-1l0.6-1.1h2.2l-0.7-1l-0.3-1.6l-1.4-1v-2l-1.5-0.5l0.7-1.4l-0.5-1.8l1.3-0.4l2.1-1.6l-1.2-1.2l1-1.7
+            l-0.8-1.5l-1-0.8l1-1.5v-1.5l1-1.1l1,0.3l0.7,1l1.8-0.2l1.1-1.1h1.4l0.9,1l1.4,0.7l0.6,1.7h1.3l1-0.4L59,374l1,1l2.3-0.4l1.4,0.6
+            L64,377l1.2,1.4l0.4,1.6l1.2,1.2l0.8,2.3l-0.9,1.7l1,1.8l1.3,1.3l1,1.3v1.5l1.4,1.4l0.3,1.9l1.1,1.6v2.9l-2,1.3l-1.9,0.6l-1.6-0.6
+            l-1,1l0.6,1l-0.9,0.8h-1.6v1.1l1.3,0.6l-0.8,2h-2.1l-1-1V405l-0.9,0.1l-1,1.3l-1.1,0.2l-0.5-2.2L56,402.1" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Чеченская Республика" data-code="RU-CE" d="M66.8,408.9l1.3,1.8l2.6,0.2l0.2,2.9l-1.3,0.4l-2.3,1.3l-2.2,2.7
+            l-0.8,3l-2.1-1.2l-1.3,1l-2.1-0.2l-1.4,1.1l-2.2,0.3L56,420l-1.9-2l1.9-1.4l1.5-2.4l1.2-2.6l0.5-1.9l-2-1.6l-0.9-1.7l2.6,0.1
+            l1.3-0.4l0.8-1l0.9-0.1v0.9l1,1h2.1L66.8,408.9" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Кабардино-Балкарская Республика" data-code="RU-KB" d="M39.7,397.4l1.5-0.6l1.5-1.5l1.2,0.1l1.8-0.7l2,0.6l1.9,0.4
+            l0.5,1.5l2.3,2.3l1.8-0.4l1,1l1.4,1l-0.5,1l-1,0.8v1.5l-0.9,0.9l-2.3,0.1l-0.8,0.8l-1.1-1h-1.8L47,406l-1.1-0.2l-1.7,0.6l-1.8-1.6
+            l0.5-2.5l-2.2-1.8L39.7,397.4" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Волгоградская область" data-code="RU-VGG" data-logo="static/img_logo/volgograd.png" data-face="static/img_face/shevron.jpg" data-name="Абушахманов Рифат" data-link-glav="https://vk.com/id191158657" data-adress="г. Волгоград, ул. Писемского 91" data-link-school="https://vk.com/hmbschoolvlg" d="M97.9,329.9l-0.2,2.2l0.8,3l2.8,0.4l1.7,0.9v1.5l2.6-0.1l3,2.9
+            l0.4,3.5l-2.3,2.2l1.7,1.6l0.9-0.9l1.8,0.7l0.5,2.6l1.2,1.2h1.8l0.4,1.9l1.5,1.5l0.1,2.5l-0.9,2l-1.6,1.2h-2.5l-2,2l-1.6,1.6v2.3
+            l-2.2,0.9l-2.3-0.1l-1.6,1.6l-0.9-2.6l-1.5-1.5l-1.8,1.2l-2.6-0.1l-1.3-1.3l-3,0.8l-0.9,2.3l-2.3-0.5l-1.3-1.3v-1.6l-1.2-0.4
+            l-0.9,2.5l-1.3,0.5l-1.3-1.3l-1.5,0.6l-1.4-1.4l-2.3,2.1l-2.7-2.6l-0.6-2.3l0.8-2.1v-2.3l-2.8-2l1.6-1.6v-1.6l2.1-0.9l1.7,1.7
+            l2.6-0.4l1.8-3.4l-1.1-4.5l3-3l1.1-2.7l-1.8-2.7l-0.2-1.7l3-3l0.9-3h3.6l1.8-1.6l1.9,0.4l0.4,1.4l1.9,1.1H97.9" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Вологодская область" data-code="RU-VLG" d="M124.2,249.7v-2.5l0.7-2.1l-1.8-0.6l-2,0.4l-2.6-1.2l0.9-0.9
+            l0.3-1.9l-1.6-2.6l-1.8-0.7l1.3-2.7l1.4-1.4l2.4,0.4l0.8-1.1l1.6-0.4l1.6-2.1l0.7-1.7l1.1-2.2l2.9-1.6l1.9-2.7l1.4,0.8l2.3-1.3
+            l2.1-0.7l2.1,0.4l1.8,0.8l2.1-0.4l1.6,1l0.1,1.1l1.8,2l-1.9,3.9l0.3,1.2l-1,1l0.7,3.5l1.5,0.9v1.6l2,1l0.5,1.3l0.8,0.5l1.2,1.2h1.3
+            l1.1,1.1l0.5,1.4l2.5,0.1l1.9,0.5l0.9,0.9l1.6,0.4l0.6,1.6l1.5,1.5l1,0.7v1.3l1.1,0.4h2.2v-0.8l1,0.3h1.4v1.6l0.8,0.9h0.8v1l1.5,0.8
+            l1,1l1.3-1.3l0.4-1.1l1.4,0.6l1,1.6l-1.1,1.1l1.5,0.8v0.8h1.1l1.4,0.6l-0.6,0.6l1.6,2l-2.8,2.8l-1.7,1.7l-2.4-1.1l-1.3,1.2l2.8,2.9
+            l-1.8,0.9v2.3l-0.8,0.8l-2.9-2.6l-1.6,2.4l-2.8-0.7l-1.2,1.2l-1.7-2.5l-2.6-1.4l-2.1-1l-0.9-2.4l-2.5-2.5l-3.3-0.6l-1.7-3.6
+            l-2.6,1.2l-2.8-1.2l-3.1,0.8l-2.8,1.2l-3-3v-2.7v-2.3l-2.4-2.4l-1.2,1.2l-3.2-2.2l-1.3-1.3l-2.3,0.2L124.2,249.7" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Ростовская область" data-code="RU-ROS" data-logo="static/img_logo/rnd.png" data-face="static/img_face/rnd.png" data-name="Запрудский Никита" data-link-glav="https://vk.com/id295654644	" data-adress="г. Ростов-на-Дону, пер. Доломановский, д. 11" data-link-school="https://vk.com/hmbschoolrnd	" d="M76.4,369.7v-2.7l-2.7-2.6l-0.6-2.3l0.8-2.1v-2.3l-2.8-2l1.6-1.6
+            v-1.6l2.1-0.9l1.7,1.7l2.6-0.4l1.8-3.4l-1.1-4.5l3-3l1.1-2.7l-1.8-2.7l-0.2-1.7h-3.3l-1.1,1.1h-1.8l-0.9-1.2h-2.2V333l-1-1l-1,1.3
+            l-0.9,2.2l-4.7,0.6l0.1,2l-1.8-0.3l-1.8,1.8l0.5,2.8l-1.9,1.1l-2.8,2.8l-3-3.3l-2-2.2l-2.2,0.9l-2.4-1l-2.8,1.3l-1.9,2l1.5,0.5
+            L46,346l2.2,0.5l1.5,1.1l-0.5,2.3L47,349l-2.9-0.4l-0.4,1.6l-0.1,1.3l1.4,1.4l1.4-0.9l4.4,4.6l-1.4,0.4l0.4,2l-1.7,1.4l1,1l1.4,2.2
+            l1.4,0.6l1,1.3l-1.2,1.2l0.2,2.6h1.4l0.9,1l1.6-1.3l1.2,0.9h2.3l0.9-0.9v-1.2h1.5l0.7,1.8v1.7l1.2,1.2l1.6,0.4l0.5,2.2l0.4,1.6l1,1
+            l1.4,0.5l0.6-0.6l1.5,0.4l2.7-2.8H76l2.6-1.9l1.2-2.6v-1.9l-1.9,1L76.4,369.7" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Астраханская область" data-code="RU-AST" d="M101.9,369l-0.9-2.6l-1.5-1.5l-1.8,1.2l-2.6-0.1l-1.3-1.3l-3,0.8
+            l-0.9,2.3l0.7,2.5l1.5,1l-0.8,4l0.2,2.4l1.2,1.6l2.8,0.1l-0.7,3.1l-1.5,0.8l-0.9,3.2l1.3,1.3l-0.8,2l-2.7-0.2l-0.2,1.6h-0.9l-0.2-1
+            l-1.4-0.6l-1,1l0.9,1.2v1.5l0.8,0.8v1.2l-4.1,2.9l0.4,1l1.7,0l1.4,1l2.3,0.4l0.9,0.9l1.9,0.5c0,0-0.3,1,1,1s2.7-0.2,2.7-0.2h1.1h1.4
+            h1.8l2.2-0.3l1.3-1.3l-1.6-1.6l-1.1-2.2l-0.3-2.3l1.9,0.3l1.3,1.4l1.3-1.3v-3.5l-0.7-4.3l0.6-3.3l-1.5-1.5l-2.4-2.3l-1.6-1l1.6-1.6
+            l0.8-3.3l-1.8-1.8l-0.8-2.5L101.9,369z" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Орловская область" data-code="RU-ORL" data-logo="static/img_logo/orel.png" data-face="static/img_face/shevron.jpg" data-name="Глянцев Валерий" data-link-glav="https://vk.com/v_glyantsev" data-adress="г. Орел, Веселая, 2 (здание ДОСААФ)" data-link-school="https://vk.com/hmbschoolorel	" d="M68.4,284.7l-1.3,0l-1.4,1.4l0.7,1.1l1.3,0.5l1,0.8v2.1l1.5,0.4
+            l0.4,1.2l1.3,0.6l0.4,2.8l1.4,2.3l0.4,2.9l1.4,0.3l1,1l1.5-1.2h1.6l1.1-1.1l-0.7-1.4l2.5-1.5l0.7-1.8l2-0.7l-0.9-2.8l0.9-0.9
+            l-2.3-1.5l-1.6-3.2l-0.9-4.4l-2.8-1.1h-2l-1.8-0.6l-0.8,0.8l-0.4,1.6L72,283l-1-1h-1.4l-1.2,0.4l0.4,1.1L68.4,284.7" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Липецкая область" data-code="RU-LIP" d="M94,294.4l-1.8,0.1l-0.6,1.1h-1.9l-0.7,1.5h-1.5l-1.3-1.8
+            l-0.9-0.9l-2,0.7l-0.7,1.8l-2.5,1.5l0.7,1.4l-1.1,1.1H78l-1.5,1.2v2.2l1.6,0.3l1.8,1.1l2.2,0.4l1,1.9l2.3,0.8l-0.5,2.3l1.5,1.5
+            l1.9,0.2l2,2.7l1.5-1.2h1.4l0.4-2l-1.4-1.4l0.3-1.8l-0.8-1l0.4-1.3l1.7-0.6l2.1-2.1l2.6-1.9l-0.5-3.4l-1.7-1.7l-1.6,1.1l-0.8-1.3
+            l0.6-1.3L94,294.4" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Тульская область" data-code="RU-TUL" d="M97.7,288.2l-1,1.7v1.5l-1.3,1l-1.4,2l-1.8,0.1l-0.6,1.1
+            c0,0-1.9-0.4-1.9,0s-0.7,1.5-0.7,1.5h-1.5l-1.3-1.8l-0.9-0.9l-0.9-2.8l0.9-1.2l-2.3-1.2l-1.6-3.2l-0.9-4.4l1.8-2.4l1.1,0.4l1.1-1.1
+            l2.2-0.6l1.3,0.7l1.5,1.5l1.7-0.3v-1.4l0.7-0.7l1.8,1.2l1.9-1.3l1.1,1.8l1.6,0.3v1.4l-0.5,1.6l0.5,1.6l-0.6,2.1L97.7,288.2z" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Рязанская область" data-code="RU-RYA" data-logo="static/img_logo/ryazan.png" data-face="static/img_face/ryazan.jpg" data-name="Славченко Татьяна" data-link-glav="https://vk.com/thera_brutality	" data-adress="г. Рязань, Михайловское шоссе 238А" data-link-school="https://vk.com/hmbschoolrzn	" d="M98.6,302l-0.5-3.4l-1.7-1.7l-1.6,1.1l-0.8-1.3l0.6-1.3l-0.6-1
+            l1.4-2l1.3-1v-1.5l1-1.7l1.9-0.3l0.3-1.3l1.6-0.3l0.5,0.5l2.3-0.1l0.7-0.7l2,0.4l1.2,0.4l1.3-0.3l0.6-0.6l1.5,0.1h1.5l1.2,1
+            l-0.5,1.5l1.9,0.6l0.3,1.7l1.3,0.4l1.6,2.6v2.3l1.2,0.8l0.8,0.8v1.2l0.4,1.2l-1.2,1.2l-1.5,0.4l-0.8,0.8l-1.2,1.2h-1.4v1l-1.1,1.1
+            l-1.4,1l-1.2-0.6l-1.5-1.5l-1.2,0.1l-1.5-1.4l-1.4,1.6l-2.3-0.3l-0.8-2.1l-2.3-0.7L98.6,302" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Тамбовская область" data-code="RU-TAM" d="M97.8,326.4l1.8-0.8l1.2-0.1l1.3-1.3l2.2-1.2l2.5-1.5l0.7-1.3h2.1
+            l0.3-4l-1-1.9l0.5-3.3l-0.5-2l1.2-1.2l1.4-1.6l-1.5-1.5l-1.2,0.1l-1.5-1.4l-1.4,1.6l-2.3-0.3l-0.8-2.1l-2.3-0.7l-1.8,0.1l-2.6,1.9
+            l-2.1,2.1l-1.7,0.6l-0.4,1.3l0.8,1l-0.3,1.8l1.4,1.4l-0.4,2h-1.4l-1.5,1.2l1.1,1.1l-0.6,1.9l1.5,1.5l2.4,1l0.8,1.6l1.5,1.5
+            L97.8,326.4" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Мордовия" data-code="RU-MO" d="M121.4,300.2l1.4,1.4h2.3l0.6,1.8l1.2,1.2v2.4l1.6,1.6l0.6,2.1
+            l2.1,0.6l1-1.5l3-0.1l0.6-0.6l2.1-0.1l-0.3,1.5l0.9,0.9h1.3l0.7,1.5l-1.3,1.9l0.6,1.3l-1.1,1.1l-0.4,1.8l-3.3,0.4l-1.2-1.3l-2,1.4
+            l-1.8-0.2l-1.7-1.7l-1.5-1.5h-2.6l-0.7,0.7l-2.6-2.3V312l-2-2h-1.5l-2.2-0.9l-1.2-1.2l-1.4,0.5l-0.2-1.6l1.4-1l1.1-1.1v-1h1.4l2-2
+            l1.5-0.4L121.4,300.2" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Пензенская область" data-code="RU-PNZ" d="M111.5,306.3l1.2,0.6l0.2,1.6l1.4-0.5l1.2,1.2l2.2,0.9h1.5l2,2
+            v2.4l2.6,2.3l0.7-0.7h2.6l3.2,3.2l1.8,0.2l1.2,1.9v3.1l-1.3,1.3v1.7l1,1l-0.5,1.4l-1,0.4l-1.2,2.2l-1.5,2.2l-1.5-1.8l-1.9,0.5h-1.6
+            l-2.6-1.4l-2.9-1.2l-1.7-1.2l-0.6-2.2l-2.7,0.1l-1.9-1.8l-1.4-0.5l-1.1-1.1l-0.2-1.5l-1.9-1l0.7-1.3h2.1l0.3-4l-1-1.9l0.5-3.3
+            l-0.5-2L111.5,306.3" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Саратовская область" data-code="RU-SAR" d="M128.9,334.7l1,2l1.6,1.6h4.4l1.5,1.5l1.2,2.3v2.3l2.6,0.8
+            l0.8,3.4l2.3,2.3l-0.5,2.7l1.8,1.8l0.9,1.4l-0.1,1.4l-3.1-0.6l-1.6,1.6l-2.9,1l-2.5-1.4h-2.7l-1.3,1.9h-2.7h-2.9l-0.6,1.4l-1.6,1.6
+            l-0.3,2.4l-3.1-0.6l-1.8-1.8v-2.5l0.8-2.5l-1.3-1.3h-2.2l-0.1-2.5l-1.5-1.5l-0.4-1.9h-1.8l-1.2-1.2l-0.5-2.6l-1.8-0.7l-0.9,0.9
+            l-1.7-1.6l2.3-2.2l-0.4-3.5l-3-2.9l-2.6,0.1v-1.5l-1.7-0.9l-2.8-0.4l-0.8-3l0.2-2.2l0.9-0.9l-1-2.6l1.8-0.8l1.2-0.1l1.3-1.3l2.2-1.2
+            l2.5-1.5l1.9,1l0.2,1.5l1.1,1.1l1.4,0.5l1.9,1.8l2.7-0.1l0.6,2.2l1.7,1.2l2.9,1.2l2.6,1.4h1.6l1.9-0.5L128.9,334.7" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Ульяновская область" data-code="RU-ULY" d="M140,316l3.3,2.3v2.2l2.6-0.6l1.9,0.9l1.9,1.9l1.8,1.6l1.9-0.8
+            l1,1l0.7,3l1.8,1.8l0.6,1.6l-1.7,2.7l-2.4,1.1l-1.1,1.1l-1.9-2.6l-2.7-1.1l-1.2,1.2l-2.3-2.5l-1.6,1.6l-2.2-0.5l-1.7,1.7v2.9
+            l1.1,1.1l-0.4,2l-2.3,0.3l-1.5-1.5h-4.4l-1.6-1.6l-1-2l1.5-2.2l1.2-2.2l1-0.4l0.5-1.4l-1-1v-1.7l1.3-1.3v-3.1l-1.2-1.9l2-1.4
+            l1.2,1.3l3.3-0.4l0.4-1.8L140,316" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Самарская область" data-code="RU-SAM" data-logo="static/img_logo/shevron.jpg" data-face="static/img_logo/shevron.jpg" data-name="Пудовкин Антон" data-link-glav="https://vk.com/pudsalt____________" data-adress="г. Самара, улица Калинина, 34Б или улица Врубеля, 29 (два адреса)" data-link-school="https://vk.com/hmbschoolsmr" d="M167.9,339.2l-0.9-2.1l0.6-1.6l-3.1-2.7h-2l-1.5,1.5l-3.3-3.3
+            l-1.7,2.7l-2.4,1.1l-1.1,1.1l-1.9-2.6l-2.7-1.1l-1.2,1.2l-2.3-2.5l-1.6,1.6l-2.2-0.5l-1.7,1.7v2.9l1.1,1.1l-0.4,2l-2.3,0.3l1.2,2.3
+            v2.3l2.6,0.8l0.8,3.4l2.3,2.3l-0.5,2.7l1.8,1.8l0.9,1.4h4.5l1.3-2.6l2.4-1.7l1.4,0.4l0.8-1.7l3.5-0.6l1.7-4l2.9-1.6l2.2-2.2
+            L167.9,339.2" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Курганская область" data-code="RU-KGN" d="M232.2,348.2l3.3-2.2l2,0.9h1.7l1.9,0.8l1.3-0.5l1.7,2.9l3-2.3
+            h2.7l1,1.3l-1.5,2.6l2.2,3.1l1.5,0.5v2.9l2,0.4l1.5,1.4h2.2l0.8,1.7l1.7,0.3l-0.4,2.4l5,3.1l0.4,3.8l-1.5,2.2h-3.2l-2.8,0.8
+            l-2.3-1.3l-2.8,0.5h-3.4l-3.3-1.7h-1.3l-1.5,1.5l-2.5,0.5l-2.4-1.3H237l-2.9-0.9l-4.3,0.1l0.7-1.8l1.9-1.9l-1-2.5h-2.5l-0.3-1.2
+            l-1.6-0.1l-1.5-1.5l0.5-1.7h1.7l1.2-1.2l-0.7-2.4l1.3-1.3h2.2l1.2-1.9l-0.4-3.2L232.2,348.2" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Башкортостан" data-code="RU-BA" d="M215.4,340.4l-1.6,1.6l-1.5-2.2h-1.8l-2.9-2.1l-1.6-2.3l-1.4,0.6
+            l-1.6-0.6l-1-3.4l-2.1-0.4l-1.1-2.3h-2.6l-2.6-2.1v-1.5l-1.6-0.6l-1.3,1.3l-4.9,1.4l-0.8,0.8l1.1,1.6v1.7l-2.6,2h-1.9l-1.5,0.7
+            l-0.8-0.8l-1.3,0.7l0.4,1.7v1.1l0.8,0.8l-1,1l-1.6,1.6H175l-0.4,1.3l-0.9,1.4l-1.5,0.6l0.6,1.2l-0.1,3.3l1,1l-0.7,3.5l1.4,0.9
+            l1.7,1.7l1.1,2.8v2.8l0.8,1.7l-0.7,1.7v2.4l-0.5,1.2l1.5,0.8l1.3-1.3h2.2l0.8,1.4l-0.8,1.9l-2.1,0.8l0.5,1l1.3,0.3l-0.4,2.5
+            l-0.8,0.8l0.4,2h1.2l0.3,1.1l1.5,1.5l1.5-0.7l1.1-1.1l1.3,0.7l0.5,1.3l1.4,1l1.6,0.4l1.6-1.2l1.1-2.5l0.8-1.3l2-0.9l0.3-1.9l1.7-3.1
+            h1.3v-2.2l1.7-2.2v-1.4l2.6-2.6l2-0.7v-0.9l2.1-0.2l0.9,1.2h1.5v-2.4l-0.9-2.8l-3.1-1l-1.3,0.9l-3.1-0.3l-1.6-2.6l-0.4-3.4l-1.2-1.2
+            l-0.5-2.4l2.8-2.1l1.9,0.6l2.1,1l1.4,1.4v1.7l2.6,1l1.7-1.7l2.9-0.7v-1.5l1.5-2.8l0.6-1.9L215.4,340.4" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Ярославская область" data-code="RU-YAR" d="M121.8,250.8l2.5-1.1l1.6-0.3l2.3-0.2l1.3,1.3l3.2,2.2l1.2-1.2
+            l2.4,2.4v5l3,3v2.2l-3.3,0.1l-0.8,1.8h-1.7l-2.4,2.6h-1.6l-0.7,1.8l-2.6-0.6l-1.2-1.2h-2.9l-1.8,1.8h-2.1l-1.1,1.1l-1.5-1.5
+            l-1.4-1.1l-0.2-1.3l-0.4-1.6l0.9-1.1l1.5-1.4l2.5-1.6l-0.9-2v-1.2l1.4-1.4l-0.6-2.2l0.7-1.6h1.8L121.8,250.8" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Костромская область" data-code="RU-KOS" d="M172.1,275.3l1.5-1.7l-2.9-2.6l-1.6,2.4l-2.8-0.7l-1.2,1.2
+            l-1.7-2.5l-4.7-2.4l-0.9-2.4l-2.5-2.5l-3.3-0.6l-1.7-3.6l-2.6,1.2l-2.8-1.2l-3.1,0.8l-2.8,1.2v2.2l-3.3,0.1l-0.8,1.8h-1.7l-2.4,2.6
+            h-1.6l-0.7,1.8l1.7,1.7h2.2l1.1,1.1l1.8-1.8l1,0.2l0.8,2.3l2.8,1.8h1.7v2.9l2.4,1.2v2.3l3,0.7l3.9-1l1.4-1.4h2.2l0.9,2.1l1.4,1.4
+            h2.4l0.9,0.9l2-2l3.1-1.1l1.3,1.3l1.5-1.6h3.6L172.1,275.3" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Ивановская область" data-code="RU-IVA" d="M120.4,270.3l1.8-1.8h2.9l1.2,1.2l2.6,0.6l1.7,1.7h2.2l1.1,1.1
+            l1.8-1.8l1,0.2l0.8,2.3l2.8,1.8h1.7v2.9l2.4,1.2v2.3h-2.6l-1,2.6h-2.6l-1.8-1.8l-1.4,1.4l-0.7,2.7l-1.6,1.6l-3.3,0.4l-2.8,0.9l1.1-4
+            l1.3-3.3l-3.3-3.3l-1.9-1.9l-3.2-1.1v-1.8l1.1-2L120.4,270.3" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Владимирская область" data-code="RU-VLA" d="M117.2,271.4l1.1-1.1h2.1l1.3,2.1l-1.1,2v1.8l3.2,1.1l1.9,1.9
+            l3.3,3.3l-1.3,3.3l-1.1,4l-2.6,0.4l-1.6,1.6l-2.1,0.4l-1.4,1.4l-1.6-2.6l-1.3-0.4l-0.3-1.7l-1.9-0.6l0.5-1.5l-1.2-1l0-1.8l0.8-0.4
+            l0.4-1.3l0.2-2.4l-1-1l-1.2-0.5l-0.6-1.2v-1.6l-1.2-0.5l-0.6-1.7l1.4-1.1l-0.1-1.7l1-1l0.5-1.6l1.4-0.7l0.2,1.3l1.4,1.1L117.2,271.4
+            " style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Нижегородская область" data-code="RU-NIZ" data-logo="static/img_logo/novgorod.png" data-face="static/img_face/novgorod.jpg" data-name="Грызлов Виталий" data-link-glav="https://vk.com/dartmatias" data-adress="г. Нижний Новгород, Светлогорский проезд, дом 3 корпус 1" data-link-school="https://vk.com/hmbschoolberlogovo" d="M118.9,296.1v-2.3l1.4-1.4l2.1-0.4l1.6-1.6l2.6-0.4l2.8-0.9
+            l3.3-0.4l1.6-1.6l0.7-2.7l1.4-1.4l1.8,1.8h2.6l1-2.6h2.6l3,0.7l3.9-1l1.4-1.4h2.2l0.9,2.1l1.4,1.4h2.4l0.9,0.9l2.7,2l3.3,3.3l-2,2
+            l-1.6,1.6l-2.7-1.6l-2.1,0.4l-1.5,1.5l-1.8,2.6l-3.4-2.1l-1.6,1.6l-2.6-0.1l0.2,2.8l-1.3,1.3l1.2,2.2l-3.7,2.1v3.1l-2.3,2l-1.1,1.8
+            h-1.3l-0.9-0.9l0.3-1.5l-2.1,0.1l-0.6,0.6l-3,0.1l-1,1.5l-2.1-0.6l-0.6-2.1L127,307v-2.4l-1.2-1.2l-0.6-1.8h-2.3l-1.4-1.4L121,299
+            v-1.2L118.9,296.1" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Чувашская Республика" data-code="RU-CU" d="M140.6,312.8l-0.7-1.5l1.1-1.8l2.3-2v-3.1l3.7-2.1l2.2,1.1h4.7
+            l0.3,2.3l1.4,1.4l-0.7,2l1.4,2.7l-3.1,0.8l-2.9,1.7v3.1l-2.4,0.9l-2.2-0.9l-2.5,1L140,316l-0.6-1.3L140.6,312.8" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Кировская область" data-code="RU-KIR" data-logo="static/img_logo/kirov.png" data-face="static/img_face/shevron.jpg" data-name="Каменев Алексей" data-link-glav="https://vk.com/stonefromvyatka" data-adress=" г. Киров, ул. Карла Либкнехта, 41" data-link-school="https://vk.com/berloga_kirov" d="M154.6,296.5l1.8-2.6l1.5-1.5l2.1-0.4l2.7,1.6l3.6-3.6l-3.3-3.3
+            l-2.7-2l2-2l3.1-1.1l1.3,1.3l1.5-1.6h3.6l0.4-6l1.5-1.7l0.8-0.8v-2.3l1.8-0.9l-2.8-2.9l1.3-1.2l2.4,1.1l4.5-4.5l1.4-1.2l1,0.3
+            l2.4,2.9l-0.4,1.4l1.1,0.6l0.2,1.9l-1.6,1.6v2.6l-2.4,0.6v1.7l-1.7,1.7v1.9l1.3,1.3v1.9l0.6,2l-0.8,1.8l0.9,0.9l1.4-1.8l0.9-2.6
+            l2.2-0.6l2.3,1.1l1.4,1.4l2-1.9l1.1,1.1l0.6,1.4l1.9-0.2l1.2-1.2h2.1l1.2,1.2l2.3,1.1l1.7,1.7l1.4,1.2l-0.3,2.2l-2.1,1.8l-2,0.8
+            l-2.3,2.3v2.1l1.3,1.3l-0.7,2v2.1l-2.8,1.8h-2.2l-0.1-2.6l-2.6,0.1l-3-2.9l-2.3,1.7l-1.4,2.4l-0.7,2.2l-1.6,1.6h-2.2l-1.2-1.2
+            l-2.3,2.4v3.7l-2.1,2.1l-1.6,1.6L174,318l-2.1-2.4l-0.7-3.1v-2l-0.7-1.9v-4l-2.1-1.2l-0.9-3l-2.8-0.6l-2.1-1.2l-0.9,1.6l-1.4-1.4
+            L158,300l-2-1.3L154.6,296.5" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Марий Эл" data-code="RU-ME" d="M149.5,296l1.6-1.6l3.4,2.1l1.4,2.2l2,1.3l2.3-1.3l1.4,1.4
+            l0.9-1.6l2.1,1.2l2.8,0.6l0.9,3l2.1,1.2v4l0.7,1.9l-2.2,1.2l-1.6-1.6h-2.8l-1.2-1.2l-2.9,1.7l-4.1,1.1l-1.4-2.7l0.7-2l-1.4-1.4
+            l-0.3-2.3h-4.7l-2.2-1.1l-1.2-2.2l1.3-1.3l-0.2-2.8L149.5,296" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Татарстан" data-code="RU-TA" data-logo="static/img_logo/kazan.png" data-face="static/img_face/shevron.jpg" data-name="Куртымов Артем" data-link-glav="https://vk.com/kurtymov" data-adress="г. Казань, Ямашева пр. 115А	" data-link-school="https://vk.com/hmbschoolkazan" d="M184.8,328.7l1.1,1.6v1.7l-2.6,2h-1.9l-1.5,0.7l-0.8-0.8l-1.3,0.7
+            l0.4,1.7v1.1l0.8,0.8l-2.6,2.6H175l-1.4,2.7l-1.5,0.6l-1.5-1.4l1.5-1.5l-2.1-2.1h-2.1l-0.9-2.1l0.6-1.6l-3.1-2.7h-2l-1.5,1.5
+            l-3.3-3.3l-0.6-1.6l-1.8-1.8l-0.7-3l-1-1l-1.9,0.8l-3.8-3.6l-1.9-0.9l-2.6,0.6v-2.2l2.5-1l2.2,0.9l2.4-0.9v-3.1l2.9-1.7l3.1-0.8
+            l4.1-1.1l2.9-1.7l1.2,1.2h2.8l1.6,1.6l2.2-1.2v2l0.7,3.1l2.1,2.4l2.6,0.3l1.2,1.7l2.2,1l0.9,1.2l1.5,0l0.3,2.3l1.7,1.3l-1.7,1
+            l0.1,1.1L184.8,328.7" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Удмуртская Республика" data-code="RU-UD" data-logo="static/img_logo/glazov.png" data-face="static/img_face/shevron.jpg" data-name="Веретенников Игорь" data-link-glav="https://vk.com/id13609624" data-adress="г. Глазов, ул. Юкаменская, 37	" data-link-school="https://vk.com/hmbscoolglaz" d="M175.1,315.1l3.7-3.7v-3.7l2.3-2.4l1.2,1.2h2.2l1.6-1.6l0.7-2.2
+            l1.4-2.4l2.3-1.7l3,2.9l2.6-0.1l0.1,2.6h2.2l-0.6,2.8l-0.1,3.2l-1.6,2.8l-0.4,3.1l-1.4,3.2l-4.1,2.1v1.4l1.6,2.5l-1.3,1.3l-4.9,1.4
+            l-0.8,0.8l-2-0.7l-0.1-1.1l1.7-1l-1.7-1.3l-0.3-2.3l-1.5,0L180,321l-2.2-1l-1.2-1.7L174,318L175.1,315.1" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Коми" data-code="RU-KO" d="M296.1,228h-1.5l-2.5,2.2l-2.2,0.1l-1,2.4l-3.4-0.6l-0.9,1.5
+            l-1.5,1.5l-1.5,0.8l-2.9,1l-2.4,0.6l-2.9-1.5l-1.5,0.3l-1.7-1.5l-3.4-1.3l-3.4-2.2l-2.5-1l-4.1-1.6l-2-2l-2.5-0.3l-4-2.6l-2-2
+            l-3.1-1.4l-3-2.6l-2.8,0.3l-2.1,1.4l-13.2,0.1l-1.4,1.4l-0.7,1.9l-0.9,0.9v0.9l-0.9,0.9l-1.1,1.1l0.5,1.1l1.4,1.4l0.6,1.2l-0.8,1.7
+            l0.4,1.7l1,1l-1.1,2l-1.1,1.1l-0.8-0.8h-1.1l-1.6-1.3l-1.6-0.4l-1.3-0.8l-1.7,0.6l-1.5,0.8l-0.4-2l-2-2l-1.8-1.1l-2.2-0.4l-1.1-1.1
+            l-1.5-0.5l-1.8-1.3h-1.6l0.3,1.7v1.5l1.3,1.9l1.3,1.3l-0.5,1.8v1.8l-1.7,1.1l-0.5,1.9l0.9,0.9l0.3,2l-0.3,1.2l-1.8-0.4l-1.5,0.4
+            l-0.5,1.2l-0.6,0.6l0.3,1.4l-1.5,0.8l0.2,2.2l1.3,0.6l1.2,0.4l1.1,1.1l1.1-1.6l0.8,0.3l0.7-1.6l1.6-0.3h1.1l0.8,0.8l1.3-0.6l0.1,1.7
+            l1.1,1.1l-1.6,1.6l-1.1,0.5l-1.7,1.7l-2,1.2l-0.2,1.1l-1.5,1l-1,1l1.4,1.4l-1.1,1.8l-1.3,1l-1.1,1.3l-1.3-0.3l-0.3-1h-2l-1.1-0.3
+            l0.1,0.9l-1.6,0.4l0.2,1.9l-1.6,1.6v2.6l-2.4,0.6v1.7l-1.7,1.7v1.9l1.3,1.3v1.9l0.6,2l-0.8,1.8l0.9,0.9l1.4-1.8l0.9-2.6l2.2-0.6
+            l2.3,1.1l1.4,1.4l2-1.9l1.1,1.1l0.6,1.4l1.9-0.2l1.2-1.2h2.1l1.9-0.8v-1.5l-1.3-1.3l1.2-2.3l2.6,1.4l0.9-0.9l0.9,0.9l1.2-1.2
+            l1.6,0.6l0.7,1l-0.3,1.6l1.3,1.6l1.6-0.6l2.8,1.2l1.8,1.8l2-1l2.3,0.9l1.3-1.3l1.3,0.4l0.9,0.9l1.3-0.4l0.8-1.6h1.3l2.9,2l2.9,1.5
+            l3.2,1.2l4.4,0.7l0.7-1.8l1.2-1.2l0.4-2.2l3.1-3.1v-1.7l1-2l-0.5-2.2l1.7-3.2l2.6-1.6l0.3-2.3l3-1.9l-0.5-2.8l1.1-2.2l2.6-2.6
+            l1.9-1.9l1.6,0.6v2l2.2-0.3l2.4-2.4l2.4-1.2l1.3-1.5l2.4-0.4l3.3,0.1v-2.8l4.1-2.3l4.1-0.9h4.3l0.9-2.8h2.4l2.3-2.3l3-1.5l-2-2
+            l2.3-1v-1.6l-2.5-1.3l0.4-2.3l1-0.5l0.6-1.4L296.1,228" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Пермский край" data-code="RU-PER" data-logo="static/img_logo/shevron.jpg" data-face="static/img_face/perm.jpg" data-name="Варов Андрей" data-link-glav="https://vk.com/id19513536" data-adress="г.Пермь, ш. Космонавтов, 63, 4 этаж, зал 403	" data-link-school="https://vk.com/club197691309	" d="M201.2,302.2l-2.8,1.8l-0.6,2.8l-0.1,3.2l-1.6,2.8l-0.4,3.1
+            l-1.4,3.2l-4.1,2.1v1.4l1.6,2.5l1.6,0.6v1.5l2.6,2.1h2.6l1.1,2.3l2.1,0.4l1,3.4l1.6,0.6l1.4-0.6l1.7-1.8l1-1v-2.2l0.9-1.7l0.8,0.8
+            h2.5l2.1-1l0.6-2.4l1.3-2.2h1.7l1.5,2.3l1-1l1.4-1.4l-1-1l-0.1-1.2l2.3-1.5l2.2,0.5l1.6-1.3l1.6-1.6l-1.4-1.4v-0.9l1.3-1.3l0.9-2.9
+            l-1.6-2.6v-3.2l2.1-1.8h2.2l1.7-1.7l1.9-2.9l2.6-2.3l1.4-3.5v-2.6l2.6-1.3v-2l-4.4-0.7l-3.2-1.2l-2.9-1.5l-2.9-2h-1.3l-0.8,1.6
+            l-1.3,0.4l-0.9-0.9l-1.3-0.4l-1.3,1.3l-2.3-0.9l-2,1l-1.8-1.8l-2.8-1.2l-1.6,0.6l-1.3-1.6l0.3-1.6l-0.7-1l-1.6-0.6L207,278l-0.9-0.9
+            l-0.9,0.9l-2.6-1.4l-1.2,2.3l1.3,1.3v1.5l-1.9,0.8l1.2,1.2l2.3,1.1l1.7,1.7l1.4,1.2l-0.3,2.2l-2.1,1.8l-2,0.8l-2.3,2.3v2.1l1.3,1.3
+            l-0.7,2V302.2" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Бурятия" data-code="RU-BU" d="M518.7,433.8l-4.4-0.6l-1.8-1.1l-5.8,0.8H503l-3,3l-3.3,0.8
+            l-3.2,0.9l-4.6-0.4l-3.1-1.3l-2-2l-1.8-3.9l-2.3-2.3l-3.3-1.3h-3.2l-3.6,0.9l-2.5-2.5h-4.9l-2.9-2.2l-1.5,1.5l-0.2-2.4l-1.2-1.2
+            l-0.5-2.2l1.4-1.4v-2.2l1.5-1.5l3.3-3.3l0.9-0.9l1.1-1.1l1.8,1.1l-0.4,1.7l2.4,1.1l1.4,1.3l3.1,1l1.4,1.4l1.6,0.9l1.8,1.8l4.1-0.9
+            l1.5,1.6l1.9,1.6h2v1.8l1.4,2.3h2.1h1.5l0.7,2.3l2.9-1.6h2.1v-3.7l2.9-2.9l3.4-4.1l1.7-4.4l4.5-4.5l5.1-6.1l0.8-9l1.8-6l-2.8-0.9
+            l-1.4-6.8l-1.2-5.6l1-1.8l1.3-1.3l-2.2-1.5l-2.1-0.7l-0.8-3.4l4-2.9h2V357l1.9-0.9l2.8,1l2.9-1v-2.5l2-1.4l1,1.1h3.2l1.9-1.3
+            l1.2,1.2l3.9,0.8l1.6-1.6l1.7,1l2.5-2.5h1.9v-5l2.3-1.1l1.4-2.9l2.4,0.6l1.1,1.1l-2.8,2.6v3.4l2.4,1.2l1,3l1.5,1.8l1,3.2l2.2,2.4
+            l2-0.8l2.8,1.4l1.9,1.9l0.8,2l-1.1,3.9l-2.9,0.9l-2.4,2.4l-1.8,2.9l-1.3,2.9l-2.1,2.1l-1.6,3.1l1,3.1l2,0.6v1.5l1.5,1.5l-0.9,3.1
+            l-4.8,4.8l-2.8,1.3l-1.7,1.7l-2.2,0.9l-0.6,3.6l-1.7,1.7l-1.9,0.8l-1.2,4.3h-2l-2.5-0.4l-3.3,3.3l-1.7,0.9l-1.4-0.6h-1.4l-1.4,1.4
+            v2.4l1,1.2l-1.6,0.7v4.5l2.2-0.3l1.5,1.5l-4.1,4.1l0.5,2.4H518.7" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Забайкальский край" data-code="RU-ZAB" d="M597.7,392.1l0.8-5.4l1-2.2l-1-4.1l-1.8-1.8l-1.6-1.6l-2,1.6
+            l-1.4-1.8l1-2.5l1.4-4.2l2-2l4-2.3l-1.8-3.2l-0.8-1.6h-2.2l-0.6-2.7l-1.1-1.6l1.9-1.1v-0.9h-1l-1.7-1.8l-1.4-0.2l0.3-3.2l-0.8-1.5
+            l-0.9-2.5l-2-1l-1.5,2l-1.5-0.6l-0.1-2.2l-1-1l-1.5-0.4l-1.6,1.6l-0.8,1.9l-2.6-0.7l-0.8-1.6l1.5-1.9l-0.9-1.5l-1.7,0.6l-2.2-0.6
+            l-1.5-1.5l0-1.5l-2.1-0.6v-2.2l-1.9-0.6l-2-2.6l-2.8-1l-0.6-2.9l-1.3-1.3l-1.6,1.2h-1.6l-1.2-1.2l-2-0.1l-2.2,2.2l0.9,0.9l-1,2.2
+            l1.1,1.1l-1,2.6l3.7,3.7l2-0.9v1.6l0.9,0.9l-0.5,2.5l-2,1.2l-1.1,2.2l-2.9-0.8l-1.9,1l-2.3-0.2v3.4l2.4,1.2l1,3l1.5,1.8l1,3.2
+            l2.2,2.4l2-0.8l2.8,1.4l1.9,1.9l0.8,2l-1.1,3.9l-2.9,0.9l-2.4,2.4l-1.8,2.9l-1.3,2.9l-2.1,2.1l-1.6,3.1l1,3.1l2,0.6v1.5l1.5,1.5
+            l-0.9,3.1l-2.9,2.8l-1.9,1.9l-2.8,1.3l-1.7,1.7l-2.2,0.9l-0.6,3.6l-1.7,1.7l-1.9,0.8l-0.7,2.4l-0.6,1.9h-2l-2.5-0.4l-3.3,3.3
+            l-1.7,0.9l-1.4-0.6h-1.4l-1.4,1.4v2.4l1,1.2l-1.6,0.7v4.5l2.2-0.3l1.5,1.5l-4.1,4.1l0.5,2.4l1.8,1.8l1,1.9l3.4,1.1l3.8-0.5h5.2
+            l3.7-1.1h4.1l1.6-1.6l3.1-3.1l4.1-1.9l2.9-2l2.2-2.2l1.1-3.7l4.6-4.6l3.2-1.4l2.4,0.9l2.7,1.4l3.5-2l2.5-1.5l3.4,0.6l4.7,0.4
+            l4.2-1.5l2.5-2.5l1.7-4l2.7-0.8v-3.5l-1.1-1.1l-1.9-3.7l1.4-3.5V392.1" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Иркутская область" data-code="RU-IRK" d="M558,320.9l-1-2.8l-1.6-0.2V316l-1.7-1.9l-1.4-1.4h-2v1.9
+            l-1.8,1.8l-2.8-0.4v-1.8l-1.2-1V311l-2.5-0.3l-2.8-1.3l-2.7,0.3l-2.7-0.4l-1.5,1.8l-0.8,2.5l-1.8,1.8l0.7,2.5l-0.9,2.8l-2.4,2.4v4.4
+            l-3.3,2.3v2.6l-1.4-2v-2.2l-1.7-1.7l-1.6,0.7l-0.4,2.1l-4.2,1.6h-2l-0.8,2.4l-1.3,1.9l-2.7,0.2l-3-3l-0.3-6.3l0.4-3.8v-3.6l0.5-3.2
+            v-3.1l-2.2-0.9l-1.6-0.6l-0.2-1.5l-0.7-1.7l-1.4-1.4v-1.7l1-1l0.3-2.3l-1.4-1.4h-1.8l-2-0.9V297l0.8-0.8l-0.9-0.9l-0.7-2.8l-1.6-2.8
+            l-1.9-1.3l-2.1,0.6l-2.1,0.2v-2.5l1.7-0.5v-1.6l-1.8-1.8l-0.7,1.4l-1.1,1.1l-1.5-0.3l-1.7,1.7l-1.7,0.6l-1,2.3v2.3l0.9,2.5l-0.7,2.1
+            v1.8l2.2,2.2l1.4,1.4l-0.6,1.8l-0.9,1.5l1.6,1.6l-1.6,1.6l-1.1,0.8v3.4l-1.3,0.8l-0.5,2.3l-2.2,0.9l0.6,3l-1,0.9l-0.4,2.8l0.6,2.5
+            l1.3,0.6l2.1,2.1l0.9-0.9l2,0.8v2.2l0.7,1.9l-1.4-0.2l-1,1.7l-0.8,1.5l0.4,1.2h2l1,2l0.7,1.8l-1.1,1.1l-1.2,1.9v1.6l-0.6,1.4h-1.9
+            l-1.6-1.6h-2.2l-0.8-1.5l-2-0.9l-0.4-1.3l-1.6-0.4l-2.2,1.4l-0.6,2.5l1.2,2.6l-1.7,2.5l-2.7,2.7l-1.9,2.7l-0.6,2.7l-1,2.3l1.8,1.8
+            l-1.7,1.2l-2.5-1.7l-1.2-2.9l-2.1-2.1l-1.9,1l-0.9,2.7l-3.2,1.2l-2.5-0.4l-2.7,0.6l-0.1,3.8l-1.5,1.5v3.6l1.8,1.8l1.2,2.9v1.7
+            l-1.9,1l-0.9,2.3h-1.8l-0.5,2.4l-0.9,2l1.4,2l0.1,2l-1,0.7v3l0.5,1.7l-0.9,1.6l0.3,2l-3.7,0.2v1.6l-1.6-0.3l-0.6,1.6l2.4,1.5
+            l3.6,3.6l1.7,1h2.3l1.9,1.4l2.9,0.4l2.4,2.3l1.6,0.8h2.8l1.1-1.1l2.4,2.4l5.4-5.4l2,1.4l-0.6,1.4l2.4,1.1l1.4,1.3l3.1,1l1.4,1.4
+            l1.6,0.9l1.8,1.8l4.1-0.9l3.4,3.2h2v1.8l1.4,2.3h3.6l0.7,2.3l2.9-1.6h2.1v-3.7l2.9-2.9l3.4-4.1l1.7-4.4l4.5-4.5l5.1-6.1l0.8-9l1.8-6
+            l-2.8-0.9l-2.7-12.4l1-1.8l1.3-1.3l-2.2-1.5l-2.1-0.7l-0.8-3.4l4-2.9h2V357l1.9-0.9l2.8,1l2.9-1v-2.5l2-1.4l1,1.1h3.2l1.9-1.3
+            l1.2,1.2l3.9,0.8l1.6-1.6l1.7,1l2.5-2.5h1.9v-5l2.3-1.1l1.4-2.9l2.4,0.6l1.1,1.1l-2.8,2.6l2.3,0.2l1.9-1l2.9,0.8l1.1-2.2l2-1.2
+            l0.5-2.5l-0.9-0.9v-1.6l-2,0.9l-3.7-3.7l1-2.6l-1.1-1.1l1-2.2l-0.9-0.9l2.2-2.2l2,0.1l1.2,1.2h1.6l1.6-1.2l0.4-1.4L558,320.9" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Тюменская область" data-code="RU-TYU" d="M275.8,375.2l-1.1-2.3h-3.2l-2.5-1.5l-2.8-0.3l-0.4-3.8l-5-3.1
+            l0.4-2.4l-1.7-0.3l-0.8-1.7h-2.2l-1.5-1.4l-2-0.4v-2.9l-1.5-0.5l-2.2-3.1l1.5-2.6l1.6-1.2l-0.7-2.3l1-1l-0.5-2.8l2.2-2.2l1.9,0.5
+            l1.5-1.5l1.7,0.7l2.9-1.5v-2.1l-0.6-1.7l0.7-2.4l1.8,1.4h2.7l2-0.6v-1.7l1-1l3.5,1l1.4-1.4h3.8l1.1-1.1l2-0.7l2.1-0.8l1-1l-0.1-2
+            h1.4l1.7,1.4l1.5,0.8l1.7,1.7h1.9l2.5,0.7l2,2l1.4,2.6l1.7,2.8v2.3l2.6,0.4v2.2l1.3,1.3l2.1,0.7l1.2,1.2h2.3l1.6,1.4h2.1l-1.1,1.6
+            l-2,2l-2.5,1.2h-3l-1.9-0.6l-2.2-1.1l-1.3,1.2h-2.1l-1.6-1l-1.4-0.7l-2.2-0.7l-1.7-0.6v-1.5l1.2-1.2l-2-2l-1.9,1.3l-1.1,1.9
+            l-1.5,1.5l-0.2,2l0.9,2.6l-2,1v1.4l1.7,0.9l1.2,1.2l0.6,1.5l1.9,1v1.7l-0.9,0.9l-2.4,0.4l-1.4,1.4l-1.8,1.8v2.2l-0.5,1.3l-1.3,1.3
+            l-1,0.2v1.7l-1.3,1.3l-0.7,1.5v1.5H275.8" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Свердловская область" data-code="RU-SVE" d="M249.8,347.8h-2.7l-3,2.3l-1.7-2.9l-1.3,0.5l-1.9-0.8h-1.7l-2-0.9
+            l-3.3,2.2l-1.3-1.3l-1.4-1.4l-1.8-1l-1.6,1.6l-1.7-1.7l-1.7-0.2l-0.4-1l-2.3-0.8l-0.7-1.3l-2.1-1.4l-1.7,0.7l-1.6,1.6l-1.5-2.2h-1.8
+            l-2.9-2.1l-1.6-2.3l1.7-1.8l1-1v-2.2l0.9-1.7l0.8,0.8h2.5l2.1-1l0.6-2.4l1.3-2.2h1.7l1.5,2.3l1-1l1.4-1.4l-1-1l-0.1-1.2l2.3-1.5
+            l2.2,0.5l1.6-1.3l1.6-1.6l-1.4-1.4v-0.9l1.3-1.3l0.9-2.9l-1.6-2.6v-3.2l2.1-1.8h2.2l1.7-1.7l1.9-2.9l2.6-2.3l1.4-3.5v-2.6l2.6-1.3
+            v-2l0.7-1.8l1.2-1.2l1.8,1.1v1.6l1,1l1.1,0.8l1.7,1.7l3,3l1.9,3.4l1.5,1.5v3.4l-1.3,1.7l0.7,3.9l-0.8,3.2l1.6,1.6v2.5l-1.5,1.5
+            l0.5,2.9l2.1,1.1l1.5,1.8l0.1,2h1.5l1.5,1.5l-0.8,1.5v2.9l1.4,1.4l-0.7,2.4l0.6,1.7v2.1l-2.9,1.5l-1.7-0.7l-1.5,1.5l-1.9-0.5
+            l-2.2,2.2l0.5,2.8l-1,1l0.7,2.3l-1.6,1.2L249.8,347.8" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Ханты-Мансийский автономный округ" data-code="RU-KHM" d="M273.4,251.3l-0.3,4.2l0.5,3.4l-1,3.1l-2.3,2.3l1.2,1.2l2.2,2.2
+            l2.5,2.5l3.4-0.8l2.7,1.1l2.7-1.1l2.9,1.5l2.9,2.5l-2.2,2.2l1.9,2.2l3.4,0.6l1.8-1.8l1.9,1.9l1.4-1.4h3.4l3,3l0.7,3.4v2.2l2.9,2.9
+            l-0.6,2.5l0.9,2.5l4.4-0.5h2.2l1.9,3h2.2l2.5,2.7l2.2-0.5l3.1,0.8l2,2l1.2-1.2l3.4,1.4l-0.9,2.4l2.7,1.4l2,2h4.7h4.4l1-1.8l2.3-1.3
+            l2.7-1.8l1,2.7l2.6,3.4l1.2-1.2l3.7,1.1l1.9,3.2l1.9-0.6h1.8l2.7,3.3l0,3.9l3.2,2.1l3.6,1.6l-1.9,3.1l-4.5,2l-2.9,2.9l-4.7-3.4
+            l-5,2.1l-0.9,3.1l-3.4-1.7l-2.4,0.6l-2.9-2.9l-3.2,1.2l-4.1-0.5l-1.1-1.6h-4.4l-3-1.3l-4.1,0.6l-1.5,3l-1.5,3.7l0.2,4l-4.2,1.2
+            l-3.4,2.5l-0.4,2.7l-3.6,2.1h-2.1l-1.6-1.4h-2.3l-1.2-1.2l-2.1-0.7l-1.3-1.3v-2.2l-2.6-0.4v-2.3l-1.7-2.8l-1.4-2.6l-2-2l-2.5-0.7
+            h-1.9l-1.7-1.7l-3.2-2.2h-1.4l0.1,2l-1,1l-4.1,1.5l-1.1,1.1H275l-1.4,1.4l-3.5-1l-1,1v1.7l-2,0.6h-2.7l-1.8-1.4l-1.4-1.4v-2.9
+            l0.8-1.5l-1.5-1.5h-1.5l-0.1-2l-1.5-1.8l-2.1-1.1l-0.5-2.9l1.5-1.5c0,0,0.4-2.1,0-2.5s-1.6-1.6-1.6-1.6l0.7-2.6l-0.5-4.5
+            c0,0,0.8-1.2,1.3-1.7c0.5-0.4,0-3.4,0-3.4l-1.5-1.5l-1.9-3.4l-3-3l-1.7-1.7l-2.1-1.8v-1.6l-1.8-1.1l0.4-2.2l3.1-3.1v-1.7l1-2
+            l-0.5-2.2l1.7-3.2l2.6-1.6l0.3-2.3l3-1.9l-0.5-2.8l1.1-2.2l2.6-2.6l1.9-1.9l1.6,0.6v2l2.2-0.3l2.4-2.4l2.4-1.2l1.3-1.5L273.4,251.3z
+            " style="fill: white;"></path>
+            
+                <path class="map" onmousedown="Check_region(this)" data-title="Красноярский край" data-code="RU-KYA" data-number="2" data-logo="static/img_logo/krasnoyarsk.png" data-face="static/img_face/shevron.jpg" data-name="Михайлов Антон" data-link-glav="https://vk.com/ant_mih" data-adress="г. Красноярск, Новая Заря, 2В" data-link-school="https://vk.com/hmbschoolkrsk" data-face-2="static/img_face/shevron.jpg" data-name-2="Неудачин Павел" data-link-glav-2="https://vk.com/silarent" data-adress-2="г. Зеленогорск, ул. Гагарина 18, МБУ 'Молодежный центр'" data-link-school-2="https://vk.com/hmbschoolzlk" d="M417.6,108.5l-1,1.3l-0.9,1.7l-0.8-0.3l0.6-2.2v-2.3l-2.5,0.8
+                c0,0-1.5,0.3-1.8,0.5c-0.3,0.1-2.1,0.7-2.1,0.7l-0.8,1.7l-0.5,1.5l-1,1.3l0.3,1.5l-2,1.5l0.9,0.8l1.4-0.5l1.2,1.6l0.1,1.5l1,1.3
+                l2.6,0.2l0.3,1.5l1.8-1.1l0.9,1.5l2.5,0.9l2.4-1.2l1.2-1.6l-0.9-1.8l-1.5-2.1l1.2-0.8l0.5-2l-0.6-2.2l0.2-2.2L417.6,108.5z M377,157.7l-0.6,0.6l0.8,0.7l1.3-0.4L377,157.7 M384.4,174.7l-1.4,0.7c0,0,0.6,1.7,0.6,1.5c0-0.2,1-0.5,1-0.5
+                L384.4,174.7z M462.6,227.2l0.7,1.7l1,2.2l2.2,1.5l0.2,4.2l2.2,4v1.7l0.6,3.2
+                l0.7,4.9l-1.9,0.6l-1.3,2.1l-1.2,1.2l0.7,2.1l0.7-0.7l2.4,1v2.1l0.9,0.9l-0.9,0.8v2.2l2.2,1.2l0.7,3.5l2.6,2.6l-0.9,2.5l-1.5,2.4
+                l0.6,1.9v1.7l-0.8,0.8v2.5l1.3,0.6h2.1l1-1h1.2l1.1,1.3l2.3-0.9l1.7,0.8l1.4-1.4l1.9,0.1l0.1,1.5l-0.7,1.4l-1.1,1.1l-1.5-0.3
+                l-1.7,1.7l-1.7,0.6l-1,2.3v2.3l0.9,2.5l-0.7,2.1v1.8l2.2,2.2l1.4,1.4l-0.6,1.8l-0.9,1.5l1.6,1.6l-1.6,1.6l-1.1,0.8v3.4l-1.3,0.8
+                l-0.5,2.3l-2.2,0.9l0.6,3l-1,1l-0.4,2.8l0.6,2.5l1.3,0.6l2.1,2.1l0.9-0.9l2,0.8v2.2l0.7,1.9l-1.4-0.2l-1,1.7l-0.8,1.5l0.4,1.2h2l1,2
+                l0.7,1.8l-1.1,1.1l-1.2,1.9v1.6l-0.6,1.4h-1.9l-1.6-1.6h-2.2l-0.8-1.5l-2-0.9l-0.4-1.3l-1.6-0.4l-2.2,1.4l-0.6,2.5l1.2,2.6l-1.7,2.5
+                l-2.7,2.7l-1.9,2.7l-0.6,2.7l-1,2.3l1.8,1.8l-1.7,1.2l-2.5-1.7l-1.2-2.9l-2.1-2.1l-1.9,1l-0.9,2.7l-3.2,1.2l-2.5-0.4l-2.7,0.6
+                l-0.1,3.8l-1.5,1.5v3.6l1.8,1.8l1.2,2.9v1.7l-1.9,1l-0.9,2.3h-1.8l-0.5,2.4l-0.9,2l1.4,2l0.1,2l-1,0.7v3l0.5,1.7l-0.9,1.6l0.3,2
+                l-3.7,0.2v1.6l-1.6-0.3l-0.6,1.6l2.4,1.5l3.6,3.6l1.7,1l-0.7,1.6l-1.4-0.5l-1.1,1.1l-2.8-0.1l-2.4,2.4l-3.3-0.6l-1.2,1.2l-0.8,4.6
+                l-2.9,0.8v2.1l-1.9,1.9v3.2l-2.7,0.8l-3.7,3.2l-2.7,1.1h-2l-2.6-1.3h-2.9l-2.9-1l-2.2-2.2l0.9-1.3l1.1-2.8l2.3-1l2.1-2.1l-0.3-2.6
+                l2.1-2.1l0.8-2.6l-0.7-2.1v-2.4l-2.7-2.7l-0.8-3l-2.6-2.6l0.8-3.4l-0.8-1.6l-2.4,0.8l-3.7-0.4l-1.2,1.2l-2.5-0.5l-2.4-2.6l-1.4-2.4
+                l2.3-2.3l1.5-0.6l-0.2-3.6l-1.3-2.6l-1.8-0.6l-1-0.9l-0.4-2l0.6-2.7v-3.8l1.6-2.9l2.8-1.4L394,363l-3.4-1.1h-2.2l-0.6-2l-1.9-3
+                l1.2-3.2l4.1-4.4l-1.3-1.3l-3.7,0.3l-0.8-2.9l-2.4-2.4l-1.5-2.3l-3-0.8h-4.1l-3.4,0.9l-2.8-0.9l-0.8-2.5l2.3-2.3l-2.5-5.1l2.9-2.9
+                l4.5-2l1.9-3.1l-3.6-1.6l-3.2-2.1l0-3.9l3-3l1.1-1.1l0.2-2.9l1.8-1.8v-3.2l-1.9-2.7l1.3-2.4l1.8-2.3l1.7-1.7l-0.9-2l0.5-2.7l-0.5-3
+                l-1.5,1.5l-1.5-1.5l-2.9-0.6l-0.6-2.7l1.3-1.3l-0.3-2.9l-1.1-2.3l-1.5-1.5h-1.5l-1.4-2.5l1.1-0.9v-2.3l-0.9-1.5v-1.3l1.7-1.6
+                l-1.1-2.2l-2.8-1.6v-1.8l-1.1-1.1l1.1-1.9l-0.4-2.3l-1.2-1.2l0.1-2l1.8,0.4l0.5-1.6l1.4-1.4l0.8-2.4l-1-1.9h1l0.7-1.8l-1.2-2.9v-2
+                l-2-0.4l0.1-2.5c0,0-1.3,1.3-1.5,1.5c-0.2,0.2-0.8-0.8-0.8-0.8l-1.5,1.3l-0.8-0.8l-0.3-1.6l-2.4-0.4l-1.6-1.6l-0.3-1.4l-1.1-1.1
+                l-0.1-2.3l2.3-1.7l1.9-1.9l1-1.5h2.5v-4.4l0.3-3l-2.7-1.5l-0.8-1.6l-0.5,0.7l-0.8-1.7l1.7-1.7l2.4-0.4l-0.3-1.3l1.2-1.2l-0.4-1.6
+                l-1.8-1l-1.6-0.3l-1.1-1.1l-0.5-1.4h-1.2l-0.1-1.5l2.5,0.5l2.1-0.3l1.7,1.7l3.3,1.8l-0.9,2.5l0.8,0.8l2.2,2.2h3.4l0.5-2l-1.4-1.9
+                l0.1-1.8l-2.4-0.9l-1.8-2.9l-1-1l0.8-3l1.1-2.5l-1-1l-0.6-3.2l2.5-2.3h6l3,1.1v-0.8h4.9l3.3-1.4h2.4l1.3-1.3l-1.3-1.9l-1.5-0.5
+                l-1.3-1.3c0,0,0.5-0.5,1.5-1.5c1-1,1,1,1,1l1.5-0.4l-1-1.1l0.7-1.6l-1.1-1.1l1.3-1.8l1.8-1.4l-1.8-0.1l-0.1-1.9l3.5,0.1l1.4-2.9
+                l3.5-1.3l1.3-1.3l4.8-0.7l1.2-1.2l3.4-1l0.8-0.9l-2.3-0.8l1.3-1.3l3.3-0.8l2.8-0.4l0.6-1.4l2.3-0.4l-1.2,2.3v1.8l1.6-1.6l3.9,0.1
+                l0.4-2l2.5-0.5l2.5,0.5l-1.1-1.5l-1.5-1.1l-0.8-1.4h2.8l2.9-0.9h0.9l-0.3-2.2l-1-0.8v-3l0.6-2l1.9-4.7l2.3-1.6l2-2.2l2.5,1.5
+                l1.9-0.3l0.6,2.6l-2,2l-1.6,2.2l4,0.2l0.8-0.8h2.5l1.8,1.8l-1.6,1.6c0,0-0.1,1.6,0.6,1.6c0.8,0,2.8,0.9,2.8,0.9l0.6-2.2l-1.1-1.1
+                l2.8-1.5h2.5l2.6-1.8l1.5,1.5l2-1l1.5,1.5l1.3,2.5l1.5,1.3l0.9-1l1.3,1.3l1.7,1.7l-0.3,2.7l-2.5-0.5l1,1l2.5,1.4l1.6,2.7l-1.5,1.5
+                v2.5l-1.3,1.8l-1.2,2.5l-1.5,1.5l-2.5,3v1.3l-0.8,3.5l-1.9,1.9l-0.8,3.9l-3,0.8l-1,2.9l-2.1,2.1l-0.5,3.3l-0.6,2.3l2.3-1L452,187
+                l2.3-1.4c0,0,2-0.6,3.2-0.6c1.1,0,1.5-2.3,1.5-2.3l2.2-1.8l2-0.8l1.2-2.3l-1-1l-1.5-0.1l0.1-1l-0.1-2l1.9-0.1h1.5l0.3,2.2l1,0.8
+                l-0.3,1.2l-0.9,0.9l0.6,1.5l1.1,1.7l1.1,1.1l-0.4,2.5l0.9,1.9l2.6,1v1.3l3.4,2.5l1.6,1.6v3.1l1.8,3.4h2l0.2,2.6h-1l-0.5,1.8
+                l-2.4,2.4l-2.1,1.4l0.1,2.6v2l-1.9,0.7l-0.7,2.5l1.4,1.4v2.1l-0.8,1.7l-2.6-0.8l-1.9,0.6l-2.8,3.9l-2.7,1L462.6,227.2 M444.1,136.7l-0.5,0.7l1,0.7l0.5-0.8L444.1,136.7 M439.2,126.4l-1.2,0.7l1.6,0.8l1.1,0.8l1.3-0.3l-0.3-1.5l-1.3,0.3
+                L439.2,126.4 M427.9,120.8v-1.6l0.1-2.9l-0.8-1.6l-1.2,0.1l-1.6,2l0.1,1.7
+                l-0.7,1.2l0.5,3.1l-1.4,1.4l0.1,3.1l-0.7,2.6l-0.6,2.6l1,0.6l2.2-1.7l1.3-0.8l2.9-1.5l2.3-0.2l2.9-2.2l1.4-2.6l-0.9-2.3l-1-1.7
+                l-1.4,0.6l-1.4-2.4l-1-1l-1.3,1.5L427.9,120.8 M415.5,143.7l-1.2,1.4l-1.5,0.3l1.4,1l1.4-1.4L415.5,143.7 M396.3,143.2l-0.6,0.9l0.8,0.7l1-1.5L396.3,143.2 M374.6,164.4l-1.3,1l0.7,1.4l1.1-0.2L374.6,164.4 M374.1,179.4l-0.2,1.3h2l1,1l0.1-1.7l-1.2-0.2L374.1,179.4 M367.4,111.3l-0.7,0.7l0.8,0.5l1.3,0.9l0.3-1.2L367.4,111.3 M360.4,191.4l-0.8,1l0.5,1.4l0.8,1l1.1-1.3l0.5-1.5l-1-1
+                L360.4,191.4 M377.1,96.4l-1,0.2l-0.6,0.6l1,1l1.3-0.4l0.8-0.8L377.1,96.4 M398.9,94.5l-0.9,0.9l0.7,0.7l0.7,0.7l1.5-1.4v-1L398.9,94.5 M408,93.2l-0.3,1.9l-1.7,0.8l-2.6,1.7v2.4l1,1l-1.4,1.4l-0.9,1.8
+                l1.2,1.7l0.5,1.7l2.2,1.9l2-1.9h1.3l2-1.1l2.4-0.8l-0.7-2.3v-2.9l1.4-1.2l-1.2-1.2l-2.4-2.4l-0.9-1.9L408,93.2 M402.4,109l-1.6-0.2l0.3,2.1v1.3l2.1,0.6l0.9,0.9l1.3-1.3l0.7-1.9
+                l-1.2-1L402.4,109" style="fill: rgb(255, 183, 65);"></path>
+    
+            <path class="map" onmousedown="Check_region(this)" data-title="Томская область" data-code="RU-TOM" d="M367.4,329.8l1.4,3l1,2.2l-2.3,2.3l0.8,2.5l2.8,0.9l3.4-0.9h4.1
+            l3,0.8l1.5,2.3l2.4,2.4l0.8,2.9l3.7-0.3l1.3,1.3l-2.2,2.4l-2,2l-1.2,3.2l1.9,3l0.6,2h2.2l3.4,1.1l0.4,2.9l-2.8,1.4l-1.6,2.9v3.8
+            l-2.4,1l-2.7,2.7l-1.4-1.4l-2.8,1.5l-2.3-1h-2.7l-4.3,3.8H367l-2.6,1.3l-3.2-0.2l-3.3,3.5l-1.4-1.4l1.2-1.2l-1-1v-2.4l-0.5-3.2
+            l-1.6-0.8l-1.8,1.8l-3,0.8h-2.6l-2.2-3h-5.5l-2.5-3.5l-1.7-1.7l-2.1-2.1l-3.4-1.4l-2.9-1.5l-3.4-0.5h-3.1l-1.5-1.5l-2.8-0.7
+            l-0.8-2.2l-1.4-2.9l0.4-3.2l-1.5-1.5v-2.6l1.4-3.3l-0.4-1.2l3.6-2.1l0.4-2.7l3.4-2.5l4.2-1.2l-0.2-4l3-6.6l4.1-0.6l3,1.3h4.4
+            l1.1,1.6l4.1,0.5l3.2-1.2l2.9,2.9l2.4-0.6l3.4,1.7l0.9-3.1l5-2.1L367.4,329.8" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Кемеровская область" data-code="RU-KEM" d="M389.7,378.7l-0.4-2l0.6-2.7l-2.4,1l-2.7,2.7l-1.4-1.4l-2.8,1.5
+            l-2.3-1h-2.7l-4.3,3.8H367l-2.6,1.3l0.4,4.2l0.9,1.8l0.7,3.8l-0.5,5.4l1.6,2.4l1.5,2.9h2.3l1.6,3.1l1.4,1.4l0.5,2.4l2,1.2h1.9
+            l0.1,1.7l-1.9,0.9l1.1,1.9l0.3,2.5l0.8,2.1l2.5,2.2h2.5l2.2,1.1h1.2l0.1,2.3h1.7v-2.1l1.8-1.8l2.2-2.2L392,418l-0.8-1.6l0.3-1.4l1-1
+            l-1.2-1.6l-1.3-1.3l2.3-3.4v-2.7v-1l0.8-0.8v-1.6l-2.2-0.4l-1.5,1.5l-1.8-1.8l2.3-0.6v-2.3l0.6-2l-1.3-2.5l-0.9-2.5l1.9-1.6l2.3-2.3
+            l1.5-0.6v-3.3l-1.5-2.9l-1.8-0.6L389.7,378.7" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Хакасия" data-code="RU-KK" d="M390.2,389.3l1.4,2.4l2.4,2.6l2.5,0.5l1.2-1.2l3.7,0.4l2.4-0.8
+            l0.8,1.6l-0.8,3.4l2.6,2.6l0.8,3l2.7,2.7v2.4l0.7,2.1l-0.8,2.6l-2.1,2.1l0.3,2.6l-2.1,2.1l-2.3,1l-1.1,2.8l-0.9,1.3l-2.7,1.4v2.8
+            l-2.4,2.4l-4.7-0.8l-1.1,1.1h-1.3L388,435h-2l-2.6-2.6l1.2-1.2l-0.6-2.5l3.4-3.4h1.7v-2.1l4-4L392,418l-0.8-1.6l0.3-1.4l1-1
+            l-1.2-1.6l-1.3-1.3l2.1-3.1l0.2-4l0.8-0.8v-1.6l-2.2-0.4l-1.5,1.5l-1.8-1.8l2.3-0.9v-2l0.6-2l-1.3-2.5l-0.9-2.5L390.2,389.3" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Адыгея" data-code="RU-AD" d="M32.7,366.7l-0.8-1.2l-1.4-1.4l-0.7,0.3v1.2l0.6,1.1l2.7,2.8h1.3
+            l0.4-0.5l1.4,0.9l0.7,1.7l-0.8,0.8l-1.4-0.1l-0.8,1.5h-1.2v2.1l0.5,1.2l-0.3,1H30l-1-0.5l-1.1,1.1l1.9,2.4l0.7,1.3l0.6-0.6l1.3-0.2
+            v-1l0.9-0.8l1.4-1.4l1.3-1.9l1.1-1.1l1.2-0.5l0.5,1.7l0.7-1.4v-2.8v-1.8l-0.9-0.6l-0.8-0.8l-1.1-0.6l-0.4-1.4l-1.6-0.5l-0.7,0.3
+            L32.7,366.7" style="fill: white;"></path>
+           
+                <path class="map" onmousedown="Check_region(this)" data-title="Республика Саха" data-code="RU-SA" d="M638.5,97.5l-2.4,2.4v1.8l1.2,1.2h-2.5l-2.3,1.8l-3.2,1.4
+                l-3.5-3.5l-1.7-1.7l-3.5,0.2l-4.2,0.6l-2.4,2.9l-2.7,2.7l-3.2,4.7v3.7l-2.5,3.2l-2.4,2.4l-2.7,0.1l-2.4-1.3l-3.4,1.9
+                c0,0,0.8,3.3,0.4,2.9c-0.4-0.4-2.4-2.5-2.4-2.5l-1.8,2h-2.8c0,0-1.7-0.6-0.9-1.4c0.8-0.8,1.9-2.3,1.9-2.3l-2.3-1.6l-3.8,1.6
+                l-2.7,1.3l-1.1,3.2l-0.5,1.8l0.8,4.1v2.4l-2.2,2l0.6-4.9l-2.4-0.8l-1.9,1.9l-2.2,1l0.9-3.4c0,0,2.4-0.9,2.4-1.6
+                c0-0.8-0.5-1.3-0.5-1.3l-3.7,1.6l-4.7,1.8l-1,2.9l-3.5,1.8h-2.4l-1.6,1.6l2.7,1.6l0.4,1.8l-2.8,2.5v2.7l1.5,1l1.3-3.3l0.9,0.8v2.8
+                l2.2,1.1l1.9,1.9l0.9,0.5l-1.9,1.9l-2.4-0.1l-1.4,1.5l-1.1,1.1l3,1.3v1.9l-2.8-0.8l-2.4,0.1l-3.3,0.8l-1.8,3.3l0.6,3.3h-3.2
+                l-2.8,0.8l-1.8-1.8l-3.2-0.4v2.3l1.6,1.6v1.8l0.8,1.9l1.3,4.2l-0.3,2.4l-2.9-1.5l-1.1,1.1l-2.7-0.5l-1.9-1.3l-2.5-2.5l-2.6,0.1v-2
+                c0,0-1.1-1.8-1.1-1.1s-1.4,1.3-1.4,1.3l-1.8-1.8l1-1l1.6-0.5v-2.8l-1.3-1.3l-2.4,1.5v-2.4l-1.5-1.5h-1.5l1-3.1l-3-1l-0.9,0.9
+                l-2.8-2.2c0,0-0.3,1.2-1.2,1.2s-0.8,2.3-0.8,2.3l-1,0.8l-1-1.1l-1,0.3l-0.5,1.5l-2-1.4l-1.3-1.3l-1.6,1.2l-1.5-1.5l-0.4,1.5
+                l-0.5,2.9l1.9,2.9l0.4,2.5c0,0,0.6,2.3,0,2.3s-3.4,0.5-3.4,0.5l-2.7,2.3l-2.7,1l-1.5-2.4l-0.4,1.4l-0.1,1h-3.9l-2.1-2.1l0.9-0.9
+                l-1-1.5l-3.8,1.1l-4.8,0.9l-3.2,1.6l-2.3,2.3l-1.2,1.2l1.8,1.6H475l-1.5-2.2v-2.5l-1.3-1.3l-1.6,2.2l-0.5,1.5l-2.5-1l-2.2-0.5
+                l0.3,2.2l1,0.8l-0.3,1.2l-0.9,0.9l0.6,1.5l1.1,1.7l1.1,1.1l-0.4,2.5l0.9,1.9l2.6,1v1.3l3.4,2.5l1.6,1.6v3.1l1.8,3.4h2l0.2,2.6h-1
+                l-0.5,1.8l-2.4,2.4l-2.1,1.4l0.1,4.6l-1.9,0.7l-0.7,2.5l1.4,1.4v2.1l-0.8,1.7l-2.6-0.8l-1.9,0.6l-2.8,3.9l-2.7,1v1l0.7,1.7l1,2.2
+                l2.2,1.5l0.2,4.2l2.2,4v1.7l0.6,3.2l0.7,4.9l-1.9,0.6l-1.3,2.1l-1.2,1.2l0.7,2.1l0.7-0.7l2.4,1v2.1l0.9,0.9l-0.9,0.8v2.2l2.2,1.2
+                l0.7,3.5l2.6,2.6l-0.9,2.5l-1.5,2.4l0.6,1.9v1.7l-0.8,0.8v2.5l1.3,0.6h2.1l1-1h1.2l1.1,1.3l2.3-0.9l1.7,0.8l1.4-1.4l1.9,0.1l0.1,1.5
+                l1.8,1.8v1.6l-1.7,0.5v2.5l2.1-0.2l2.1-0.6l1.9,1.3l1.6,2.8l0.7,2.8l0.9,0.9l-0.8,0.8v1.8l2,0.9h1.8l1.4,1.4l-0.3,2.3l-1,1v1.7
+                l1.4,1.4l0.7,1.7l0.2,1.5l1.6,0.6l2.2,0.9v3.1l-0.5,3.2v3.6l-0.4,3.8l0.3,6.3l3,3l2.7-0.2l1.3-1.9l0.8-2.4h2l4.2-1.6l0.4-2.1
+                l1.6-0.7l1.7,1.7v2.2l1.4,2v-2.6l3.3-2.3V323l2.4-2.4l0.9-2.8l-0.7-2.5l1.8-1.8l0.8-2.5l1.5-1.8l2.7,0.4l2.7-0.3l2.8,1.3l2.5,0.3
+                v2.3l1.2,1v1.8l2.8,0.4l1.8-1.8v-1.9h2l1.4,1.4l1.7,1.9v1.8l1.6,0.2l1,2.8l1.7,1.7l1.9,1.9l-0.4,1.4l1.3,1.3l0.6,2.9l2.8,1l2,2.6
+                l1.9,0.6v2.2l2.1,0.6l2.2-2.2l2.5-2.1h2.5l1.1-1.1l1.4,1.4l1.9,0.4l0.9-0.9h2.5l1,1.3h1.6l0.5-1.9l3.2,0.6l1.1-1.1l2.3-0.5l2.1,1
+                l2.7,2.7l2.1-0.9l2.3-0.6l1-1.4l1.7,0.8l1.3-1.3h1.4l1.3,1.3l1.3-1.3l3.7-3.7l2.7,0.4v-1.7l3.4-1.3l2.5,0.5l2.5-1.6l-0.2-2.6
+                l4.1-2.5l3.9-3.2l-1.4-3.3v-2.5l-1.7-1.7l1.5-1.5l0.4-3.3l-3.5-1.5h-2.8l-0.3-1.7l2-0.4l-1-2.1l0.6-3.9l-2.4-0.4l-2.4-2.5l2.1-0.5
+                l0.2-3l-0.9-0.9l-0.6-1.6l0.8-2l-1.6-1.6l1.3-1.8l-1.1-1.1v-2.7l2.6-1.3l1.7-1l2.1,0.2l1.7-1.7l2.3-0.9l0.3-2.2l-1.5-1.5l0.8-2.1
+                l2.9-0.6l3.9-3.9l-0.2-4.4l2.8-0.9v-1.4l-2.7-2.7l-0.6-1.9l-3-3l-1.9-0.4l-0.4-2.5l0.5-2.9l-1.5-1.5l2.3-3v-2.7l0.2-3.3l-1.2-1.2
+                l-0.6-2.4l-1.1-1.1l-0.1-2.9l2.2-0.5l1.9,0.5l2.5,1.3l2.5-1.3l2-0.6l2-2l1.4-2.5l1.9,0.1l1.1-0.7l0.8,0.8l1.1-0.4v-2.1l-0.2-3.5
+                l0.4-2.4l-1.9-1.9l-0.5-1.5l-1.7-1.7l-3-1.5l-0.8-1.8l-2.1-2.8v-1.5l-1-0.5l0.5-2.5l0.8-0.8l-1.4-1.4l0.4-2.2l3.3-1.3v-1.2l2.5,0.1
+                l-0.2-2.8l-1.9-0.6l-1.3-1.7l1.6-1.5h1.6v-2l1.6-1.1v-1.4l2-0.5l1.2,1.4l1.7-0.2l0.9-1.8l-0.6-1.6l1.7-2.8l0.6-1.8l1.7-0.3v-1.6
+                l-0.9-2.3l-2.1-1.2l-2-2v-2.3l-0.2-2.5l-1.9-1l-1.3-1.8v-2.1l1.5-0.3l-0.7-2.1l-2.1-0.6l0.4-1.9l2.2-0.9v-2.2l1-1h2.5l0.2-2.6h3.2
+                l1.3-1.3l-0.8-2.6l1.1-2.1l-1.5-2.5h-1.4l-1.3-2.7l-1.5-1.5h-2.1l-2.6,0.9l-2.4-1l-2.5-0.4v-2.9l-2-1.1l-1-2.5l1.5-2.4v-2.6l1.7-1.2
+                v-2.5l1.2-3l2.6-2l-2-3.3l-2.3-0.9l-0.6-1.6l-2.5-0.3l-3-1L638.5,97.5z M549.2,100.9L549,100l1.7,0.8l0.9-0.9l1.2-1.2l1.8-1.8l1.1,1.3
+                h0.6l1.4-1.4l1.3-1.6l2.5-1.1l1.8,1.4l-1,2.9v1.6l-1.2,1.2l-1.9,0.9l-2.1,0.8h-2.1l-1.6,1.6l-2.5-0.9l-1.3-1.8L549.2,100.9 M545,103.3h-3.7l-1.2,1.2l-1.9,1.3l-1.4-1.4l-3.3,1l0.2,2.1
+                l0.9,0.9l1.3,1.3l0.9,0.9l-1.3,1l-1.7-1.5l-0.9,0.9l-1.3-1.3l-2.9,0.6l-1.3-0.7l-0.6,1.5l0.9,0.9L526,113v2.2l1.4,1.4l-0.3,1.6h1.3
+                l1.6,1.6l-0.5,1.8l2.1,1l2.8,0.1l1.2,1.1h2.1l2.4-0.7v-1.8l-1.5-1.4l0.8-0.8l1.2,1.2l2.1-3.9l2-2l0.9,0.9l1.8-1.8l0.6-1.7l-2.1-0.7
+                l-1.4,1.4l-1.7-1.3l-2.1-1.3l-2.1-1.5l0.7-1.5l1.1-1.1l0.9,2.9l1.3,1.3l2.2,0.4l1.4-0.6h1.2l1.1-1.1l-0.6-2.4H546l0.5-2.1v-1.5
+                L545,103.3 M546.9,123.6l-1,0.9l0.8,2.3l1.3,1.3l1.1-2.1v-1.7l-0.8-0.8
+                L546.9,123.6 M551.6,125.6l-1.3,1.3l0.7,1.8l1.3,1.3l-0.8,1.8l0.7,0.7l1-2.2
+                l2.6-0.6l2.3-0.9l3.1-1.8l-1.6-3h-2.2l-3.1-1l-1.4,1.3L551.6,125.6 M525.8,120.7l-1-1l-1.8-0.1l1.2,1.2l0.7,2.7h1.5v-1.5L525.8,120.7 M468.3,165.4l-2.1,2.1v1.4h1.8l0.6,1.4l1.5-0.7l1.7-1.7v-2.8h-2.2
+                L468.3,165.4 M543.2,84.5l-0.7,1.3l0.7,0.7l0.9-0.7L543.2,84.5 M536.8,134.7l-2.2-0.5l-0.7,0.6l1.3,0.6l1.6,1.3l0.7-0.9
+                L536.8,134.7" style="fill: white;"></path>
+    
+            <path class="map" onmousedown="Check_region(this)" data-title="Ленинградская область" data-code="RU-LEN" d="M103.3,194.1h11.6v3.7l1.4,4.7l4.8,13.8l3,1.4l1.8,3.4l1.4,5.3
+            l-1.8,3.9l-1.6,2.1l-1.6,0.2l-0.8,1.4l-2.4-0.4l-1.4,1.4l-1-3.8l-1-1l-1.5-0.5l0.8-1.6v-1.5l-1.6-0.7l-0.2-1.5l-1.8-0.1l-1.1,1.1
+            l-1.4-1.7l0.4-3.3l-1.1-0.3l-1.3-1.3l-1.2,1l-1.3,0.3l-2-0.8l-2-0.2h-2.9l-0.9-1.8l-1.1,0.5l-0.9,0.9l-1.7-0.2l-0.5-2.5l0.7-2.3
+            l-0.8-1.8l-0.1-1.8l-1.6-1.6l0.8-1.7l-1.5-1.8l2.5-1.5l3.4,0.8l0.5-1.9l1.1-1.1l2.2,1l1.8,1.9l2.8,0.9l1,2.3l-0.4,0.4v0.7l-0.6,2.3
+            l0.9-0.2l1.1,0.8l0.5-0.4h0.5l1.1-0.5v-1l0.6-0.7v-1l-0.3-0.4l-0.9,1l-0.3-3.7l-2.3-2v-4.3l2-0.5l0.6-0.6l-2.8-1.1L103.3,194.1" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Республика Карелия" data-code="RU-KR" d="M114.9,194.1v3.7l1.4,4.7l4.8,13.8l3,1.4l1.8,3.4l1.4,5.3l2.9-1.6
+            l1.9-2.7l1.4,0.8l2.3-1.3l2.1-0.7l2.1,0.4l1.8,0.8l2.1-0.4l1.6,1l0.1,1.1l1.8,2l1-1.1l0.9-0.2l2.5-2.5l0.4-2l-0.3-1.7l2.1-0.6l1-2.6
+            l-2.4-2.4l0.3-3.2l0.6-1.4l1.6-0.8l0.8-1.8l-0.1-2l0.8-0.9l1,1.3l0.6-0.6l1.3,0.9l1.6-2.3l1.8-3.2l-1.9-6l2.3-2.3l1-4.5l2.5-2.5
+            l3.1-1l1.8-3.9l0.5-2.8l-1.8-1.8l1.4-1.4l-0.1-3.2l-1.6,0.1l-1.3-0.8l-2.1,0.5l-1.4-1.4l0.7-1.9l0.3-2.3l-6.1-5.5l-4.7,8.7l-2.2-1
+            l-4.4,3.5l-2,0.1v4.3l-2.3,0.9v3.3l-3,2.4h-3.5l-0.9,8.4v3.3l-5.3,1.9L114.9,194.1" style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-title="Санкт-Петербург" data-code="RU-SPE" data-logo="static/img_logo/spb.png" data-face="static/img_face/spb.png" data-name="Самойлов Юрий" data-link-glav="https://vk.com/mandulay	" data-adress="г. Санкт-Петербург, Кадетская лин. ВО, 5 корп. 2Д,, Вавилов лофт" data-link-school="https://vk.com/hmbschoolspb	" d="M104.5,207.8c0,0.1,0,0.1-0.1,0.1c-0.1,0.1,0,0.1,0,0.2
+            c0,0.1-0.1,0.1-0.1,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1-0.1,0.1s0,0.1-0.1,0.1c-0.1,0.1,0,0.2-0.1,0.2c-0.1,0.1,0,0.1-0.1,0.1
+            c-0.1,0.1,0,0.1,0,0.2c0,0.1,0,0.1-0.1,0.1c-0.1,0.1-0.1,0.1-0.1,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0,0.1,0,0.2c0,0.1,0.1,0.1,0.1,0.1
+            c0,0.1,0,0.1,0,0.2s0,0.1,0.1,0.1c0.1,0,0.1,0,0.2,0c0.1,0,0.1,0,0.1-0.1c0.1,0,0.1-0.1,0.2-0.1c0.1,0,0.1-0.1,0.1-0.1
+            c0.1,0,0.2-0.1,0.2,0c0.1,0.1,0.1,0,0.1,0.1c0.1,0.1,0,0.1,0.1,0.1c0.1,0.1,0.1,0.1,0.1,0.1c0,0.1,0,0.1,0.1,0.1
+            c0.1,0.1,0.1,0,0.1,0.1c0.1,0.1,0.2-0.1,0.2,0c0.1,0.1,0.1,0.1,0.1,0.1c0.1,0,0.1,0,0.1,0.1c0.1,0.1,0.1,0.1,0.1,0.1
+            c0.1,0,0.1,0,0.2,0c0.1,0,0.2,0.1,0.2,0c0.1-0.1,0.1-0.1,0.1-0.1s0.2,0,0.2-0.1c0.1,0,0.1-0.1,0.2-0.1c0.1,0,0.1,0,0.1-0.1
+            c0.1-0.1,0.1,0,0.2,0c0.1,0,0.1,0,0.1-0.1c0.1-0.1,0.1,0,0.1-0.1c0.1-0.1,0.1,0,0.2-0.1c0.1,0,0.1-0.1,0.1-0.1c0-0.1,0-0.1,0-0.2
+            c0-0.1,0-0.1,0-0.2c0-0.1,0-0.2,0-0.2c0-0.1,0.1-0.1,0.1-0.1c0.1-0.1,0.1-0.1,0.1-0.1c0-0.1,0.1,0,0.1-0.1s0.1-0.1,0.1-0.1
+            c0-0.1,0.1-0.1,0.1-0.1c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.3c0-0.1,0-0.1,0.1-0.1c0.1-0.1,0-0.1,0-0.2
+            c0-0.1,0-0.1,0-0.2c0-0.1-0.1-0.1-0.1-0.1c0-0.1,0-0.1-0.1-0.1c-0.1-0.1-0.1-0.1-0.1-0.1c0-0.1,0-0.1-0.1-0.1
+            c-0.1-0.1-0.1,0-0.2-0.1c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0.1-0.1,0.1c-0.1,0-0.1,0-0.2,0
+            c-0.1,0-0.2-0.1-0.2,0c-0.1,0.1-0.1,0.1-0.1,0.1c-0.1,0-0.2,0-0.2,0c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0-0.1-0.1-0.2-0.1
+            c-0.1,0-0.2,0-0.3,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1,0-0.2,0c-0.1,0-0.2-0.1-0.2,0c-0.1,0.1-0.1,0.1-0.2,0.1c-0.1,0-0.1,0.1-0.1,0.1
+            c-0.1,0-0.1,0.1-0.1,0.1h-0.1v0.1h0.1" style="fill: rgb(255, 183, 65);"></path>
+            <path class="map" onmousedown="Check_region(this)" data-text="" data-code="RU-HR" data-title="Херсонская область" d="M17.3,337.4 17.9,336.4 18.2,335.5 18.6,335 19.3,334.3 20.1,334.2 21.9,334.6 23.2,333.9 26,330.6
+            27.4,325 25.9,322.4 25.2,321.4 24.4,319.8 23.8,319.1 23.6,318.3 23,317.5 21.9,316.9 21.8,316 20.5,316.3 19.7,316.9 18.7,318
+            17.7,317.8 16.9,318 17,318.9 17.3,319.7 16.4,319.9 16.2,319.1 15.5,319.7 15.1,319.8 14,319.1 13.8,317.9 13.4,318.4 12.7,317.2
+            11.7,317 11.2,316.6 10.4,316.8 9.7,317.5 9,316.7 8.2,317.4 8.1,318.3 7.8,319.2 6.9,318.9 6.7,318.1 5.8,318.3 6.2,319.6
+            6.7,320.3 6.9,321.1 5.5,321 5.1,318.9 4.8,317.6 5.5,316.6 4.4,316 4.2,316.9 4.2,319.2 4.5,320.4 5.1,321.1 5.9,322.3 6.2,323.6
+            7.3,324.6 7.6,325.9 8.2,327.1 8.2,326.1 9.4,326.4 8.4,325.3 7.6,324.1 9.1,324.7 9.8,325.9 10.7,326 11.3,326.8 11.6,327.7
+            11.5,329 12.8,329.1 13.3,328.9 14.3,328.4 15,329.1 15.2,329.9 15,330.9 15.1,331.7 15.7,332.5 17,332.2 18.2,333.3 17.2,333
+            16.5,333.7 17.5,333.8 17.2,334.8 17.9,334.2 18.7,333.6 18.8,334 18.1,334.7 17.8,335.6 17,336.2 16.8,336.7 16.8,337.1 " style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-code="RU-ZP" data-title="Запорожская область" d="M31.9,339.7 32.4,339.5 33.3,339.3 33.7,339.2 34.6,339 36,338.9 37.4,338.8 42.1,335.3 41,330.5
+            39.8,329.4 38.7,328.7 38,327.9 38.3,326.9 38.5,325.9 38.8,325.4 38.2,324.6 38,324.1 37.9,323.2 37.4,323.4 36.9,323.1
+            36.3,322.7 36.2,322.2 35.6,322 35,321.2 33.9,320.4 33.7,319.6 33.3,320.2 33.1,320.7 32.3,321.3 31.9,321.9 31.4,322 31.3,323
+            30.1,324.2 29.4,324.9 28.4,324.6 28.1,323.7 28.5,323.2 28,322.9 27.3,322.5 26.4,322.3 25.9,322.4 25.5,322.5 25.2,323.1
+            25.4,323.9 25.9,324.3 25.6,324.8 24.8,325.5 24.5,326 24.3,327 24.4,327.4 24.5,328.3 24.4,329.3 23.5,329.5 22.9,329.2 22,329.4
+            22.1,329.9 21.9,330.9 21.7,331.9 22.2,332.2 22.4,332.7 22.1,333.6 21.9,334.6 22.4,335 23.3,334.7 22.5,335.4 21.6,335.6
+            20.7,335.8 20.2,335.5 19.3,335.7 19.4,336.1 20.4,336.4 21.5,336.6 22.3,336.4 23.1,335.7 24.4,335.4 24.8,334.8 25.8,335.5
+            26.8,335.7 28.1,335.5 28.7,335.7 29.8,336.5 29.9,336.9 29.6,337.4 29.1,337.5 28.7,337.6 27.8,337.9 28,338.8 28.9,338.5
+            29.8,338.3 30.1,337.8 31,337.5 31.3,337 31.9,337.4 32,337.8 32.1,338.3 32.2,338.7 " style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-code="RU-DON" data-title="Донецкая Народная Республика" d="M52.5,340.8 51.4,341.3 50.8,341.5 50.6,341.6 50.3,341.7 49.2,341.2 47.9,340.7 47.5,340.9 46.5,341.3
+            45.8,341.7 45.1,342 43.7,343.5 42.9,342.2 42.5,342.7 41.2,343 42,342.4 40.7,341.3 39.8,341.1 39.2,340.7 38.3,340.4 37.3,340.3
+            36.3,340 35.2,339.3 35.5,338.8 36.4,338.5 36.6,337.6 36.5,337.1 36.8,336.1 37.9,335.4 38.5,335.7 39.1,336.1 40.1,336.3
+            40.3,335.3 39.7,335 39.6,334.6 39.9,333.9 39.3,333.2 39.1,332.3 39.3,331.4 39.7,330.8 39.6,330.4 39.9,329.8 40.2,329.2
+            40.7,329.1 41.5,328.5 41.7,327.9 42.4,328.7 42.6,329.6 43.4,329 44.7,328.2 44.9,327.2 45.1,326.2 45.9,326 46.2,325 46.1,324.5
+            46.8,323.5 47.7,323.2 47.7,323.7 48.4,324.5 49.9,324.6 50.8,324.4 51.7,324.1 52.1,324.1 52.5,324 54,324.1 54.1,323.7
+            54.2,323.5 55,324.3 56.6,325.8 57.3,326.5 57.4,332.6 56.1,337.1 55.4,339.7 54.2,340.8 " style="fill: white;"></path>
+            <path class="map" onmousedown="Check_region(this)" data-code="RU-LUG" data-logo="static/img_logo/lygansk.png" data-face="static/img_face/shevron.jpg" data-name="Смелянская Марина" data-link-glav="https://vk.com/lcoldragel" data-adress="г. Луганск, ул. Советская, 25" data-link-school="https://vk.com/shkola_hmb_rutnik" data-title="Луганская Народная Республика" d="M53,339.9 52.3,341 52.8,341.3 53.4,342.2 54.9,342.8 55.1,343.7 57.5,346.3 60.3,343.5 60.5,343.3
+            60.9,343.1 61.2,343 61.6,342.7 62.2,342.4 61.7,339.6 62,339.2 62.3,338.9 62.7,338.6 63,338.2 63.5,337.8 63.8,337.9 65.3,338.1
+            65.2,336.1 65.7,336 66.5,335.9 66.9,335.9 67.3,335.8 67.6,335.8 67.9,335.8 68.2,335.7 68.4,335.7 68.7,335.6 69.9,335.5
+            70.1,335 70.2,334.6 70.5,334 70.6,333.7 70.8,333.3 71,333 71.1,332.8 71.3,332.6 71.5,332.4 71.8,332 69.4,331 69.4,329.8
+            69.4,328.7 69.4,328.3 68,326.6 67.6,326.1 67.2,325 67.1,324.3 67,324.1 66.9,323.8 66.8,323.6 66.8,323.2 65.5,322.5 64.9,322.1
+            64.6,321.8 64.1,321.2 63.7,320.7 63.2,320.2 62.9,319.8 62.4,321.1 61.6,321.7 61.3,322.2 60.4,322.4 59,322.6 58.3,323.7
+            57.6,324.7 57.2,325.3 56.4,325.9 57,326.7 56.3,327.8 55.5,328.4 56.1,329.2 55.7,329.7 55.5,330.7 54.6,330.9 54.1,330.9
+            53.7,331.5 53.5,332.4 53.6,333.3 53.4,334.3 52.5,334.5 52.5,334.9 52.6,335.4 52.8,336.3 52.3,336.4 53,337.6 52.8,338.6
+            52.8,339 " style="fill: rgb(255, 183, 65);"></path>
+        </svg>
+      </div>
+
+  </div>
+  
   </main>
 
   <div class="modal-school" id="modalSchool">
@@ -423,7 +1267,7 @@ class="location__r-point"
   </div>
 </div>
     
-<footer class="footer">
+<footer class="footer" style="overflow: hidden;">
     <h4 class="footer__title">Ростов-на-Дону</h4>
     <p class="footer__text">мфсоо школы исторического<br>средневекового боя</p>
     <div class="footer__icon-conteiner">
@@ -450,14 +1294,210 @@ class="location__r-point"
   <div class="footer__bg"></div>
 
   </footer>
+
+  <script>
+  const path_map = document.querySelectorAll('.map')
+  function getButtonsReg(){
+    let tool_bar = document.getElementById('toolbar_region')
+    tool_bar.innerHTML = ''
+    for(i = 0; i < path_map.length; i++){
+      if(path_map[i].getAttribute('data-name') != null){
+        tool_bar.innerHTML += `<div class="bar_region" onclick='findSchool(this)'>${path_map[i].getAttribute('data-title')}</div>`
+      }
+    }
+  }
+
+  function findSchool(el){
+    unColored()
+    let title_elem = el.innerHTML
+    for(let i = 0; i < path_map.length; i++){
+      if(path_map[i].getAttribute('data-title') == title_elem){
+        path_map[i].style.fill = 'black'
+        putData(el.innerHTML)
+        break
+      }
+    }
+  }
+
+  function unColored(){
+    for(i = 0; i < path_map.length; i++){
+       if(path_map[i].getAttribute('data-name') == null){
+          path_map[i].style.fill = 'white'
+       }
+       else{
+        path_map[i].style.fill = '#ffb741'
+       }
+    }
+  }
+
+  function Check_region(thise) {    
+      unColored()
+      putData(thise.getAttribute('data-title'))
+      thise.style.fill = 'black'
+  };    
+
+  function putData(reg_name){
+    let flag = true
+    let block_contacts = document.getElementById('block_contacts')
+    let mech_for_j = ''
+
+    for(let i = 0; i < path_map.length; i++){
+
+       if(path_map[i].getAttribute('data-title') == reg_name){
+          block_contacts.innerHTML = ''
+
+          if(path_map[i].getAttribute('data-logo') == null){
+            console.log(path_map[i].getAttribute('data-number'))
+            block_contacts.innerHTML = `<div class="item_school" style='width:80%'> <h1 style="color:white;font-size:4vw">Рыцарей не интересует ${path_map[i].getAttribute('data-title')}!</h1> </div>`
+            break
+            return
+          }
+
+          let much_school = path_map[i].getAttribute('data-number') > '1' ? parseInt(path_map[i].getAttribute('data-number')) : 1
+          flag = false
+          console.log(much_school)
+          let path = path_map[i]
+          for(let j = 1; j < much_school + 1; j++){
+            if(j == 1){
+              mech_for_j = ''
+            }
+            if(j > 1){
+              mech_for_j = '-' + j
+            }
+
+            let data_face = path.getAttribute('data-logo')
+            data_face = '/static/img_face/' + data_face.slice(17, data_face.length - 4) + '.jpg'
+            console.log(data_face)
+
+            let template = `<div class="item_school">
+            <h1 class="count_school">${j}</h1>
+            <div class="info_item_school">
+                <div class="logo_item_school">
+                    <img style="display: block;width: 38%;" src="${path.getAttribute('data-face'+ mech_for_j)}">
+                    <div style="width: 38%;">
+                        <img style="display: block;margin-left: auto;margin-right: auto;" src="${path.getAttribute('data-logo')}">
+                        <a href="${path.getAttribute('data-link-school'+ mech_for_j)}" class="vk_community_school">
+                            Сообщество 
+                            <img style="display: block;width: 17%;" src="static/img/vk.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="info_data_school">
+                    <div class="map_school">
+                      <a style="display: block;width: 100%;" href="https://yandex.ru/maps/?um=constructor%3Abbdf23d1ec7a6aa3fa17459c957762a7f7473a5554efb211fad69751b1338c42&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Abbdf23d1ec7a6aa3fa17459c957762a7f7473a5554efb211fad69751b1338c42&amp;width=100&amp;height=100&amp;lang=ru_RU" style="display: block;width: 100%;border-radius: var(--border_info_school);" alt="" /></a>
+                        <p style="text-align: center;color: white;margin-top: 5px;font-size: 1vw;margin-top: 7%;">${path.getAttribute('data-adress'+ mech_for_j)}</p>
+                    </div>
+                    <div class="about_master">
+                        <h1 style="text-align: center;display: block;margin-left: auto;margin-right: auto;margin-top: 7%;">Руководитель школы</h1>
+                        <img style="width: 50%;display: block;margin-left: auto;margin-right: auto;border-radius: 50%;margin-top: 5%;" src="${data_face}" alt="">
+                        <h1 class="h1_bottom_about_master" style="text-align: center;margin-left: auto;
+                        margin-right: auto;margin-top: 8%;">${path.getAttribute('data-name' + mech_for_j)}</h1>
+                    </div>
+                    <div class="write_bottom_vk">
+                      <div class="div_write_vk" style="opacity: 0;">
+                        Написать в 
+                        <img style="display: block;width: 17%;" src="static/img/vk.svg" alt="">
+                      </div>
+                      <a class="div_write_vk" href="${path.getAttribute('data-link-glav'+ mech_for_j)}">
+                        Написать в 
+                        <img style="display: block;width: 17%;" src="static/img/vk.svg" alt="">
+                      </a>
+                  </div>
+                </div>
+            </div>
+        </div>`
+        block_contacts.innerHTML += template
+          }
+          break
+       }
+    }
+    // if(flag){
+      
+    //   let template = `<div class="item_school">
+    //         <h1 class="count_school"></h1>
+    //         <div class="info_item_school">
+    //             <div class="logo_item_school">
+    //                 <img style="display: block;width: 38%;" src="static/img_face/shevron.jpg">
+    //                 <div style="width: 38%;">
+    //                     <img style="display: block;margin-left: auto;margin-right: auto;" src="">
+    //                     <a href="" class="vk_community_school">
+    //                         Сообщество 
+    //                         <img style="display: block;width: 17%;" src="static/img/vk.svg" alt="">
+    //                     </a>
+    //                 </div>
+    //             </div>
+    //             <div class="info_data_school">
+    //                 <div class="map_school">
+    //                   <a style="display: block;width: 100%;" href="https://yandex.ru/maps/?um=constructor%3Abbdf23d1ec7a6aa3fa17459c957762a7f7473a5554efb211fad69751b1338c42&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Abbdf23d1ec7a6aa3fa17459c957762a7f7473a5554efb211fad69751b1338c42&amp;width=100&amp;height=100&amp;lang=ru_RU" style="display: block;width: 100%;border-radius: var(--border_info_school);" alt="" /></a>
+    //                     <p style="text-align: center;color: white;margin-top: 5px;font-size: 1vw;margin-top: 7%;"></p>
+    //                 </div>
+    //                 <div class="about_master">
+    //                     <h1 style="text-align: center;display: block;margin-left: auto;margin-right: auto;margin-top: 7%;">Руководитель школы</h1>
+    //                     <img style="width: 50%;display: block;margin-left: auto;margin-right: auto;border-radius: 50%;margin-top: 5%;" src="static/img_face/moskow.jpg" alt="">
+    //                     <h1 class="h1_bottom_about_master" style="text-align: center;margin-left: auto;
+    //                     margin-right: auto;margin-top: 8%;">Сергей <br>Уколов </h1>
+    //                 </div>
+    //                 <div class="write_bottom_vk">
+    //                   <div class="div_write_vk" style="opacity: 0;">
+    //                     Написать в 
+    //                     <img style="display: block;width: 17%;" src="static/img/vk.svg" alt="">
+    //                   </div>
+    //                   <a class="div_write_vk" href="">
+    //                     Написать в 
+    //                     <img style="display: block;width: 17%;" src="static/img/vk.svg" alt="">
+    //                   </a>
+    //               </div>
+    //             </div>
+    //         </div>
+    //     </div>`
+    //     block_contacts.innerHTML += template
+    // }
+
+
+    
+  }
+
+  unColored()
+  getButtonsReg()
+
+
+
+
+
+</script>
 <script src="js/header.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="js/slider.js"></script>
+<!-- <script src="js/slider.js"></script> -->
 <script src="js/card.js"></script>
 <script src="js/time.js"></script>
 <script src="https://unpkg.com/imask"></script>
 <script src="js/form.js"></script>
 
+<script>
+function Check_region(el) {
+  // Получаем данные из элемента
+  const title = el.getAttribute("data-title");
+  const address = el.getAttribute("data-address");
+  const leader = el.getAttribute("data-leader");
+  const logo = el.getAttribute("data-logo");
+  const group = el.getAttribute("data-group");
+  const open = el.getAttribute("data-open");
+
+  // Заполняем модальное окно
+  document.getElementById("modal-title").textContent = title || '';
+  document.getElementById("modal-address").textContent = address || '';
+  document.getElementById("modal-leader").textContent = leader || '';
+  document.getElementById("modal-logo").src = logo || '';
+  document.getElementById("modal-group").href = group || '#';
+  document.getElementById("modal-open").href = open || '#';
+
+  // Показываем модальное окно
+  document.getElementById("modal-single").style.display = "block";
+
+  // Прячем слайдер, если он был открыт
+  document.getElementById("modal-multi").style.display = "none";
+}
+</script>
 
 </body>
 </html>

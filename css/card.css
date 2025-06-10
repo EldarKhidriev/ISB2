@@ -42,10 +42,12 @@
 #modal-single #modal-logo {
   max-width: 140px;
   height: auto;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   object-fit: contain;
   margin-bottom: 10px;
 }
+
+
 
 /* Заголовок */
 #modal-single #modal-title {
@@ -59,22 +61,27 @@
 #modal-single p {
   font-size: 16px;
   color: #444;
-  margin: 6px 0;
+  margin: 9px 0 0;
+
 }
+
+
 
 /* Ссылки внизу */
 #modal-single a {
   display: inline-block;
-  margin: 10px 8px 0 8px;
-  padding: 10px 18px;
+  /* margin: 10px 8px 0 8px; */
+  padding: 11px 18px;
   font-size: 15px;
   font-weight: 600;
   color: #fff;
   background-color: #007bff;
-  border-radius: 6px;
+  border-radius: 20px;
   text-decoration: none;
   transition: background-color 0.3s ease;
   user-select: none;
+  width: 60%;
+  
 }
 
 #modal-single a:hover {
@@ -177,7 +184,7 @@
 
 /* Пагинация Swiper */
 .swiper-pagination-bullet {
-  background: #007bff;
+  background: #ffa601;
   opacity: 0.7;
   transition: opacity 0.3s ease;
 }
@@ -185,3 +192,105 @@
 .swiper-pagination-bullet-active {
   opacity: 1;
 }
+
+#modal-multi {
+  width: 450px;
+}
+
+#modal-multi .swiper-slide {
+  background: #fff; /* как в одиночной */
+  border-radius: 12px; /* скругление как в #modal-single */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2); /* более заметная тень */
+  padding: 25px 30px; /* аналогично #modal-single */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 350px; /* ограничение по ширине как у #modal-single */
+  margin: 0 auto; /* центрируем слайд в контейнере */
+  height: auto;
+}
+
+/* Логотип внутри слайда — увеличить */
+#modal-multi .swiper-slide img {
+  width: 140px; /* как в #modal-single #modal-logo */
+  margin: 0 auto;
+  margin-bottom: 10px;
+  object-fit: contain;
+  border-radius: 0; /* если нужно, убрать скругление */
+}
+
+/* Заголовок как в одиночной модалке */
+#modal-multi .swiper-slide h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+/* Текст параграфов */
+#modal-multi .swiper-slide p {
+  font-size: 16px;
+  color: #444;
+  margin: 9px 0 0;
+}
+
+/* Ссылка — как кнопка в одиночной */
+#modal-multi .swiper-slide a {
+  display: inline-block;
+  padding: 11px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  margin-top: 15px;
+  width: 90%;
+  text-align: center;
+}
+
+#modal-multi .swiper-slide a:hover {
+  background-color: #0056b3;
+}
+
+
+#modal-multi {
+  max-width: 1100px; /* увеличил максимальную ширину */
+ 
+  padding: 20px;
+
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Задаём ширину слайдам и центрируем */
+
+/* Задаём ширину слайдам и центрируем */
+#modal-multi .swiper-slide {
+  flex-shrink: 0;
+  width: 100%; /* По умолчанию, может быть переопределено Swiper-ом */
+  margin: 0 auto;
+}
+
+  #modal-multi {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  #modal-multi .swiper-slide {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  #modal-single {
+    max-width: 450px;
+    padding: 20px;
+  }
+

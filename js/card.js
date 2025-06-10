@@ -22,36 +22,37 @@
   const multiSchoolData = {
     "Москва": [
       {
-        title: "Школа 1 в Омске",
+        title: "Школа в Москве 1",
         address: "Омск, улица 1",
         leader: "Руководитель 1",
-        logo: "assets/img/logos/omsk1.png",
+        logo: "../assets/img/contacts/adress/moscov.png",
         groupUrl: "https://vk.com/group_omsk1",
         openUrl: "https://vk.com/open_omsk1"
       },
       {
-        title: "Школа 2 в Омске",
+        title: "Школа в Москве 2",
         address: "Омск, улица 2",
         leader: "Руководитель 2",
-        logo: "assets/img/logos/omsk2.png",
+        logo: "../assets/img/contacts/adress/moscov.png",
         groupUrl: "https://vk.com/group_omsk2",
         openUrl: "https://vk.com/open_omsk2"
       }
     ],
     "Архангельск": [
       {
-        title: "Школа А в Зеленогорске",
+        title: "Школа в Архангельске 1",
         address: "Зеленогорск, улица А",
         leader: "Руководитель А",
-        logo: "assets/img/logos/z1.png",
+        logo:"../assets/img/contacts/adress/moscov.png",
+
         groupUrl: "https://vk.com/group_z1",
         openUrl: "https://vk.com/open_z1"
       },
       {
-        title: "Школа Б в Зеленогорске",
+        title: "Школа в Архангельске 2",
         address: "Зеленогорск, улица Б",
         leader: "Руководитель Б",
-        logo: "assets/img/logos/z2.png",
+        logo: "../assets/img/contacts/adress/moscov.png",
         groupUrl: "https://vk.com/group_z2",
         openUrl: "https://vk.com/open_z2"
       }
@@ -77,9 +78,9 @@
               <img src="${school.logo}" alt="${school.title}" style="max-width: 100px;">
               <h2>${school.title}</h2>
               <p><strong>Адрес:</strong> ${school.address}</p>
+              <a class="btn" href="${school.groupUrl}" target="_blank">Сообщество</a>
               <p><strong>Руководитель:</strong> ${school.leader}</p>
-              <a class="btn" href="${school.groupUrl}" target="_blank">Сообщество VK</a>
-              <a class="btn" href="${school.openUrl}" target="_blank">Открыть VK</a>
+              <a class="btn" href="${school.openUrl}" target="_blank">Открыть</a>
             </div>
           `;
           swiperWrapper.appendChild(slide);
@@ -91,7 +92,7 @@
         } else {
           window.modalSwiper = new Swiper('.swiper', {
             loop: false,
-            autoplay: { delay: 3000 },
+            // autoplay: { delay: 3000 },
             pagination: { el: '.swiper-pagination', clickable: true },
             navigation: {
               nextEl: '.swiper-button-next',
@@ -101,13 +102,13 @@
             spaceBetween: 20,
             slidesPerView: 1.2,
             breakpoints: {
-              768: { slidesPerView: 2.5 }
+              768: { slidesPerView: 1.2 }
             }
           });
         }
       } else {
         // Одна школа
-        modalSingle.style.display = 'block';
+        modalSingle.style.display = 'flex';
         modalMulti.style.display = 'none';
 
         modalLogo.src = btn.dataset.logo;
@@ -130,3 +131,6 @@
   modal.addEventListener('click', (e) => {
     if (e.target === modal) modal.style.display = 'none';
   });
+
+
+  
