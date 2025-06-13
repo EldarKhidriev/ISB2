@@ -691,8 +691,12 @@ section {
 }
 
 .time {
-  font-size: 16px;
+  font-size: 19.5px;
 }
+
+
+
+
 
 .clock-icon {
   width: 24px;
@@ -1171,19 +1175,26 @@ section {
 
   
   .time {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     
   }
   
   .label {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
   
   .time-container {
     padding: 5px 10px;
-    gap: 20px;
+    gap: 5px;
     margin-top: 28px; 
     margin-bottom: 28px; 
+  }
+  .time-block {
+    gap: 5px;
+  }
+  .clock-icon {
+    width: 1rem;
+    margin-left: 1rem;
   }
 
 
