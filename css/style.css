@@ -430,11 +430,25 @@ section {
   transition: bottom 0.3s ease; /* Плавность при изменении bottom */
   bottom: 0; /* нужно задать начальное значение */
 }
-.news-card:hover {
-  bottom: 1.5rem;
-}
-.news-card:hover .news-card__content {
-  top: calc(335px + 1.5rem);
+
+@media (min-width: 768px) {
+  .news-card:hover {
+    bottom: 1.5rem;
+  }
+  .news-card:hover .news-card__content {
+    top: calc(335px + 1.5rem);
+  }
+  
+  .news-card:hover .news-card__img-comteiner {
+    /* height: calc(295px - 30px); уменьшение высоты */
+  }
+  
+  .news-card:hover .news-card__img {
+    transform: scale(1.1); 
+  }
+  .news-card:hover .overlay {
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
 
 /* НАДО ДОДЕЛАТЬ АНИМАЦИЮ!!!!!!!!!!!!! */
@@ -454,13 +468,6 @@ section {
   display: block;
   transition: transform 0.4s ease;
 }
-.news-card:hover .news-card__img-comteiner {
-  /* height: calc(295px - 30px); уменьшение высоты */
-}
-
-.news-card:hover .news-card__img {
-  transform: scale(1.1); 
-}
 
 .overlay {
   position: absolute;
@@ -471,9 +478,6 @@ section {
   background-color: rgba(0, 0, 0, 0.4); /* степень затемнения */
   pointer-events: none; /* чтобы не мешал кликам */
   transition: background-color 0.4s ease; /* <== ПЛАВНОСТЬ */
-}
-.news-card:hover .overlay {
-  background-color: rgba(0, 0, 0, 0);
 }
 
 .news-card__bottom {
@@ -1126,16 +1130,16 @@ section {
     font-size: 0.8rem;
     letter-spacing: 0.01rem;
   }
-  .news-card:hover .news-card__content {
+  /* .news-card:hover .news-card__content {
   top: calc(187px + 1.5rem);
-  }
+  } */
   .news-card__bottom {
     min-height: 250px;
   }
-  .news-card__bottom:hover {
+  /* .news-card__bottom:hover {
     height: 50px;
 
-  }
+  } */
 
   .community__card-wrapper {
     height: auto;

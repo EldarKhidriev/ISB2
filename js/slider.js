@@ -47,10 +47,10 @@
 // });
 
 const swiper = new Swiper('.swiper', {
-  loop: true,
-  autoplay: {
-    delay: 3000,
-  },
+  loop: false,
+  // autoplay: {
+  //   delay: 3000,
+  // },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
