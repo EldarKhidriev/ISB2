@@ -203,18 +203,10 @@ section {
   padding-top: 46px; */
   background-color: #000;
 }
-.begin__bg-left {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 705px; /* ширина картинки */
-  height: 100%;
-  background-image: url("../assets/img/begin-bg-left.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; /* или contain, в зависимости от задачи */
-  background-position: center; /* или left / top */
-  z-index: 1;
-}
+
+
+
+
 .begin__bg-r {
   position: absolute;
   top: 0;
@@ -264,6 +256,9 @@ section {
   clip-path: polygon(0 0, 100% 0, 100% 65%, 85% 100%, 0 100%);
   padding: 1.5rem 8rem;
 }
+
+
+
 
 
 .system-section {
@@ -449,6 +444,12 @@ section {
   .news-card:hover .overlay {
     background-color: rgba(0, 0, 0, 0);
   }
+
+  .begin__bg-left {
+    background-image: url();
+  }
+
+
 }
 
 /* НАДО ДОДЕЛАТЬ АНИМАЦИЮ!!!!!!!!!!!!! */
@@ -2430,3 +2431,64 @@ background: linear-gradient(180deg, #ffa200,#ff9500);/* W3C, IE 10+/ Edge, Firef
   .desk {
     display: none;
   }}
+
+
+
+
+
+
+
+  
+.begin__bg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 705px; /* ширина картинки */
+  height: 100%;
+  background-image: url("../assets/img/begin-bg-left.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; /* или contain, в зависимости от задачи */
+  background-position: center; /* или left / top */
+  z-index: 1;
+
+
+
+}
+
+@media (max-width: 768px) {
+  .begin__bg-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 705px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fadeCycle 6s infinite ease-in-out;
+  }
+  
+  /* Первая картинка */
+  .begin__bg--1 {
+    background-image: url("../assets/img/begin-bg-left.jpg");
+    z-index: 2;
+    animation-delay: 0s;
+  }
+  
+  /* Вторая картинка */
+  .begin__bg--2 {
+    background-image: url("../assets/img/mob/begin-r.jpg");
+    z-index: 1;
+    animation-delay: 3s;
+  }
+  
+  /* Ключевые кадры анимации */
+  @keyframes fadeCycle {
+    0%   { opacity: 1; }
+    33.33% { opacity: 0; }
+    66.66% { opacity: 0; }
+    100%  { opacity: 1; }
+  }
+  
+}
