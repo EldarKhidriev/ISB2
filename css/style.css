@@ -151,6 +151,18 @@ section {
     font-size: clamp(0.7rem, 0.9vw, 0.9rem);
   }
   
+.header-mob__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-mob__add img {
+  width: 40px; /* или любое нужное значение */
+  height: 40px;
+}
+
+
 }
 
 
