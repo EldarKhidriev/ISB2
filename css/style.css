@@ -158,6 +158,7 @@ section {
   border: none;
   background-color: transparent;
   height: 50px;
+  padding: 0;
 }
 /* .header-mob__burger img {
   transform: scale(1.1);
