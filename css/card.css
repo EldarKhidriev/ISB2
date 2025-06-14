@@ -295,3 +295,44 @@
     padding: 20px;
   }
 
+
+
+    .toolbar_region {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* для плавности на iOS */
+  }
+
+  .bar_region {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    padding: 15px 20px;
+    border-radius: 8px;
+    min-width: 200px;
+    text-align: center;
+    background-color: #ffa601;
+    color: #000;
+    font-weight: 900;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+  }
+
+  .bar_region:hover {
+    background-color: #dd9001;
+  }
+
+
+  .map{
+    fill: white;
+    stroke:black;
+    margin-bottom: 2rem;
+        
+    }
+
+
+ 
