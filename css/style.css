@@ -2004,6 +2004,23 @@ details ul {
 }
 
 @media (max-width: 768px) {
+#small-card-1 {background-image: none;}
+#small-card-2 {background-image: none;}
+#small-card-3 {background-image: none;}
+#small-card-4 {background-image: none;}
+
+#small-card-rules-1 {background-image: none;}
+#small-card-rules-2 {background-image: none;}
+#small-card-rules-3 {background-image: none;}
+#small-card-rules-4 {background-image: none;}
+#small-card-rules-5 {background-image: none;}
+#small-card-rules-6 {background-image: none;}
+#small-card-rules-7 {background-image: none;}
+
+
+
+
+
   .small-card__btn {
   color: #000;
   background-color: #FDA215; 
@@ -2040,6 +2057,7 @@ details ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   
 }
 
@@ -2548,3 +2566,11 @@ background: linear-gradient(180deg, #ffa200,#ff9500);/* W3C, IE 10+/ Edge, Firef
 }
 
 
+@media (max-width: 768px) {
+  .doc-rul {
+  margin-top: 53px;
+}
+.doc-nav__link {
+  font-size: .8rem;
+}
+}
