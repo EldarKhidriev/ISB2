@@ -1581,12 +1581,12 @@ section {
 }
 
 .mobile-menu__close {
-  position: relative;
+  position: absolute;
   width: 1rem;
   height: 1rem;
   padding: 0;
-  top: -0.5rem;
-  right: -0.5rem;
+  top: 0.5rem;
+  right: 0.5rem;
   font-size: 3rem;
   font-weight: 400;
   background: none;
