@@ -1246,22 +1246,21 @@ class="location__r-point"
 <script src="js/header.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- <script src="js/slider.js"></script> -->
-<script src="js/card.js"></script>
 <script src="js/time.js"></script>
 <script src="https://unpkg.com/imask"></script>
 <script src="js/form.js"></script>
 <script src="https://unpkg.com/imask"></script>
 
 <script>
-// function Check_region(el) {
-//   const modal = document.getElementById("regionModal");
-
-//   // Получаем все data-атрибуты
-//   const title = el.getAttribute("data-title") || "";
-//   const code = el.getAttribute("data-code") || "";
-//   const logo = el.getAttribute("data-logo") || "";
-//   const face = el.getAttribute("data-face") || "";
-//   const name = el.getAttribute("data-name") || "";
+  // function Check_region(el) {
+    //   const modal = document.getElementById("regionModal");
+    
+    //   // Получаем все data-атрибуты
+    //   const title = el.getAttribute("data-title") || "";
+    //   const code = el.getAttribute("data-code") || "";
+    //   const logo = el.getAttribute("data-logo") || "";
+    //   const face = el.getAttribute("data-face") || "";
+    //   const name = el.getAttribute("data-name") || "";
 //   const linkGlav = el.getAttribute("data-link-glav") || "";
 //   const adress = el.getAttribute("data-adress") || "";
 //   const linkSchool = el.getAttribute("data-link-school") || "";
@@ -1281,31 +1280,31 @@ class="location__r-point"
 
 // // Функция закрытия
 // function closeModal() {
-//   document.getElementById("regionModal").style.display = "none";
-// }
-
-// // Закрытие по клику вне окна
-// window.addEventListener("click", function (event) {
-//   const modal = document.getElementById("regionModal");
-//   if (event.target === modal) {
-//     modal.style.display = "none";
-//   }
-// });
-document.querySelectorAll('.mobile-city').forEach((cityBlock) => {
-  cityBlock.addEventListener('click', () => {
-    const city = cityBlock.dataset.title;
-
-    // Найдем точку на карте с тем же городом
-    const point = document.querySelector(`.location__r-point[data-title="${city}"]`);
-    if (point) {
-      point.click(); // эмулируем нажатие
-    } else {
-      console.warn(`Не найдена точка на карте для города: ${city}`);
-    }
-  });
-});
-
-</script>
+  //   document.getElementById("regionModal").style.display = "none";
+  // }
+  
+  // // Закрытие по клику вне окна
+  // window.addEventListener("click", function (event) {
+    //   const modal = document.getElementById("regionModal");
+    //   if (event.target === modal) {
+      //     modal.style.display = "none";
+      //   }
+      // });
+      document.querySelectorAll('.mobile-city').forEach((cityBlock) => {
+        cityBlock.addEventListener('click', () => {
+          const city = cityBlock.dataset.title;
+          
+          // Найдем точку на карте с тем же городом
+          const point = document.querySelector(`.location__r-point[data-title="${city}"]`);
+          if (point) {
+            point.click(); // эмулируем нажатие
+          } else {
+            console.warn(`Не найдена точка на карте для города: ${city}`);
+          }
+        });
+      });
+      
+    </script>
 <script>
   document.querySelectorAll('.bar_region').forEach(div => {
     const words = div.textContent.trim().split(/\s+/);
@@ -1314,6 +1313,7 @@ document.querySelectorAll('.mobile-city').forEach((cityBlock) => {
 </script>
 
 
+<script src="js/card.js"></script>
 
 </body>
 </html>
