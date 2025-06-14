@@ -1109,7 +1109,7 @@ section {
   }
 
   .section-title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   
@@ -1162,11 +1162,11 @@ section {
   
   .footer__title {
     padding-top: 31px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
   }
   .footer__text {
-    font-size: 1rem;
+    font-size: .8rem;
     padding-top: 10px;
     padding-bottom: 14px;
   }
