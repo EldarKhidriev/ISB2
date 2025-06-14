@@ -333,6 +333,12 @@
     margin-bottom: 2rem;
         
     }
+    .bar_region {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
 
 
  

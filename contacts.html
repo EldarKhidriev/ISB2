@@ -1306,6 +1306,12 @@ document.querySelectorAll('.mobile-city').forEach((cityBlock) => {
 });
 
 </script>
+<script>
+  document.querySelectorAll('.bar_region').forEach(div => {
+    const words = div.textContent.trim().split(/\s+/);
+    div.innerHTML = words.join('<br>');
+  });
+</script>
 
 
 
