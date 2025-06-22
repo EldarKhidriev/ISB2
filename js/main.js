@@ -13,3 +13,5 @@ window.onload = function() {
         initialSlide: 0, /* Устанавливаем первый слайд как активный */
     });
 };
+
+
