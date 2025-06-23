@@ -1593,6 +1593,7 @@ section {
   border: none;
   cursor: pointer;
   color: #FDA215;
+  z-index: 100;
   
 }
 
