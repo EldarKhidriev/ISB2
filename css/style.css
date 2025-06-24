@@ -2500,61 +2500,39 @@ background: linear-gradient(180deg, #ffa200,#ff9500);/* W3C, IE 10+/ Edge, Firef
     100%  { opacity: 1; }
   }
 
-  .begin__logo-conteiner img {
+  .begin__logo-conteiner img:first-child {
     position: absolute;
     width: 181px;
     height: 99px;
     object-fit: contain;
     animation: logoFadeMove 20s infinite ease-in-out;
   }
+  .begin__logo-conteiner img:last-child {
+    position: absolute;
+    width: 181px;
+    height: 99px;
+    object-fit: contain;
+    opacity: 0;
+    left: 0;
+    right: auto;
+    animation: logoFadeMoveTwo 20s infinite ease-in-out;
+  }
+  
 
   /* Ключевые кадры логотипа с мягким появлением справа */
   @keyframes logoFadeMove {
-    0% {
-      opacity: 0;
-      left: auto;
-      right: 0;
-    }
-    5% {
-      opacity: 1;
-      left: auto;
-      right: 0;
-    }
-    40% {
-      opacity: 1;
-      left: auto;
-      right: 0;
-    }
-    45% {
-      opacity: 0;
-      left: auto;
-      right: 0;
-    }
-    50% {
-      opacity: 0;
-      left: 0;
-      right: auto;
-    }
-    55% {
-      opacity: 1;
-      left: 0;
-      right: auto;
-    }
-    90% {
-      opacity: 1;
-      left: 0;
-      right: auto;
-    }
-    95% {
-      opacity: 0;
-      left: 0;
-      right: auto;
-    }
-    100% {
-      opacity: 0;
-      left: auto;
-      right: 0;
-    }
+    0%    { opacity: 1; }
+    40%   { opacity: 1; }
+    50%   { opacity: 0; }
+    90%   { opacity: 0; }
+    100%  { opacity: 1; }
+  }
+  @keyframes logoFadeMoveTwo {
+    0%    { opacity: 0; }
+    40%   { opacity: 0; }
+    50%   { opacity: 1; }
+    90%   { opacity: 1; }
+    100%  { opacity: 0; }
   }
 }
 
