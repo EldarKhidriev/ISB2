@@ -25,7 +25,7 @@
         title: "Школа в Москве 1",
         address: "г. Москва, Автозаводская, Ул. Ленинская Слобода д.26",
         leader: "Мещерякова Анастасия",
-        logo: "../assets/img/contacts/adress/moscov.png",
+        logo: "../assets/img/contacts/adress/stav.png",
         groupUrl: "https://vk.com/hmbschoolmoscow",
         openUrl: "https://vk.com/id180668770"
       },
@@ -33,7 +33,7 @@
         title: "Школа в Москве 2",
         address: "г. Москва, ул. Электрозаводская, дом 21, проходная 3 (Мраморная)",
         leader: "Уколов Сергей",
-        logo: "../assets/img/contacts/adress/moscov.png",
+        logo: "../assets/img/contacts/adress/stav.png",
         groupUrl: "https://vk.com/bayard_fencing_hall",
         openUrl: "https://vk.com/ukolovsv"
       }
@@ -43,7 +43,7 @@
         title: "Школа в Архангельске 1",
         address: "г. Архангельск, пр. Троицкий, 94",
         leader: "Рыкалов Роман",
-        logo:"../assets/img/contacts/adress/moscov.png",
+        logo:"../assets/img/contacts/adress/stav.png",
 
         groupUrl: "https://vk.com/hmbarh",
         openUrl: "https://vk.com/rykalovroman"
@@ -52,7 +52,7 @@
         title: "Школа в Архангельске 2",
         address: "г. Архангельск, Гайдара, д.55, 3 этаж (ТЦ &quot;Мебельная империя&quot;",
         leader: "Яргина Оксана",
-        logo: "../assets/img/contacts/adress/moscov.png",
+        logo: "../assets/img/contacts/adress/stav.png",
         groupUrl: "https://vk.com/hmbschoolnorthenwolf",
         openUrl: "https://vk.com/barsyaksyu"
       }
