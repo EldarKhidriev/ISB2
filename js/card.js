@@ -25,7 +25,7 @@
         title: "Школа в Москве 1",
         address: "г. Москва, Автозаводская, Ул. Ленинская Слобода д.26",
         leader: "Мещерякова Анастасия",
-        logo: "assets/img/contacts/adress/stav.png",
+        logo: "assets/img/contacts/adress/test.png",
         groupUrl: "https://vk.com/hmbschoolmoscow",
         openUrl: "https://vk.com/id180668770"
       },
