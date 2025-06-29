@@ -25,15 +25,15 @@
         title: "Школа в Москве 1",
         address: "г. Москва, Автозаводская, Ул. Ленинская Слобода д.26",
         leader: "Мещерякова Анастасия",
-        logo: "assets/img/contacts/adress/test.png",
+        logo: "assets/img/contacts/emty/москва/1.svg",
         groupUrl: "https://vk.com/hmbschoolmoscow",
         openUrl: "https://vk.com/id180668770"
       },
       {
         title: "Школа в Москве 2",
-        address: "г. Москва, ул. Электрозаводская, дом 21, проходная 3 (Мраморная)",
+        address: "г. Москва, м. Нагатинская, ул. Нагатинская, 16",
         leader: "Уколов Сергей",
-        logo: "assets/img/contacts/adress/stav.png",
+        logo: "assets/img/contacts/emty/москва/2.svg",
         groupUrl: "https://vk.com/bayard_fencing_hall",
         openUrl: "https://vk.com/ukolovsv"
       }
@@ -41,18 +41,18 @@
     "Архангельск": [
       {
         title: "Школа в Архангельске 1",
-        address: "г. Архангельск, пр. Троицкий, 94",
-        leader: "Рыкалов Роман",
-        logo:"assets/img/contacts/adress/stav.png",
+        address: "г. Архангельск, пр-т Обводный канал, 9к3",
+        leader: "Верещагин Иван",
+        logo:"assets/img/contacts/emty/архангельск/1.jpg",
 
         groupUrl: "https://vk.com/hmbarh",
-        openUrl: "https://vk.com/rykalovroman"
+        openUrl: "https://vk.com/ivereschagin2004"
       },
       {
         title: "Школа в Архангельске 2",
         address: "г. Архангельск, Гайдара, д.55, 3 этаж (ТЦ &quot;Мебельная империя&quot;",
         leader: "Яргина Оксана",
-        logo: "assets/img/contacts/adress/stav.png",
+        logo: "assets/img/contacts/emty/архангельск/1.jpg",
         groupUrl: "https://vk.com/hmbschoolnorthenwolf",
         openUrl: "https://vk.com/barsyaksyu"
       }
