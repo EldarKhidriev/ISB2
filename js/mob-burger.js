@@ -24,6 +24,3 @@ const langButton = document.getElementById('lang-button');
   });
 
 
-  window.addEventListener('DOMContentLoaded', function () {
-    alert('⚠️  Внимание! 1 июля все исходные файлы сайта будут зашифрованы.');
-  });
