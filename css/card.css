@@ -58,6 +58,10 @@
   
 }
 
+#modal-title {
+  display: none;
+}
+
 /* Параграфы с информацией */
 #modal-single p {
   font-size: 16px;
