@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISB SCHOOLS</title>
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="fonts/font.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/fav/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="assets/fav/favicon.svg" />
+<link rel="shortcut icon" href="assets/fav/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/fav/apple-touch-icon.png" />
+<link rel="manifest" href="assets/fav/site.webmanifest" />
+
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  
+
+</head>
+<body>
+<header class="header">
+  <div class="header__wrapper">
+    <div class="header-top">
+      <a href="#" class="header-top__link desk openSchoolModalBtn">Open a school<img src="assets/img/icon-add.svg" alt="add"></a>
+      <a href="index.html" class="header-top__logo"><img src="assets/img/icon-logo.svg" alt="School logo"></a>
+      <!-- <a href="#" class="header-top__link"><img src="assets/img/icon-lang.svg" alt="language">Русский<img src="assets/img/icon-arrow.svg" alt="arrow down"></a> -->
+       <div class="language-selector">
+  <button class="header-top__link" id="lang-button">
+    <img src="assets/img/icon-lang.svg" alt="language">
+    <span id="current-lang">English</span>
+    <img src="assets/img/icon-arrow.svg" alt="arrow down">
+  </button>
+  <ul class="lang-dropdown" id="lang-dropdown">
+    <li data-lang="ru"> <a href="index.html" style="text-decoration: none;">Russian</a></li>
+    <li data-lang="en">English</li>
+  </ul>
+</div>
+    </div>
+  </div>
+
+  <div class="header-bottom">
+    <nav class="header-bottom__nav">
+      <ul class="header-bottom__list">
+        <li class="header-bottom__item"><a href="about.html" class="header-bottom__link">About</a></li>
+        <li class="header-bottom__item"><a href="contacts.html" class="header-bottom__link">Contacts</a></li>
+        <li class="header-bottom__item"><a href="cup.html" class="header-bottom__link">ISB Schools Cup</a></li>
+        <li class="header-bottom__item"><a href="catalog.html" class="header-bottom__link">Catalog</a></li>
+        <li class="header-bottom__item"><a href="coach-council.html" class="header-bottom__link">Coaching Council</a></li>
+        <li class="header-bottom__item has-submenu">
+          <button class="header-bottom__link" aria-expanded="false">
+            Documents
+            <img src="assets/img/icon-arrow_back.svg" alt="">
+          </button>
+          <ul class="dropdown-list" hidden>
+            <li><a href="document-rules.html">Rules</a></li>
+            <li><a href="document-forms.html">Forms</a></li>
+            <li><a href="document-design.html">Design</a></li>
+            <li><a href="document-general.html">General</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="header-mob">
+    <a href="#" class="header-mob__add openSchoolModalBtn"><img src="assets/img/mob/plus.svg" alt="add"></a>
+    <a href="index.html" class="header-mob__logo"><img src="assets/img/mob/logo.svg" alt="School logo"></a>
+    <button class="header-mob__burger" id="burger-btn"><img src="assets/img/mob/burger.svg" alt="menu"></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu__nav">
+    <button class="mobile-menu__close" id="menuClose">×</button>
+    <ul class="mobile-menu__list">
+      <li><a href="about.html">About</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
+      <li><a href="cup.html">ISB Schools Cup</a></li>
+      <li><a href="catalog.html">Catalog</a></li>
+      <li><a href="coach-council.html">Coaching Council</a></li>
+      <li>
+        <details>
+          <summary class="mobile-menu__summary--active">Documents</summary>
+          <ul>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-rules.html">Rules</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-forms.html">Forms</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-design.html">Design</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-general.html">General</a></li>
+          </ul>
+        </details>
+      </li>
+      <!-- <li>
+  <details>
+    <summary class="lang-summary">
+  <span class="lang-summary__content">
+    <img src="assets/img/icon-lang.svg" alt="language">
+    <span id="current-lang-mobile">Russian</span>
+ <span id="current-lang">Russian</span>
+    <img src="assets/img/icon-arrow.svg" alt="arrow down">
+  </span>
+</summary>
+
+
+    <ul>
+      <li data-lang="ru" class="mobile-menu__summary-text-bottom" style="border-bottom:2px solid #FDA215;">Russian</li>
+      <li data-lang="en" class="mobile-menu__summary-text-bottom"><a href="#">Russian</a></li>
+      <li data-lang="en" class="mobile-menu__summary-text-bottom"><a href="#">English</a></li>
+    </ul>
+  </details>
+</li> -->
+
+    </ul>
+    <div class="language-selector--mobile">
+  <button class="header-top__link--mobile" id="lang-button-mobile">
+    <img src="assets/img/icon-lang.svg" alt="language">
+    <span id="current-lang-mobile">Language</span>
+    <!-- <img src="assets/img/lang.svg" alt="arrow down" class="lang-marker"> -->
+    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="lang-marker">
+<path d="M17.4422 9.23364C18.1057 9.6239 18.098 10.5861 17.4282 10.9656L2.47951 19.4364C1.80977 19.8159 0.980338 19.328 0.986543 18.5583L1.12504 1.37693C1.13124 0.607157 1.96843 0.132765 2.63197 0.523027L17.4422 9.23364Z" fill="#FDA215"/>
+</svg>
+  </button>
+  <ul class="lang-dropdown--mobile" id="lang-dropdown-mobile">
+    <!-- <li data-lang="ru" class="mobile-menu__summary-text-bottom" style="border-bottom:2px solid #FDA215;">Russian</li> -->
+    <li data-lang="en" class="mobile-menu__summary-text-bottom"><a href="index.html" id="mobile-menu__summary-text-bottom-link">Russian</a></li>
+    <li data-lang="en" class="mobile-menu__summary-text-bottom"><a href="#" id="mobile-menu__summary-text-bottom-link">English</a></li>
+  </ul>
+</div>
+
+  </nav>
+</div>
+
+<div class="modal-school" id="modalSchool">
+  <div class="modal-school__content">
+    <span class="modal-school__close" id="closeSchoolModalBtn">&times;</span>
+    <h2>Fill out the form</h2>
+    <form id="schoolForm">
+      <input type="text" name="fio" placeholder="Full name" required>
+      <input type="tel" name="phone" id="phoneInput" placeholder="+7-XXX-XXX-XX-XX" required>
+      <input type="text" name="location" placeholder="Location" required>
+
+      <div class="modal-school__radio-group">
+  <label>
+    <input type="radio" name="action" value="learn" required>
+    <span class="custom-radio"></span>
+    Start learning
+  </label>
+  <label>
+    <input type="radio" name="action" value="open" required>
+    <span class="custom-radio modal-school-btn"></span>
+    Open a school
+  </label>
+</div>
+
+
+<button class="big-card__btn big-card__btn--fill system-card__btn" type="submit">Send</button>    </form>
+  </div>
+</div>
+
+
+  <main>
+    <section class="begin">
+      <div class="begin__logo-conteiner">
+        <!-- <img src="assets/img/logo-rbmirt.svg" alt="ISB SCHOOLS"> -->
+        <img src="assets/img/logo-rbmirt.svg" alt="ISB SCHOOLS" class="desk">
+      </div>
+      <button class="begin-btn openSchoolModalBtn">Start<br>learning</button>
+      <div class="begin__bg-left begin__bg--1 ">
+        <img src="assets/img/logo-rbmirt.svg" alt="ISB SCHOOLS" class="mob two__logo ">
+      </div>
+      <div class="begin__bg-left begin__bg--2">
+        <img src="assets/img/logo-rbmirt.svg" alt="ISB SCHOOLS" class="mob one__logo ">
+      </div>
+
+
+      <div class="begin__bg-r"></div>
+    </section>
+
+    <section class="system-section desk">
+      <div class="system-section__bg-img"></div>
+      <div class="system-section__wrapper">
+        <div class="system-section__card">
+          <div class="system-card system-card--left">
+            <div class="system-card__icon-conteiner">
+              <div>
+                <img src="assets/img/system-icon-isb.png" alt="school icon" class="desk">
+                <img src="assets/img/AI_Image.svg" alt="school icon" class="mob">
+
+              </div>
+              <h3 class="system-card__title">
+                <span class="system-card__title--medium">Presentation</span><br>
+                <span class="system-card__title--bold">Belt</span><br>
+                <span class="system-card__title--bold">system</span><br>
+                <span class="system-card__title--regular">Principles of belt ranking<br>in ISB Schools</span>
+              </h3>
+              <div class="system-card__btn-container">
+  <button class="btn-open-pdf system-card__btn system-card__btn--fill" data-pdf="assets/files/belts.pdf">Open</button>
+  <button class="btn-download-pdf system-card__btn system-card__btn--nofill" data-pdf="assets/files/belts.pdf">Download</button>
+</div>
+            </div>
+            
+          </div>
+          <div class="system-card--right">
+            <img src="assets/img/system-section-right.jpg" alt="Medieval market painting">
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <section class="system-mob mob">
+      <div class="system-mob__card">
+        <div class="system-card__icon-conteiner">
+              <div>
+                <img src="assets/img/system-icon-isb.png" alt="school icon" class="desk">
+                <!-- <img src="assets/img/mob/ШКОЛЫ СБ РОССИИ ЛОГО 2.svg" alt="school icon" class="mob"> -->
+                <img src="assets/img/лого чб.svg" alt="school icon" class="mob svg-mob" width="60px">
+                 
+
+
+              </div>
+              <h3 class="system-card__title">
+                <span class="system-card__title--medium">Presentation</span><br>
+                <span class="system-card__title--bold">Belt</span><br>
+                <span class="system-card__title--bold">system</span><br>
+              </h3>
+              <span class="system-card__title--regular">Principles of belt ranking<br>in ISB Schools</span>
+              <div class="system-card__btn-container">
+                <button class="btn-open-pdf system-card__btn system-card__btn--fill" data-pdf="assets/files/belts.pdf">Open</button>
+                <button class="btn-download-pdf system-card__btn system-card__btn--nofill" data-pdf="assets/files/belts.pdf">Download</button>
+              </div>
+            </div>
+      </div>
+    </section>
+
+    <section class="events">
+      <h2 class="events__title section-title">Events</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/img/events-slider/1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/events-slider/2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/events-slider/3.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/events-slider/1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/events-slider/2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/events-slider/3.jpg" alt=""></div>
+          
+          
+        </div>
+      
+        <!-- Если нужны кнопки -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      
+        <!-- Если нужна пагинация -->
+        <!-- <div class="swiper-pagination"></div> -->
+      </div>
+    </section>
+
+    <section class="news desk">
+      <h2 class="news__title section-title">News</h2>
+      <div class="news-card__wrapper">
+        <div class="news-card">
+          <div class="news-card__img-comteiner">
+            <img src="assets/img/news/1.jpg" alt="" class="news-card__img">
+            <div class="overlay"></div>
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__content-text-wrapper">
+              <h5 class="news-card__title">Vladimir Ivlev's seminar</h5>
+              <p class="news-card__text">Follow our news, participate in seminars and become stronger together with the best ISB fighters in Russia!</p>
+            </div>
+            <p class="news-card__date">Event: 22.03.25 ISB School Rostov-on-Don</p>
+          </div>
+          <div class="news-card__bottom">
+          </div>
+        </div>
+  
+        <div class="news-card">
+          <div class="news-card__img-comteiner">
+            <img src="assets/img/news/2.jpg" alt="" class="news-card__img">
+            <div class="overlay"></div>
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__content-text-wrapper">
+              <h5 class="news-card__title">RECON 2025 | results</h5>
+              <p class="news-card__text">For the second year, ISB Schools are bringing an interactive exhibition to the Recon festival, telling about the wonderful world of Historical Medieval Battle.</p>
+            </div>
+          </div>
+          <div class="news-card__bottom">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news-mob mob">
+  <h2 class="news__title section-title">News</h2>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="news-card">
+          <div class="news-card__img-comteiner">
+            <img src="assets/img/news/1.jpg" alt="" class="news-card__img">
+            <div class="overlay"></div>
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__content-text-wrapper">
+              <h5 class="news-card__title">Vladimir Ivlev's seminar</h5>
+              <p class="news-card__text">Follow our news, participate in seminars and become stronger together with the best ISB fighters in Russia!</p>
+            </div>
+            <p class="news-card__date">Event: 22.03.25 ISB School Rostov-on-Don</p>
+          </div>
+          <div class="news-card__bottom"></div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="news-card">
+          <div class="news-card__img-comteiner">
+            <img src="assets/img/news/2.jpg" alt="" class="news-card__img">
+            <div class="overlay"></div>
+          </div>
+          <div class="news-card__content">
+            <div class="news-card__content-text-wrapper">
+              <h5 class="news-card__title">RECON 2025 | results</h5>
+              <p class="news-card__text">For the second year, ISB Schools are bringing an interactive exhibition to the Recon festival, telling about the wonderful world of Historical Medieval Battle.</p>
+            </div>
+          </div>
+          <div class="news-card__bottom"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Если нужны кнопки -->
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+
+    <!-- Если нужна пагинация -->
+    <!-- <div class="swiper-pagination"></div> -->
+  </div>
+</section>
+
+
+    <section class="community">
+      <h2 class="community__title section-title">Community</h2>
+
+      <div class="community__content">
+        <a class="community__card-wrapper" href="https://m.vk.com/hmbschools?from=search">
+          <div class="overlay-orange"></div>
+          <img src="assets/img/community/1.jpg" alt="VK community 'ISB Schools' Russia">
+        </a>
+
+        <a class="community__card-wrapper" href="https://m.vk.com/hmbrussia">
+          <div class="overlay-orange"></div>
+          <img src="assets/img/community/2.jpg" alt="VK community 'ISB Schools' Russia">
+        </a>
+
+        <a class="community__card-wrapper" href="https://m.vk.com/viagladii">
+          <div class="overlay-orange"></div>
+          <img src="assets/img/community/3.jpg" alt="VK community 'ISB Schools' Russia">
+        </a>
+      </div>
+      <div class="community__bg"></div>
+
+    </section>
+    
+
+  </main>
+
+
+
+  <footer class="footer">
+    <h4 class="footer__title">Rostov-on-Don</h4>
+    <p class="footer__text">ISB schools historical<br>medieval battle</p>
+    <div class="footer__icon-conteiner">
+      <a href="https://rutube.ru/channel/54856058/" class="footer__icon-img-conteiner"><img src="assets/img/footer/Rutube_icon.svg 1.png" alt="Rutube"></a>
+      <a href="https://vk.com/hmbschools" class="footer__icon-img-conteiner"><img src="assets/img/footer/VK_Compact_Logo_(2021-present).svg 1.png" alt="VK"></a>
+      <a href="#" class="footer__icon-img-conteiner"><img src="assets/img/footer/telegram7584-Photoroom 1.png" alt="Telegram"></a>
+    </div>
+    
+    <div class="time-container">
+  <div class="time-block">
+    <span class="label">UTC</span>
+    <span id="utc-time" class="time"></span>
+  </div>
+  <div class="time-block">
+    <img src="assets/img/footer/pace.svg" alt="Clock" class="clock-icon">
+    <span class="label">MSK</span>
+    <span id="msk-time" class="time"></span>
+  </div>
+</div>
+
+  <div class="footer__old">16+</div>
+  <div class="footer__bg"></div>
+
+  
+</footer>
+<!-- <img src="assets/img/mob/photo_2025-06-08_21-14-22.jpg" alt="" style="width: 100%;"> -->
+
+  <script src="js/header.js"></script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/slider.js"></script>
+<script src="js/time.js"></script>
+<script src="https://unpkg.com/imask"></script>
+
+<script src="js/mob-burger.js"></script>
+<script src="js/form.js"></script>
+
+
+<script src="js/pdf.js"></script>
+
+
+  
+</body>
+</html>

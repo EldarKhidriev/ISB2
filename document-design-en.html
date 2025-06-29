@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISB SCHOOLS</title>
+  <link rel="stylesheet" href="css/globals.css">
+  <link rel="stylesheet" href="fonts/font.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/fav/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="assets/fav/favicon.svg" />
+<link rel="shortcut icon" href="assets/fav/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/fav/apple-touch-icon.png" />
+<link rel="manifest" href="assets/fav/site.webmanifest" />
+
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  
+
+</head>
+<body>
+<header class="header">
+  <div class="header__wrapper">
+    <div class="header-top">
+      <a href="#" class="header-top__link desk openSchoolModalBtn">Open a school<img src="assets/img/icon-add.svg" alt="add"></a>
+      <a href="index.html" class="header-top__logo"><img src="assets/img/icon-logo.svg" alt="School logo"></a>
+      <!-- <a href="#" class="header-top__link"><img src="assets/img/icon-lang.svg" alt="language">Русский<img src="assets/img/icon-arrow.svg" alt="arrow down"></a> -->
+       <div class="language-selector">
+  <button class="header-top__link" id="lang-button">
+    <img src="assets/img/icon-lang.svg" alt="language">
+    <span id="current-lang">English</span>
+    <img src="assets/img/icon-arrow.svg" alt="arrow down">
+  </button>
+  <ul class="lang-dropdown" id="lang-dropdown">
+    <li data-lang="ru"> <a href="index.html" style="text-decoration: none;">Russian</a></li>
+    <li data-lang="en">English</li>
+  </ul>
+</div>
+    </div>
+  </div>
+
+  <div class="header-bottom">
+    <nav class="header-bottom__nav">
+      <ul class="header-bottom__list">
+        <li class="header-bottom__item"><a href="about.html" class="header-bottom__link">About</a></li>
+        <li class="header-bottom__item"><a href="contacts.html" class="header-bottom__link">Contacts</a></li>
+        <li class="header-bottom__item"><a href="cup.html" class="header-bottom__link">ISB Schools Cup</a></li>
+        <li class="header-bottom__item"><a href="catalog.html" class="header-bottom__link">Catalog</a></li>
+        <li class="header-bottom__item"><a href="coach-council.html" class="header-bottom__link">Coaching Council</a></li>
+        <li class="header-bottom__item has-submenu">
+          <button class="header-bottom__link" aria-expanded="false">
+            Documents
+            <img src="assets/img/icon-arrow_back.svg" alt="">
+          </button>
+          <ul class="dropdown-list" hidden>
+            <li><a href="document-rules.html">Rules</a></li>
+            <li><a href="document-forms.html">Forms</a></li>
+            <li><a href="document-design.html">Design</a></li>
+            <li><a href="document-general.html">General</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="header-mob">
+    <a href="#" class="header-mob__add openSchoolModalBtn"><img src="assets/img/mob/plus.svg" alt="add"></a>
+    <a href="index.html" class="header-mob__logo"><img src="assets/img/mob/logo.svg" alt="School logo"></a>
+    <button class="header-mob__burger" id="burger-btn"><img src="assets/img/mob/burger.svg" alt="menu"></button>
+  </div>
+
+  <nav class="doc-nav">
+        <ul class="doc-nav__list">
+            <li class="doc-nav__item">
+            <a href="document-rules.html" class="doc-nav__link">Rules</a>
+            </li>
+            <li class="doc-nav__item">
+            <a href="document-forms.html" class="doc-nav__link">Forms</a>
+            </li>
+            <li class="doc-nav__item">
+            <a href="document-design.html" class="doc-nav__link  doc-nav__link--active">Design</a>
+            </li>
+            <li class="doc-nav__item">
+            <a href="document-general.html" class="doc-nav__link">General</a>
+            </li>
+        </ul>
+      </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu__nav">
+    <button class="mobile-menu__close" id="menuClose">×</button>
+    <ul class="mobile-menu__list">
+      <li><a href="about.html">About</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
+      <li><a href="cup.html">ISB Schools Cup</a></li>
+      <li><a href="catalog.html">Catalog</a></li>
+      <li><a href="coach-council.html">Coaching Council</a></li>
+      <li>
+        <details>
+          <summary class="mobile-menu__summary--active">Documents</summary>
+          <ul>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-rules.html">Rules</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-forms.html">Forms</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-design.html">Design</a></li>
+            <li class="mobile-menu__summary-text-bottom"><a href="document-general.html">General</a></li>
+          </ul>
+        </details>
+      </li>
+      <!-- <li>
+  <details>
+    <summary class="lang-summary">
+  <span class="lang-summary__content">
+    <img src="assets/img/icon-lang.svg" alt="language">
+    <span id="current-lang-mobile">Russian</span>
+ <span id="current-lang">Russian</span>
+    <img src="assets/img/icon-arrow.svg" alt="arrow down">
+  </span>
+</summary>
+
+
+    <ul>
+      <li data-lang="ru" class="mobile-menu__summary-text-bottom" style="border-bottom:2px solid #FDA215;">Russian</li>
+      <li data-lang="en" class="mobile-menu__summary-text-bottom"><a href="#">Russian</a></li>
+      <li data-lang="en" class="mobile-menu__summary-text-bottom"><a href="#">English</a></li>
+    </ul>
+  </details>
+</li> -->
+
+    </ul>
+    <div class="language-selector--mobile">
+  <button class="header-top__link--mobile" id="lang-button-mobile">
+    <img src="assets/img/icon-lang.svg" alt="language">
+    <span id="current-lang-mobile">Language</span>
+    <!-- <img src="assets/img/lang.svg" alt="arrow down" class="lang-marker"> -->
+    <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="lang-marker">
+<path d="M17.4422 9.23364C18.1057 9.6239 18.098 10.5861 17.4282 10.9656L2.47951 19.4364C1.80977 19.8159 0.980338 19.328 0.986543 18.5583L1.12504 1.37693C1.13124 0.607157 1.96843 0.132765 2.63197 0.523027L17.4422 9.23364Z" fill="#FDA215"/>
+</svg>
+  </button>
+  <ul class="lang-dropdown--mobile" id="lang-dropdown-mobile">
+    <!-- <li data-lang="ru" class="mobile-menu__summary-text-bottom" style="border-bottom:2px solid #FDA215;">Russian</li> -->
+    <li data-lang="en" class="mobile-menu__summary-text-bottom"><a href="index.html" id="mobile-menu__summary-text-bottom-link">Russian</a></li>
+    <li data-lang="en" class="mobile-menu__summary-text-bottom"><a href="#" id="mobile-menu__summary-text-bottom-link">English</a></li>
+  </ul>
+</div>
+
+  </nav>
+</div>
+
+<div class="modal-school" id="modalSchool">
+  <div class="modal-school__content">
+    <span class="modal-school__close" id="closeSchoolModalBtn">&times;</span>
+    <h2>Fill out the form</h2>
+    <form id="schoolForm">
+      <input type="text" name="fio" placeholder="Full name" required>
+      <input type="tel" name="phone" id="phoneInput" placeholder="+7-XXX-XXX-XX-XX" required>
+      <input type="text" name="location" placeholder="Location" required>
+
+      <div class="modal-school__radio-group">
+  <label>
+    <input type="radio" name="action" value="learn" required>
+    <span class="custom-radio"></span>
+    Start learning
+  </label>
+  <label>
+    <input type="radio" name="action" value="open" required>
+    <span class="custom-radio modal-school-btn"></span>
+    Open a school
+  </label>
+</div>
+
+
+<button class="big-card__btn big-card__btn--fill system-card__btn" type="submit">Send</button>    </form>
+  </div>
+</div>
+
+    <main class="doc-rul">
+      <section class="doc-rul__cards-wrapper">
+      
+      <div class="small-card__wrapper" id="small-card-4">
+        <div class="small-card">
+        <div class="small-card__content-l">
+          <div class="big-card__logo-conteiner">
+          <img src="assets/img/logo-rbmirt.svg" alt="ISB Schools" width="60px">
+          </div>
+          <p>Regulation</p>
+          <h3>Brandbook of ISB Russia</h3>
+          <p>Document</p>
+          <div class="small-card__btn-container">
+          <button class="btn-open-pdf small-card__btn small-card__btn--fill" data-pdf="assets/files/design/1.pdf">Open</button>
+          <button class="btn-download-pdf small-card__btn small-card__btn--nofill" data-pdf="assets/files/design/1.pdf">Download</button>
+          </div>
+        </div>
+        <div class="small-card__content-r"></div>
+        </div>
+      </div>
+
+      <div class="small-card__wrapper" id="small-card-4">
+        <div class="small-card">
+        <div class="small-card__content-l">
+          <div class="big-card__logo-conteiner">
+          <img src="assets/img/logo-rbmirt.svg" alt="ISB Schools" width="60px">
+          </div>
+          <p>Regulation</p>
+          <h3>Sample School Brandbook</h3>
+          <p>Document</p>
+          <div class="small-card__btn-container">
+          <button class="btn-open-pdf small-card__btn small-card__btn--fill" data-pdf="assets/files/design/2.pdf">Open</button>
+          <button class="btn-download-pdf small-card__btn small-card__btn--nofill" data-pdf="assets/files/design/2.pdf">Download</button>
+          </div>
+        </div>
+        <div class="small-card__content-r"></div>
+        </div>
+      </div>
+
+      <div class="small-card__wrapper" id="small-card-4">
+        <div class="small-card">
+        <div class="small-card__content-l">
+          <div class="big-card__logo-conteiner">
+          <img src="assets/img/logo-rbmirt.svg" alt="ISB Schools" width="60px">
+          </div>
+          <p>Regulation</p>
+          <h3>Crest</h3>
+          <p>Document</p>
+          <div class="small-card__btn-container">
+          <button class="btn-open-pdf small-card__btn small-card__btn--fill" data-pdf="assets/files/design/2.pdf">Open</button>
+          <button class="btn-download-pdf small-card__btn small-card__btn--nofill" data-pdf="assets/files/design/2.pdf">Download</button>
+          </div>
+        </div>
+        <div class="small-card__content-r"></div>
+        </div>
+      </div>
+
+      <div class="small-card__wrapper" id="small-card-4">
+        <div class="small-card">
+        <div class="small-card__content-l">
+          <div class="big-card__logo-conteiner">
+          <img src="assets/img/logo-rbmirt.svg" alt="ISB Schools" width="60px">
+          </div>
+          <p>Regulation</p>
+          <h3>ISB School Logo</h3>
+          <p>Document</p>
+          <div class="small-card__btn-container">
+          <button class="btn-open-pdf small-card__btn small-card__btn--fill" data-pdf="assets/files/design/3.pdf">Open</button>
+          <button class="btn-download-pdf small-card__btn small-card__btn--nofill" data-pdf="assets/files/design/3.pdf">Download</button>
+          </div>
+        </div>
+        <div class="small-card__content-r"></div>
+        </div>
+      </div>
+      </section>
+    </main>
+    
+
+   <footer class="footer" style="overflow: hidden;">
+    <h4 class="footer__title">Rostov-on-Don</h4>
+    <p class="footer__text">ISB Historical Medieval Battle<br>Schools</p>
+    <div class="footer__icon-conteiner">
+      <a href="https://rutube.ru/channel/54856058/" class="footer__icon-img-conteiner"><img src="assets/img/footer/Rutube_icon.svg 1.png" alt="Rutube"></a>
+      <a href="https://vk.com/hmbschools" class="footer__icon-img-conteiner"><img src="assets/img/footer/VK_Compact_Logo_(2021-present).svg 1.png" alt="VK"></a>
+      <a href="#" class="footer__icon-img-conteiner"><img src="assets/img/footer/telegram7584-Photoroom 1.png" alt="Telegram"></a>
+    </div>
+    
+    <div class="time-container">
+  <div class="time-block">
+    <span class="label">UTC</span>
+    <span id="utc-time" class="time"></span>
+  </div>
+  <div class="time-block">
+    <img src="assets/img/footer/pace.svg" alt="Clock" class="clock-icon">
+    <span class="label">MSK</span>
+    <span id="msk-time" class="time"></span>
+  </div>
+</div>
+
+  <div class="footer__old">16+</div>
+  <div class="footer__bg"></div>
+
+  </footer>
+ <script src="js/header.js"></script>
+<script src="js/time.js"></script>
+<script src="js/mob-burger.js"></script>
+<script src="js/form.js"></script>
+<script src="https://unpkg.com/imask"></script>
+
+<script src="js/pdf.js"></script>
+
+
+</body>
+</html>
