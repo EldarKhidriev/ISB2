@@ -22,3 +22,8 @@ const langButton = document.getElementById('lang-button');
   document.addEventListener('click', () => {
     wrapper.classList.remove('open');
   });
+
+
+  window.addEventListener('DOMContentLoaded', function () {
+    alert('⚠️  Внимание! 1 июля все исходные файлы сайта будут зашифрованы.');
+  });
