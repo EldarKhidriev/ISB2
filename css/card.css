@@ -259,6 +259,10 @@
 }
 
 
+.card > h2 {
+  display: none;
+}
+
 #modal-multi {
   max-width: 1100px; /* увеличил максимальную ширину */
  

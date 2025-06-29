@@ -23,7 +23,7 @@
     "Москва": [
       {
         title: "Школа в Москве 1",
-        address: "г. Москва, Автозаводская, Ул. Ленинская Слобода д.26",
+        address: "г. Москва, м. Автозаводская, Ул. Ленинская Слобода д.26, БЦ Омега, клуб единоборств 'Берн'",
         leader: "Мещерякова Анастасия",
         logo: "assets/img/contacts/emty/москва/1.svg",
         groupUrl: "https://vk.com/hmbschoolmoscow",
@@ -38,6 +38,125 @@
         openUrl: "https://vk.com/ukolovsv"
       }
     ],
+    "Краснодар": [
+      {
+      title:"Краснодар",
+      address:"г. Краснодар, ул. Тюляева 4/1",
+      leader:"Басов Захар",
+      logo:"assets/img/contacts/emty/краснодар/1.svg",
+      groupUrl:"https://vk.com/hmbschoolkrd",
+      openUrl:"https://vk.com/id209706471"
+      },
+      {
+      title:"Ейск",
+      address:"г. Ейск, ул. Коммунистическая, 83/4",
+      leader:"Иванов Юрий",
+      logo:"assets/img/contacts/emty/ейск/1.svg",
+      groupUrl:"https://vk.com/istfexyisk",
+      openUrl:"https://vk.com/volhve"
+      },
+      {
+      title:"Ленинградская",
+      address:"ст. Ленинградская, ул. 417-й дивизии, 40",
+      leader:"Трояков Евгений",
+      logo:"assets/img/contacts/emty/ленинградская/1.svg",
+      groupUrl:"https://vk.com/club_plumbeum?from=search",
+      openUrl:"https://vk.com/id675540526"
+      },
+      {
+        title: "Геленджик",
+        address: "г. Геленджик, ул. Мичурина, 14",
+        leader: "Степанов Кирилл",
+        logo: "assets/img/contacts/emty/геленджик/1.svg",
+        groupUrl: "https://vk.com/hmbschoolglk",
+        openUrl: "https://vk.com/hmbstepanov"
+      }
+    ],
+
+    "Красноярск": [
+      {
+        title: "Красноярск",
+        address: "г. Красноярск, Новая Заря, 2В",
+        leader: "Михайлов Антон",
+        logo: "assets/img/contacts/emty/красноярск/1.svg",
+        groupUrl: "https://vk.com/hmbschoolkrsk",
+        openUrl: "https://vk.com/ant_mih"
+      },
+      {
+        title: "Зеленогорск",
+        address: "г. Зеленогорск, ул. Гагарина 18, МБУ 'Молодежный центр'",
+        leader: "Неудачин Павел",
+        logo: "assets/img/contacts/emty/зеленогорск/1.svg",
+        groupUrl: "https://vk.com/hmbschoolzlk",
+        openUrl: "https://vk.com/silarent"
+      }
+    ],
+
+    "Казань": [
+      {
+        title: "Казань",
+        address: "г. Казань, Ямашева пр. 115А, АК Барс Арена",
+        leader: "Куртымов Артем",
+        logo: "assets/img/contacts/emty/казань/1.svg",
+        groupUrl: "https://vk.com/hmbschoolkazan",
+        openUrl: "https://vk.com/kurtymov"
+      },
+      {
+        title: "Зеленодольск",
+        address: "г. Зеленодольск, ул. Малая Красная, 5",
+        leader: "Мухаметгалиева Анжелика",
+        logo: "assets/img/contacts/emty/зеленогорск/1.svg",
+        groupUrl: "https://vk.com/hmb_tatarstan?from=search",
+        openUrl: "https://vk.com/lika130406"
+      }
+    ],
+
+    "Санкт-Петербург": [
+      {
+        title: "Высшая Школа Санкт-Петербург",
+        address: "г. Санкт-Петербург, Кадетская лин. ВО, 5 корп. 2Д,, 'Вавилов лофт', зеленая лестница",
+        leader: "Симонова Светлана",
+        logo: "assets/img/contacts/emty/санкт-петербург/1.svg",
+        groupUrl: "https://vk.com/hmbschoolspb",
+        openUrl: "https://vk.com/sim.lana"
+      },
+      {
+        title: "Санкт-Петербург | Пересвет",
+        address: "г. Санкт-Петербург, ул. Курская 28/32",
+        leader: "Малюгин Илья",
+        logo: "assets/img/contacts/emty/санкт-петербург/2.svg",
+        groupUrl: "https://vk.com/schoolperesvet?from=search",
+        openUrl: "https://vk.com/malug"
+      }
+    ],
+
+    "Новосибирск": [
+      {
+        title: "Новосибирск",
+        address: "г. Новосибирск, Блюхера, 39",
+        leader: "Бернгардт Константин",
+        logo: "assets/img/contacts/emty/новосибирск/1.svg",
+        groupUrl: "https://vk.com/hmbschoolnsknovosibirsk",
+        openUrl: "https://vk.com/elennor1984"
+      },
+      {
+        title: "Новосибирск",
+        address: "г. Новосибирск, ул. Крылова, 26",
+        leader: "Строилов Алексей",
+        logo: "assets/img/contacts/emty/новосибирск/1.svg",
+        groupUrl: "https://vk.com/hmb54?from=search",
+        openUrl: "https://vk.com/ewdfsfwer"
+      },
+      {
+        title: "Новосибирск | Стальной поток",
+        address: "г. Новосибирск, Некрасова, 82, историко-культурный центр ГГПЦ 'Твоя история'",
+        leader: "Васильев Сергей",
+        logo: "assets/img/contacts/emty/новосибирск/1.svg",
+        groupUrl: "https://vk.com/spnso54?from=search",
+        openUrl: "https://vk.com/id53376743"
+      }
+    ],
+
     "Архангельск": [
       {
         title: "Школа в Архангельске 1",
