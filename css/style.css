@@ -261,8 +261,24 @@ section {
   padding: 1.5rem 8rem;
 }
 
+#current-lang-mobile {
+  font-size: 1.2rem;
+  font-family: 'Book Antiqua';
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.1rem;
+}
+.lang-marker {
+  width: 14px;
+  height: 14px;
+}
+.lang-marker {
+  transition: transform 0.3s ease;
+}
 
-
+.lang-marker.rotate {
+  transform: rotate(90deg);
+}
 
 
 .system-section {

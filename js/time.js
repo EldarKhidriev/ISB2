@@ -12,3 +12,13 @@ function updateTime() {
 
   updateTime();
   setInterval(updateTime, 1000);
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const langButton = document.getElementById('lang-button-mobile');
+    const langMarker = langButton.querySelector('.lang-marker');
+
+    langButton.addEventListener('click', () => {
+      langMarker.classList.toggle('rotate');
+    });
+  });
