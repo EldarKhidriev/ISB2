@@ -23,7 +23,7 @@
     "Москва": [
       {
         title: "Школа в Москве 1",
-        address: "г. Москва, м. Автозаводская, Ул. Ленинская Слобода д.26, БЦ Омега, клуб единоборств 'Берн'",
+address: "Moscow, metro Avtozavodskaya, Leninskaya Sloboda St., bld. 26, Omega Business Center, martial arts club 'Bern'",
         leader: "Meshcheryakova Anastasia",
         logo: "assets/img/contacts/emty/москва/1.svg",
         groupUrl: "https://vk.com/hmbschoolmoscow",
@@ -31,7 +31,7 @@
       },
       {
         title: "Школа в Москве 2",
-        address: "г. Москва, м. Нагатинская, ул. Нагатинская, 16",
+address: "Moscow, metro Nagatinskaya, Nagatinskaya St., 16",
         leader: "Ukolov Sergey",
         logo: "assets/img/contacts/emty/москва/2.svg",
         groupUrl: "https://vk.com/bayard_fencing_hall",
@@ -41,7 +41,7 @@
     "Краснодар": [
       {
       title:"Краснодар",
-      address:"г. Краснодар, ул. Тюляева 4/1",
+address: "Krasnodar, Tyulyaeva St., 4/1",
       leader:"Basov Zakhar",
       logo:"assets/img/contacts/emty/краснодар/1.svg",
       groupUrl:"https://vk.com/hmbschoolkrd",
@@ -49,7 +49,7 @@
       },
       {
       title:"Ейск",
-      address:"г. Ейск, ул. Коммунистическая, 83/4",
+address: "Yeysk, Kommunisticheskaya St., 83/4",
       leader:"Ivanov Yuri",
       logo:"assets/img/contacts/emty/ейск/1.svg",
       groupUrl:"https://vk.com/istfexyisk",
@@ -57,7 +57,7 @@
       },
       {
       title:"Ленинградская",
-      address:"ст. Ленинградская, ул. 417-й дивизии, 40",
+address: "Leningradskaya stanitsa, 417th Division St., 40",
       leader:"Troyakov Evgeny",
       logo:"assets/img/contacts/emty/ленинградская/1.svg",
       groupUrl:"https://vk.com/club_plumbeum?from=search",
@@ -65,7 +65,7 @@
       },
       {
         title: "Геленджик",
-        address: "г. Геленджик, ул. Мичурина, 14",
+address: "Gelendzhik, Michurina St., 14",
         leader: "Stepanov Kirill",
         logo: "assets/img/contacts/emty/геленджик/1.svg",
         groupUrl: "https://vk.com/hmbschoolglk",
@@ -76,7 +76,7 @@
     "Красноярск": [
       {
         title: "Красноярск",
-        address: "г. Красноярск, Новая Заря, 2В",
+address: "Krasnoyarsk, Novaya Zarya, 2V",
         leader: "Mikhailov Anton",
         logo: "assets/img/contacts/emty/красноярск/1.svg",
         groupUrl: "https://vk.com/hmbschoolkrsk",
@@ -84,7 +84,7 @@
       },
       {
         title: "Зеленогорск",
-        address: "г. Зеленогорск, ул. Гагарина 18, МБУ 'Молодежный центр'",
+address: "Zelenogorsk, Gagarina St., 18, Municipal Budgetary Institution 'Youth Center'",
         leader: "Neudachin Pavel",
         logo: "assets/img/contacts/emty/зеленогорск/1.svg",
         groupUrl: "https://vk.com/hmbschoolzlk",
@@ -95,7 +95,7 @@
     "Казань": [
       {
         title: "Казань",
-        address: "г. Казань, Ямашева пр. 115А, АК Барс Арена",
+address: "Kazan, Yamashева Ave., 115A, Ak Bars Arena",
         leader: "Kurtymov Artem",
         logo: "assets/img/contacts/emty/казань/1.svg",
         groupUrl: "https://vk.com/hmbschoolkazan",
@@ -103,7 +103,7 @@
       },
       {
         title: "Зеленодольск",
-        address: "г. Зеленодольск, ул. Малая Красная, 5",
+address: "Zelenodolsk, Malaya Krasnaya St., 5",
         leader: "Mukhametgalieva Anzhelika",
         logo: "assets/img/contacts/emty/зеленогорск/1.svg",
         groupUrl: "https://vk.com/hmb_tatarstan?from=search",
@@ -114,7 +114,7 @@
     "Санкт-Петербург": [
       {
         title: "Высшая Школа Санкт-Петербург",
-        address: "г. Санкт-Петербург, Кадетская лин. ВО, 5 корп. 2Д,, 'Вавилов лофт', зеленая лестница",
+address: "Saint Petersburg, Kadetskaya liniya VO, 5 bldg. 2D, 'Vavilov Loft', green staircase",
         leader: "Simonova Svetlana",
         logo: "assets/img/contacts/emty/санкт-петербург/1.svg",
         groupUrl: "https://vk.com/hmbschoolspb",
@@ -122,7 +122,7 @@
       },
       {
         title: "Санкт-Петербург | Пересвет",
-        address: "г. Санкт-Петербург, ул. Курская 28/32",
+address: "Saint Petersburg, Kurskaya St., 28/32",
         leader: "Malyugin Ilya",
         logo: "assets/img/contacts/emty/санкт-петербург/2.svg",
         groupUrl: "https://vk.com/schoolperesvet?from=search",
@@ -133,7 +133,7 @@
     "Новосибирск": [
       {
         title: "Новосибирск",
-        address: "г. Новосибирск, Блюхера, 39",
+address: "Novosibirsk, Blyukhera St., 39",
         leader: "Bernhardt Konstantin",
         logo: "assets/img/contacts/emty/новосибирск/1.svg",
         groupUrl: "https://vk.com/hmbschoolnsknovosibirsk",
@@ -141,7 +141,7 @@
       },
       {
         title: "Новосибирск",
-        address: "г. Новосибирск, ул. Крылова, 26",
+address: "Novosibirsk, Krylovа St., 26",
         leader: "Stroilov Alexey",
         logo: "assets/img/contacts/emty/новосибирск/1.svg",
         groupUrl: "https://vk.com/hmb54?from=search",
@@ -149,7 +149,7 @@
       },
       {
         title: "Новосибирск | Стальной поток",
-        address: "г. Новосибирск, Некрасова, 82, историко-культурный центр ГГПЦ 'Твоя история'",
+address: "Novosibirsk, Nekrasova St., 82, historical and cultural center GGPC 'Your History'",
         leader: "Vasiliev Sergey",
         logo: "assets/img/contacts/emty/новосибирск/1.svg",
         groupUrl: "https://vk.com/spnso54?from=search",
@@ -160,7 +160,7 @@
     "Архангельск": [
       {
         title: "Школа в Архангельске 1",
-        address: "г. Архангельск, пр-т Обводный канал, 9к3",
+address: "Arkhangelsk, Obvodny Kanal Ave., 9 bldg. 3",
         leader: "Vereshchagin Ivan",
         logo:"assets/img/contacts/emty/архангельск/1.jpg",
 
@@ -169,7 +169,7 @@
       },
       {
         title: "Школа в Архангельске 2",
-        address: "г. Архангельск, Гайдара, д.55, 3 этаж (ТЦ &quot;Мебельная империя&quot;",
+address: "Arkhangelsk, Gaydara St., bld. 55, 3rd floor (Shopping Center \"Furniture Empire\"",
         leader: "Yargina Oksana",
         logo: "assets/img/contacts/emty/архангельск/1.jpg",
         groupUrl: "https://vk.com/hmbschoolnorthenwolf",
