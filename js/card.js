@@ -12,6 +12,7 @@
   const swiperWrapper = document.getElementById('swiper-wrapper');
 
   const modalLogo = document.getElementById('modal-logo');
+  const modalLogo5 = document.getElementById('modal-logo5');
   const modalTitle = document.getElementById('modal-title');
   const modalAddress = document.getElementById('modal-address');
   const modalLeader = document.getElementById('modal-leader');
@@ -26,6 +27,7 @@
         address: "г. Москва, м. Автозаводская, Ул. Ленинская Слобода д.26, БЦ Омега, клуб единоборств 'Берн'",
         leader: "Мещерякова Анастасия",
         logo: "assets/img/contacts/emty/москва/1.svg",
+        logo5: "assets/img/contacts/emty/москва/5.png",
         groupUrl: "https://vk.com/hmbschoolmoscow",
         openUrl: "https://vk.com/id180668770"
       },
@@ -34,6 +36,7 @@
         address: "г. Москва, м. Нагатинская, ул. Нагатинская, 16",
         leader: "Уколов Сергей",
         logo: "assets/img/contacts/emty/москва/2.svg",
+        logo5: "assets/img/contacts/emty/москва/55.png",
         groupUrl: "https://vk.com/bayard_fencing_hall",
         openUrl: "https://vk.com/ukolovsv"
       }
@@ -44,6 +47,7 @@
       address:"г. Краснодар, ул. Тюляева 4/1",
       leader:"Басов Захар",
       logo:"assets/img/contacts/emty/краснодар/1.svg",
+      logo5:"assets/img/contacts/emty/краснодар/5.png",
       groupUrl:"https://vk.com/hmbschoolkrd",
       openUrl:"https://vk.com/id209706471"
       },
@@ -52,6 +56,7 @@
       address:"г. Ейск, ул. Коммунистическая, 83/4",
       leader:"Иванов Юрий",
       logo:"assets/img/contacts/emty/ейск/1.svg",
+      logo5:"assets/img/contacts/emty/5.png",
       groupUrl:"https://vk.com/istfexyisk",
       openUrl:"https://vk.com/volhve"
       },
@@ -60,6 +65,7 @@
       address:"ст. Ленинградская, ул. 417-й дивизии, 40",
       leader:"Трояков Евгений",
       logo:"assets/img/contacts/emty/ленинградская/1.svg",
+      logo5:"assets/img/contacts/emty/5.png",
       groupUrl:"https://vk.com/club_plumbeum?from=search",
       openUrl:"https://vk.com/id675540526"
       },
@@ -68,6 +74,7 @@
         address: "г. Геленджик, ул. Мичурина, 14",
         leader: "Степанов Кирилл",
         logo: "assets/img/contacts/emty/геленджик/1.svg",
+        logo5: "assets/img/contacts/emty/5.png",
         groupUrl: "https://vk.com/hmbschoolglk",
         openUrl: "https://vk.com/hmbstepanov"
       }
@@ -79,6 +86,7 @@
         address: "г. Красноярск, Новая Заря, 2В",
         leader: "Михайлов Антон",
         logo: "assets/img/contacts/emty/красноярск/1.svg",
+        logo5: "assets/img/contacts/emty/красноярск/5.png",
         groupUrl: "https://vk.com/hmbschoolkrsk",
         openUrl: "https://vk.com/ant_mih"
       },
@@ -87,6 +95,7 @@
         address: "г. Зеленогорск, ул. Гагарина 18, МБУ 'Молодежный центр'",
         leader: "Неудачин Павел",
         logo: "assets/img/contacts/emty/зеленогорск/1.svg",
+        logo5: "assets/img/contacts/emty/зеленогорск/5.png",
         groupUrl: "https://vk.com/hmbschoolzlk",
         openUrl: "https://vk.com/silarent"
       }
@@ -98,6 +107,7 @@
         address: "г. Казань, Ямашева пр. 115А, АК Барс Арена",
         leader: "Куртымов Артем",
         logo: "assets/img/contacts/emty/казань/1.svg",
+        logo5: "assets/img/contacts/emty/казань/5.png",
         groupUrl: "https://vk.com/hmbschoolkazan",
         openUrl: "https://vk.com/kurtymov"
       },
@@ -105,7 +115,8 @@
         title: "Зеленодольск",
         address: "г. Зеленодольск, ул. Малая Красная, 5",
         leader: "Мухаметгалиева Анжелика",
-        logo: "assets/img/contacts/emty/зеленогорск/1.svg",
+        logo: "assets/img/contacts/emty/зеленодольск/1.svg",
+        logo5: "assets/img/contacts/emty/5.png",
         groupUrl: "https://vk.com/hmb_tatarstan?from=search",
         openUrl: "https://vk.com/lika130406"
       }
@@ -117,6 +128,7 @@
         address: "г. Санкт-Петербург, Кадетская лин. ВО, 5 корп. 2Д,, 'Вавилов лофт', зеленая лестница",
         leader: "Симонова Светлана",
         logo: "assets/img/contacts/emty/санкт-петербург/1.svg",
+        logo5: "assets/img/contacts/emty/санкт-петербург/5.png",
         groupUrl: "https://vk.com/hmbschoolspb",
         openUrl: "https://vk.com/sim.lana"
       },
@@ -125,6 +137,7 @@
         address: "г. Санкт-Петербург, ул. Курская 28/32",
         leader: "Малюгин Илья",
         logo: "assets/img/contacts/emty/санкт-петербург/2.svg",
+        logo5: "assets/img/contacts/emty/5.png",
         groupUrl: "https://vk.com/schoolperesvet?from=search",
         openUrl: "https://vk.com/malug"
       }
@@ -136,6 +149,7 @@
         address: "г. Новосибирск, Блюхера, 39",
         leader: "Бернгардт Константин",
         logo: "assets/img/contacts/emty/новосибирск/1.svg",
+        logo5: "assets/img/contacts/emty/новосибирск/5.png",
         groupUrl: "https://vk.com/hmbschoolnsknovosibirsk",
         openUrl: "https://vk.com/elennor1984"
       },
@@ -144,6 +158,7 @@
         address: "г. Новосибирск, ул. Крылова, 26",
         leader: "Строилов Алексей",
         logo: "assets/img/contacts/emty/новосибирск/1.svg",
+        logo5: "assets/img/contacts/emty/5.png",
         groupUrl: "https://vk.com/hmb54?from=search",
         openUrl: "https://vk.com/ewdfsfwer"
       },
@@ -152,6 +167,7 @@
         address: "г. Новосибирск, Некрасова, 82, историко-культурный центр ГГПЦ 'Твоя история'",
         leader: "Васильев Сергей",
         logo: "assets/img/contacts/emty/новосибирск/1.svg",
+        logo5: "assets/img/contacts/emty/5.png",
         groupUrl: "https://vk.com/spnso54?from=search",
         openUrl: "https://vk.com/id53376743"
       }
@@ -163,6 +179,7 @@
         address: "г. Архангельск, пр-т Обводный канал, 9к3",
         leader: "Верещагин Иван",
         logo:"assets/img/contacts/emty/архангельск/1.jpg",
+        logo5:"assets/img/contacts/emty/архангельск/5.png",
 
         groupUrl: "https://vk.com/hmbarh",
         openUrl: "https://vk.com/ivereschagin2004"
@@ -172,6 +189,7 @@
         address: "г. Архангельск, Гайдара, д.55, 3 этаж (ТЦ &quot;Мебельная империя&quot;",
         leader: "Яргина Оксана",
         logo: "assets/img/contacts/emty/архангельск/1.jpg",
+        logo5: "assets/img/contacts/emty/архангельск/55.png",
         groupUrl: "https://vk.com/hmbschoolnorthenwolf",
         openUrl: "https://vk.com/barsyaksyu"
       }
@@ -194,7 +212,8 @@
           slide.className = 'swiper-slide';
           slide.innerHTML = `
             <div class="card">
-              <img src="${school.logo}" alt="${school.title}" style="max-width: 100px;">
+              <img src="${school.logo5}" alt="${school.title}" style="max-width: 60px;">
+              <img src="${school.logo}" alt="${school.title}" style="max-width: 120px;">
               <h2>${school.title}</h2>
               <p><strong>Адрес:</strong> ${school.address}</p>
               <a class="btn" href="${school.groupUrl}" target="_blank">Сообщество</a>
@@ -231,6 +250,7 @@
         modalMulti.style.display = 'none';
 
         modalLogo.src = btn.dataset.logo;
+        modalLogo5.src = btn.dataset.logo5;
         modalTitle.textContent = city;
         modalAddress.textContent = btn.dataset.address;
         modalLeader.textContent = btn.dataset.leader;
