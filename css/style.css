@@ -1652,8 +1652,15 @@ details ul {
   justify-content: center;
   align-items: center;
   gap: 3%;
-  padding: 5% 0;
+  padding: 2% 0 5% 0;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .location {
+    padding: 5% 0; /* увеличиваем отступы */
+  }
+  
 }
 
 .location__l {
