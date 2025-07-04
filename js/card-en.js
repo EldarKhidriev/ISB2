@@ -266,6 +266,7 @@ address: "Arkhangelsk, Gaydara St., bld. 55, 3rd floor (Shopping Center \"Furnit
         modalMulti.style.display = 'none';
 
         modalLogo.src = btn.dataset.logo;
+        modalLogo5.src = btn.dataset.logo5;
         modalTitle.textContent = city;
         modalAddress.textContent = btn.dataset.address;
         modalLeader.textContent = btn.dataset.leader;
